@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function LanguageLearner() {
   return (
-    <div className="w-screen  shadow-[0px_0px_50px_rgba(255,_255,_255,_0.46)] min-h-screen h-auto bg-maya-blue px-8 pt-2 pb-[20rem] mt-[-8rem] rounded-tl-[3%] rounded-tr-[3%] ">
+    <div className="w-screen  shadow-[0px_0px_50px_rgba(255,_255,_255,_0.46)] min-h-screen h-auto bg-maya-blue px-12 pt-2 pb-[20rem] mt-[-8rem] rounded-tl-[3%] rounded-tr-[3%] ">
       <h2 className="self-stretch  text-black text-[6.25rem] mt-[68px]  font-normal  leading-normal">
         Language Learner
       </h2>
@@ -14,17 +14,17 @@ export default function LanguageLearner() {
         consequat faucibus tortor amet est.
       </p>
 
-      <div className="bg-dodger-blue rounded-[20px] shadow-[0px_0px_50px_rgba(255,_255,_255,_0.46)] mt-[5rem]">
+      <div className="bg-dodger-blue p-10 rounded-[20px] shadow-[0px_0px_50px_rgba(255,_255,_255,_0.46)] mt-[5rem]">
         <div className="flex flex-row">
-          <div className="w-[55%] py-5 pl-8">
-            <h2 className="self-stretch  text-black text-[6.25rem] mt-[68px]  font-normal  leading-[7rem]">
+          <div className="w-[55%] py-5">
+            <h2 className="self-stretch  text-black text-[5.25rem] mt-[68px]  font-normal  leading-[4.8rem]">
               Become a Language Expert with
             </h2>
-            <h2 className="self-stretch font-bold text-black text-[6.25rem]  leading-normal">
+            <h2 className="self-stretch font-bold text-black text-[5.25rem]  leading-normal">
               Travelingo
             </h2>
 
-            <p className="self-stretch  text-black text-[25px]  font-normal  leading-[3rem]">
+            <p className="self-stretch  text-black text-[1.5rem]  font-normal  leading-[2rem]">
               Lorem ipsum dolor sit amet consectetur. Auctor rhoncus at bibendum
               sed ac urna dui aliquet aliquam. Amet leo habitant amet quam
               suspendisse donec. Sit aliquet elementum elit sit sit phasellus.
@@ -32,7 +32,7 @@ export default function LanguageLearner() {
             </p>
           </div>
 
-          <div className="grid  grid-cols-2  mt-20 ml-auto pr-10 w-auto gap-x-5 gap-y-0">
+          <div className="grid  grid-cols-2 h-fit gap-y-2  mt-20 ml-auto pr-10 w-auto gap-x-5 ">
             <Image
               src={"/images/language-learner/avatar1.png"}
               width={800}

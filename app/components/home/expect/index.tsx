@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export default function WhatToExpect() {
   return (
-    <div className="w-screen min-h-screen h-auto bg-pale-cyan px-8 pt-2 pb-[20rem]">
-      <div className="self-stretch  text-white text-[6.25rem] mt-[68px] mb-[98px] font-normal  leading-normal">
+    <div className="w-screen min-h-screen h-auto bg-pale-cyan px-12 pt-2 pb-[20rem]">
+      <div className="self-stretch  text-black text-[6.25rem] mt-[68px] mb-[98px] font-normal  leading-normal">
         What to Expect
       </div>
 
@@ -36,10 +36,10 @@ export default function WhatToExpect() {
 
           <div className="flex flex-row gap-x-4">
             <div className="bg-white rounded-[50px] h-[80%] w-[35%]"></div>
-            <div className="bg-white w-[65%] flex flex-row rounded-[50px] p-5">
-              <div className="flex flex-col w-[50%] mb-auto">
+            <div className="bg-white w-[65%] flex flex-row rounded-[50px] pl-8 py-6 relative ">
+              <div className="flex flex-col w-[60%] mb-auto">
                 <h2 className="self-stretch  text-black text-[40px] font-normal  leading-normal">
-                  Speak e
+                  Break Language Barriers
                 </h2>
                 <div className=" text-black">
                   Dive into the heart of each destination with tailored cultural
@@ -56,7 +56,7 @@ export default function WhatToExpect() {
                   width={500}
                   height={500}
                   alt=""
-                  className="mt-[10rem]"
+                  className=" mt-[10rem] w-[18rem] bottom-0 right-0"
                 />
               </div>
             </div>

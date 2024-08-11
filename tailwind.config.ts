@@ -19,6 +19,7 @@ const config: Config = {
         "dodger-blue": "#18A1FF",
         "light-sky-blue": "#83CCFF",
         "maya-blue": "#5FBEFF",
+        "sky-blue": "#3CAFFF",
       },
     },
   },
