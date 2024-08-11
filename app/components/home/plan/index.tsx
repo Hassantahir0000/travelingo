@@ -17,7 +17,7 @@ export default function PlanYourTrip() {
 
       <div className="w-[90%] mx-auto mt-5">
         <Image
-          src={"/images/home/plan-trip/map.png"}
+          src={"/images/home/plan-trip/map.svg"}
           width={1000}
           height={1000}
           alt="map"

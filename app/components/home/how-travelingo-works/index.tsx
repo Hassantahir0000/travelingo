@@ -15,55 +15,90 @@ export default function HowItWorks() {
       </h2>
 
       <div className="wrapper flex flex-col z-[10] ml-auto w-[50%] gap-y-5 mt-5">
-        <div className="rounded-[50px] border-2 border-black flex gap-x-5 bg-white/10 p-4">
-          <h2 className="self-stretch  text-black m-auto text-[6.25rem]   font-normal  leading-normal">
+        <div className="rounded-[50px] border-4 border-black flex gap-x-[5rem] bg-white/10 px-4 py-1 relative">
+          <h2 className="self-stretch pl-4  text-black m-auto text-[6.5rem]   font-normal  leading-normal">
             01
           </h2>
-          <p className="self-stretch  text-black text-[1.5rem] m-auto font-normal ">
+          <p className="self-stretch  text-black text-[1.2rem] m-auto font-normal pr-[5rem]">
             Travel planning made easy, with tailored travel information from
             visa requirements to cultural dos and donts, ensuring you re
             well-prepared for any journey.
           </p>
+          <Image
+            className="absolute right-5 w-[3.5rem] mt-4"
+            src={"/icons/question.svg"}
+            width={500}
+            height={500}
+            alt=""
+          />
         </div>
-        <div className="rounded-[50px] border-2 border-black flex gap-x-5 bg-white/10 p-4">
-          <h2 className="self-stretch  text-black m-auto text-[6.25rem]   font-normal  leading-normal">
+        <div className="rounded-[50px] border-4 border-black flex gap-x-[5rem] bg-white/10 px-4 py-1 relative">
+          <h2 className="self-stretch pl-4  text-black m-auto text-[6.5rem]   font-normal  leading-normal">
             02
           </h2>
-          <p className="self-stretch  text-black text-[1.5rem] m-auto font-normal ">
+          <p className="self-stretch  text-black text-[1.2rem] m-auto font-normal pr-[5rem]">
             Travel planning made easy, with tailored travel information from
             visa requirements to cultural dos and donts, ensuring you re
             well-prepared for any journey.
           </p>
+          <Image
+            className="absolute right-5 w-[3.5rem] mt-4"
+            src={"/icons/question.svg"}
+            width={500}
+            height={500}
+            alt=""
+          />
         </div>
-        <div className="rounded-[50px] border-2 border-black flex gap-x-5 bg-white/10 p-4">
-          <h2 className="self-stretch  text-black m-auto text-[6.25rem]   font-normal  leading-normal">
+        <div className="rounded-[50px] border-4 border-black flex gap-x-[5rem] bg-white/10 px-4 py-1 relative">
+          <h2 className="self-stretch pl-4  text-black m-auto text-[6.5rem]   font-normal  leading-normal">
             03
           </h2>
-          <p className="self-stretch  text-black text-[1.5rem] m-auto font-normal ">
+          <p className="self-stretch  text-black text-[1.2rem] m-auto font-normal pr-[5rem]">
             Travel planning made easy, with tailored travel information from
             visa requirements to cultural dos and donts, ensuring you re
             well-prepared for any journey.
           </p>
+          <Image
+            className="absolute right-5 w-[3.5rem] mt-4"
+            src={"/icons/question.svg"}
+            width={500}
+            height={500}
+            alt=""
+          />
         </div>
-        <div className="rounded-[50px] border-2 border-black flex gap-x-5 bg-white/10 p-4">
-          <h2 className="self-stretch  text-black m-auto text-[6.25rem]   font-normal  leading-normal">
+        <div className="rounded-[50px] border-4 border-black flex gap-x-[5rem] bg-white/10 px-4 py-1 relative">
+          <h2 className="self-stretch pl-4  text-black m-auto text-[6.5rem]   font-normal  leading-normal">
             04
           </h2>
-          <p className="self-stretch  text-black text-[1.5rem] m-auto font-normal ">
+          <p className="self-stretch  text-black text-[1.2rem] m-auto font-normal pr-[5rem]">
             Travel planning made easy, with tailored travel information from
             visa requirements to cultural dos and donts, ensuring you re
             well-prepared for any journey.
           </p>
+          <Image
+            className="absolute right-5 w-[3.5rem] mt-4"
+            src={"/icons/question.svg"}
+            width={500}
+            height={500}
+            alt=""
+          />
         </div>
-        <div className="rounded-[50px] border-2 border-black flex gap-x-5 bg-white/10 p-4">
-          <h2 className="self-stretch  text-black m-auto text-[6.25rem]   font-normal  leading-normal">
+        <div className="rounded-[50px] border-4 border-black flex gap-x-[5rem] bg-white/10 px-4 py-1 relative">
+          <h2 className="self-stretch pl-4  text-black m-auto text-[6.5rem]   font-normal  leading-normal">
             05
           </h2>
-          <p className="self-stretch  text-black text-[1.5rem] m-auto font-normal ">
+          <p className="self-stretch  text-black text-[1.2rem] m-auto font-normal pr-[5rem]">
             Travel planning made easy, with tailored travel information from
             visa requirements to cultural dos and donts, ensuring you re
             well-prepared for any journey.
           </p>
+          <Image
+            className="absolute right-5 w-[3.5rem] mt-4"
+            src={"/icons/question.svg"}
+            width={500}
+            height={500}
+            alt=""
+          />
         </div>
       </div>
     </div>
