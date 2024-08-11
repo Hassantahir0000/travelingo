@@ -16,8 +16,8 @@ export default function LanguageLearner() {
 
       <div className="bg-dodger-blue p-10 rounded-[20px] shadow-[0px_0px_50px_rgba(255,_255,_255,_0.46)] mt-[5rem]">
         <div className="flex flex-row">
-          <div className="w-[55%] py-5">
-            <h2 className="self-stretch  text-black text-[5.25rem] mt-[68px]  font-normal  leading-[4.8rem]">
+          <div className="w-[55%] ">
+            <h2 className="self-stretch  text-black text-[5.25rem]   font-normal  leading-[4.8rem]">
               Become a Language Expert with
             </h2>
             <h2 className="self-stretch font-bold text-black text-[5.25rem]  leading-normal">
@@ -32,7 +32,7 @@ export default function LanguageLearner() {
             </p>
           </div>
 
-          <div className="grid  grid-cols-2 h-fit gap-y-2  mt-20 ml-auto pr-10 w-auto gap-x-5 ">
+          <div className="grid  grid-cols-2 h-fit gap-y-2   ml-auto pr-10 w-auto gap-x-5 ">
             <Image
               src={"/images/language-learner/avatar1.png"}
               width={800}
