@@ -16,8 +16,8 @@ export default function WhatToExpect() {
               </h2>
               <div className=" text-black text-[1.4rem] font-poppinsL mt-5">
                 Travel planning made easy, with tailored travel information from
-                visa requirements to cultural dos and don'ts, ensuring you re
-                well-prepared for any journey.
+                visa requirements to cultural dos and don&apos;ts, ensuring you
+                re well-prepared for any journey.
               </div>
             </div>
             <div className="md:w-[40%]">
@@ -64,7 +64,7 @@ export default function WhatToExpect() {
             </h2>
             <div className=" text-black text-[1.4rem] font-poppinsL mt-5">
               Travel planning made easy, with tailored travel information from
-              visa requirements to cultural dos and don'ts, ensuring you re
+              visa requirements to cultural dos and don&apos;ts, ensuring you re
               well-prepared for any journey.
             </div>
           </div>

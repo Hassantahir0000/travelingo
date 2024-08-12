@@ -77,10 +77,10 @@ export default function APIFeatures() {
 
           <p className="self-stretch  text-black text-[1.6rem] mt-3 font-normal ml-4">
             The Local Customs API provides crucial information on the social and
-            cultural etiquette of a destination. It includes do's and don'ts,
-            local etiquettes, dress codes, things to avoid saying, and areas to
-            avoid, helping travelers to navigate social interactions
-            respectfully and safely.
+            cultural etiquette of a destination. It includes do&apos;s and
+            don&apos;ts, local etiquettes, dress codes, things to avoid saying,
+            and areas to avoid, helping travelers to navigate social
+            interactions respectfully and safely.
           </p>
         </div>
 
