@@ -15,6 +15,8 @@ export default function PlanYourTrip() {
         consequat faucibus tortor amet est.
       </p>
 
+      <ServicesList />
+
       <div className="w-[90%] mx-auto mt-5">
         <Image
           src={"/images/home/plan-trip/map.svg"}
@@ -24,7 +26,6 @@ export default function PlanYourTrip() {
           className="w-screen"
         />
       </div>
-      {/* <ServicesList /> */}
     </div>
   );
 }
