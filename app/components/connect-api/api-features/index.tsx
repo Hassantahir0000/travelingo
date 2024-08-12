@@ -4,7 +4,7 @@ export default function APIFeatures() {
   return (
     <div className="w-screen min-h-screen px-10  h-auto bg-light-sky-blue  pt-2 pb-[20rem] mt-[-4rem] rounded-tl-[3%] rounded-tr-[3%]">
       <h2 className="self-stretch font-poppinsM text-black text-[4.25rem] mt-[68px] font-normal  leading-normal">
-        Our API’s Features
+        Our API&apos;s Features
       </h2>
       <p className="self-stretch  text-black text-[1.9rem] font-poppinsR  font-normal mt-4 ml-4 mb-5 leading-[2.5rem]">
         Your all-in-one solution for Visa Information, Weather, Culture, and

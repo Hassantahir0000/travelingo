@@ -39,7 +39,7 @@ export default function HowItWorks() {
           </h2>
           <p className="self-stretch  text-black text-[1.2rem] font-poppinsR m-auto font-normal pr-[5rem]">
             Travel planning made easy, with tailored travel information from
-            visa requirements to cultural dos and donts, ensuring you re
+            visa requirements to cultural dos and dont&apos;s, ensuring you re
             well-prepared for any journey.
           </p>
           <Image
@@ -56,7 +56,7 @@ export default function HowItWorks() {
           </h2>
           <p className="self-stretch  text-black text-[1.2rem] font-poppinsR m-auto font-normal pr-[5rem]">
             Travel planning made easy, with tailored travel information from
-            visa requirements to cultural dos and donts, ensuring you re
+            visa requirements to cultural dos and dont&apos;s, ensuring you re
             well-prepared for any journey.
           </p>
           <Image
@@ -73,7 +73,7 @@ export default function HowItWorks() {
           </h2>
           <p className="self-stretch font-poppinsR text-black text-[1.2rem] m-auto font-normal pr-[5rem]">
             Travel planning made easy, with tailored travel information from
-            visa requirements to cultural dos and donts, ensuring you re
+            visa requirements to cultural dos and dont&apos;s, ensuring you re
             well-prepared for any journey.
           </p>
           <Image
@@ -90,7 +90,7 @@ export default function HowItWorks() {
           </h2>
           <p className="self-stretch font-poppinsR text-black text-[1.2rem] m-auto font-normal pr-[5rem]">
             Travel planning made easy, with tailored travel information from
-            visa requirements to cultural dos and donts, ensuring you re
+            visa requirements to cultural dos and dont&apos;s, ensuring you re
             well-prepared for any journey.
           </p>
           <Image
@@ -107,7 +107,7 @@ export default function HowItWorks() {
           </h2>
           <p className="self-stretch font-poppinsR text-black text-[1.2rem] m-auto font-normal pr-[5rem]">
             Travel planning made easy, with tailored travel information from
-            visa requirements to cultural dos and donts, ensuring you re
+            visa requirements to cultural dos and dont&apos;s, ensuring you re
             well-prepared for any journey.
           </p>
           <Image
