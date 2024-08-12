@@ -30,7 +30,7 @@ const ServicesList: FC = () => {
       const newTriggerIds = [];
 
       const cards: HTMLDivElement[] = gsap.utils.toArray(".service-card");
-      const spacer = 10;
+      const spacer = 20;
       cards.forEach((card, index) => {
         const triggerId1 = "service_card_trigger" + index;
         const triggerId2 = "service_card-" + index;
@@ -42,10 +42,10 @@ const ServicesList: FC = () => {
           scrollTrigger: {
             id: "service_card_trigger" + index,
             trigger: card,
-            start: index === 0 ? "top center" : "top-=" + 40 * index + " 40%", // Adjust start for first card
-            end: "top 10%",
+            start: "top-=" + 25 * index + " 25%",
+            end: "top 5%",
             scrub: true,
-            // markers: true,
+            markers: true,
             pin: true,
           },
         });
@@ -79,7 +79,7 @@ const ServicesList: FC = () => {
     <div
       ref={ref}
       data-cursor-text
-      className="card-container hello py-8 px-10 min-h-screen md:py-1"
+      className="card-container hello py-8 mb-[50rem] px-10 min-h-screen md:py-1"
     >
       {CountriesCards.length > 0 &&
         CountriesCards?.map((country, index) => (
