@@ -4,11 +4,11 @@ import ServicesList from "../services/services-list";
 export default function PlanYourTrip() {
   return (
     <div className="w-screen min-h-screen h-auto bg-light-sky-blue px-8 pt-2 pb-[20rem] mt-[-8rem] rounded-tl-[3%] rounded-tr-[3%]">
-      <h2 className="self-stretch  text-black text-[6.25rem] mt-[68px]  font-normal  leading-normal">
+      <h2 className="self-stretch font-poppinsM text-black text-[4.25rem] mt-[68px] font-normal  leading-normal">
         Plan Your Trip
       </h2>
 
-      <p className="self-stretch  text-black text-[2.5rem]  font-normal  leading-[3rem]">
+      <p className="self-stretch  text-black text-[1.9rem] font-poppinsR  font-normal mt-4 mb-5 leading-[2.5rem]">
         Lorem ipsum dolor sit amet consectetur. Tristique cursus faucibus
         aliquet amet massa. Viverra elit tempor libero sit mattis ut ac
         pharetra. Ultrices lectus et sagittis aliquet nam ornare. Iaculis

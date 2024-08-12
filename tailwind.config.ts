@@ -21,6 +21,12 @@ const config: Config = {
         "maya-blue": "#5FBEFF",
         "sky-blue": "#3CAFFF",
       },
+      fontFamily: {
+        poppinsL: ["var(--font-poppins-light)"],
+        poppinsR: ["var(--font-poppins-regular)"],
+        poppinsM: ["var(--font-poppins-medium)"],
+        poppinsB: ["var(--font-poppins-bold)"],
+      },
     },
   },
   plugins: [],

@@ -12,7 +12,7 @@ export default function HowItWorks() {
       />
 
       <div>
-        <h2 className="self-stretch  text-black text-[6.25rem] mt-[68px]  font-normal  leading-[6.5rem] w-[40%]">
+        <h2 className="self-stretch  text-black text-[6.25rem] mt-[68px] font-poppinsM  font-normal  leading-[6.5rem] w-[40%]">
           How <br></br> Travelingo <br></br> Works
         </h2>
 
@@ -24,7 +24,9 @@ export default function HowItWorks() {
               height={30}
               alt=""
             />
-            <p className="text-white text-[1.5rem]">GET ON PLAY STORE</p>
+            <p className="text-white text-[1.5rem] font-poppinsR">
+              GET ON PLAY STORE
+            </p>
           </div>
           <Image src={"/icons/arrow.svg"} width={30} height={30} alt="" />
         </button>
@@ -32,10 +34,10 @@ export default function HowItWorks() {
 
       <div className="wrapper flex flex-col z-[10] ml-auto w-[50%] gap-y-5 mt-8">
         <div className="rounded-[50px] border-4 border-black flex gap-x-[5rem] bg-white/10 px-4 py-1 relative">
-          <h2 className="self-stretch pl-4  text-black m-auto text-[6.5rem]   font-normal  leading-normal">
+          <h2 className="self-stretch pl-4  font-poppinsM  text-black m-auto text-[6.5rem]   font-normal  leading-normal">
             01
           </h2>
-          <p className="self-stretch  text-black text-[1.2rem] m-auto font-normal pr-[5rem]">
+          <p className="self-stretch  text-black text-[1.2rem] font-poppinsR m-auto font-normal pr-[5rem]">
             Travel planning made easy, with tailored travel information from
             visa requirements to cultural dos and donts, ensuring you re
             well-prepared for any journey.
@@ -49,10 +51,10 @@ export default function HowItWorks() {
           />
         </div>
         <div className="rounded-[50px] border-4 border-black flex gap-x-[5rem] bg-white/10 px-4 py-1 relative">
-          <h2 className="self-stretch pl-4  text-black m-auto text-[6.5rem]   font-normal  leading-normal">
+          <h2 className="self-stretch pl-4 font-poppinsM text-black m-auto text-[6.5rem]   font-normal  leading-normal">
             02
           </h2>
-          <p className="self-stretch  text-black text-[1.2rem] m-auto font-normal pr-[5rem]">
+          <p className="self-stretch  text-black text-[1.2rem] font-poppinsR m-auto font-normal pr-[5rem]">
             Travel planning made easy, with tailored travel information from
             visa requirements to cultural dos and donts, ensuring you re
             well-prepared for any journey.
@@ -66,10 +68,10 @@ export default function HowItWorks() {
           />
         </div>
         <div className="rounded-[50px] border-4 border-black flex gap-x-[5rem] bg-white/10 px-4 py-1 relative">
-          <h2 className="self-stretch pl-4  text-black m-auto text-[6.5rem]   font-normal  leading-normal">
+          <h2 className="self-stretch pl-4 font-poppinsM  text-black m-auto text-[6.5rem]   font-normal  leading-normal">
             03
           </h2>
-          <p className="self-stretch  text-black text-[1.2rem] m-auto font-normal pr-[5rem]">
+          <p className="self-stretch font-poppinsR text-black text-[1.2rem] m-auto font-normal pr-[5rem]">
             Travel planning made easy, with tailored travel information from
             visa requirements to cultural dos and donts, ensuring you re
             well-prepared for any journey.
@@ -83,10 +85,10 @@ export default function HowItWorks() {
           />
         </div>
         <div className="rounded-[50px] border-4 border-black flex gap-x-[5rem] bg-white/10 px-4 py-1 relative">
-          <h2 className="self-stretch pl-4  text-black m-auto text-[6.5rem]   font-normal  leading-normal">
+          <h2 className="self-stretch pl-4 font-poppinsM text-black m-auto text-[6.5rem]   font-normal  leading-normal">
             04
           </h2>
-          <p className="self-stretch  text-black text-[1.2rem] m-auto font-normal pr-[5rem]">
+          <p className="self-stretch font-poppinsR text-black text-[1.2rem] m-auto font-normal pr-[5rem]">
             Travel planning made easy, with tailored travel information from
             visa requirements to cultural dos and donts, ensuring you re
             well-prepared for any journey.
@@ -100,10 +102,10 @@ export default function HowItWorks() {
           />
         </div>
         <div className="rounded-[50px] border-4 border-black flex gap-x-[5rem] bg-white/10 px-4 py-1 relative">
-          <h2 className="self-stretch pl-4  text-black m-auto text-[6.5rem]   font-normal  leading-normal">
+          <h2 className="self-stretch pl-4 font-poppinsM text-black m-auto text-[6.5rem]   font-normal  leading-normal">
             05
           </h2>
-          <p className="self-stretch  text-black text-[1.2rem] m-auto font-normal pr-[5rem]">
+          <p className="self-stretch font-poppinsR text-black text-[1.2rem] m-auto font-normal pr-[5rem]">
             Travel planning made easy, with tailored travel information from
             visa requirements to cultural dos and donts, ensuring you re
             well-prepared for any journey.
