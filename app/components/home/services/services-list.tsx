@@ -45,7 +45,7 @@ const ServicesList: FC = () => {
             start: "top-=" + 25 * index + " 25%",
             end: "top 5%",
             scrub: true,
-            markers: true,
+            // markers: true,
             pin: true,
           },
         });
