@@ -10,9 +10,25 @@ export default function HowItWorks() {
         height={500}
         alt=""
       />
-      <h2 className="self-stretch  text-black text-[6.25rem] mt-[68px]  font-normal  leading-[6.5rem] w-[40%]">
-        How <br></br> Travelingo <br></br> Works
-      </h2>
+
+      <div>
+        <h2 className="self-stretch  text-black text-[6.25rem] mt-[68px]  font-normal  leading-[6.5rem] w-[40%]">
+          How <br></br> Travelingo <br></br> Works
+        </h2>
+
+        <button className=" bg-black rounded-full px-6 w-full items-center gap-x-5 py-5 mt-[3rem] text-white flex justify-between">
+          <div className="flex gap-x-5">
+            <Image
+              src={"/icons/play-button.svg"}
+              width={30}
+              height={30}
+              alt=""
+            />
+            <p className="text-white text-[1.5rem]">GET ON PLAY STORE</p>
+          </div>
+          <Image src={"/icons/arrow.svg"} width={30} height={30} alt="" />
+        </button>
+      </div>
 
       <div className="wrapper flex flex-col z-[10] ml-auto w-[50%] gap-y-5 mt-5">
         <div className="rounded-[50px] border-4 border-black flex gap-x-[5rem] bg-white/10 px-4 py-1 relative">

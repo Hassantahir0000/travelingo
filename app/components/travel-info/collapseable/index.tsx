@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-import DownArrow from "../down-arrow";
+import DownArrow from "../../shared/down-arrow";
 import { useState } from "react";
 
 export default function Collapseable() {

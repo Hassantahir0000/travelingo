@@ -30,37 +30,61 @@ export default function LanguageLearner() {
               suspendisse donec. Sit aliquet elementum elit sit sit phasellus.
               Libero urna a in cras.
             </p>
+
+            <button className="border-2 border-black rounded-full px-6 w-fit items-center gap-x-5 py-3 mt-[6rem] text-black flex justify-between">
+              <p className="text-black">Get Fluent</p>
+
+              <Image
+                src={"/icons/arrow-small.svg"}
+                width={20}
+                height={20}
+                alt=""
+              />
+            </button>
           </div>
 
-          <div className="grid  grid-cols-2 h-fit gap-y-2   ml-auto pr-10 w-auto gap-x-5 ">
-            <Image
-              src={"/images/language-learner/avatar1.png"}
-              width={800}
-              height={800}
-              alt=""
-              className="w-[15rem]"
-            />
-            <Image
-              src={"/images/language-learner/avatar2.png"}
-              width={800}
-              height={800}
-              alt=""
-              className="w-[15rem]"
-            />
-            <Image
-              src={"/images/language-learner/avatar3.png"}
-              width={800}
-              height={800}
-              alt=""
-              className="w-[15rem]"
-            />
-            <Image
-              src={"/images/language-learner/avatar4.png"}
-              width={800}
-              height={800}
-              alt=""
-              className="w-[15rem]"
-            />
+          <div className=" ml-auto pr-10 w-auto gap-x-5 ">
+            <div className="grid  grid-cols-2 h-fit gap-y-2  gap-x-5 ">
+              <Image
+                src={"/images/language-learner/avatar1.png"}
+                width={800}
+                height={800}
+                alt=""
+                className="w-[15rem]"
+              />
+              <Image
+                src={"/images/language-learner/avatar2.png"}
+                width={800}
+                height={800}
+                alt=""
+                className="w-[15rem]"
+              />
+              <Image
+                src={"/images/language-learner/avatar3.png"}
+                width={800}
+                height={800}
+                alt=""
+                className="w-[15rem]"
+              />
+              <Image
+                src={"/images/language-learner/avatar4.png"}
+                width={800}
+                height={800}
+                alt=""
+                className="w-[15rem]"
+              />
+            </div>
+
+            <button className="border-2 border-black rounded-full px-6 w-full items-center gap-x-5 py-3 mt-[6rem] text-black flex justify-between">
+              <p className="text-black text-[1.5rem]">Get Our API</p>
+
+              <Image
+                src={"/icons/arrow-black.svg"}
+                width={30}
+                height={30}
+                alt=""
+              />
+            </button>
           </div>
         </div>
       </div>
