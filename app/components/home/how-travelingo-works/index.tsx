@@ -30,7 +30,7 @@ export default function HowItWorks() {
         </button>
       </div>
 
-      <div className="wrapper flex flex-col z-[10] ml-auto w-[50%] gap-y-5 mt-5">
+      <div className="wrapper flex flex-col z-[10] ml-auto w-[50%] gap-y-5 mt-8">
         <div className="rounded-[50px] border-4 border-black flex gap-x-[5rem] bg-white/10 px-4 py-1 relative">
           <h2 className="self-stretch pl-4  text-black m-auto text-[6.5rem]   font-normal  leading-normal">
             01
