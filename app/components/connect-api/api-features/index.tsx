@@ -12,7 +12,7 @@ export default function APIFeatures() {
       </p>
 
       <div className="flex flex-col gap-y-5 mt-16">
-        <div className="bg-white rounded-[50px] px-[40px] py-[30px]">
+        <div className="bg-white rounded-[30px] px-[40px] py-[30px]">
           <p className="self-stretch  text-black text-[2.2rem] font-poppinsM   ml-4">
             Visa API
           </p>
@@ -26,7 +26,7 @@ export default function APIFeatures() {
           </p>
         </div>
 
-        <div className="bg-white rounded-[50px] px-[40px] py-[30px]">
+        <div className="bg-white rounded-[30px] px-[40px] py-[30px]">
           <p className="self-stretch  text-black text-[2.2rem] font-poppinsM   ml-4">
             Travel Budget API
           </p>
@@ -41,7 +41,7 @@ export default function APIFeatures() {
           </p>
         </div>
 
-        <div className="bg-white rounded-[50px] px-[40px] py-[30px]">
+        <div className="bg-white rounded-[30px] px-[40px] py-[30px]">
           <p className="self-stretch  text-black text-[2.2rem] font-poppinsM    ml-4">
             Weather API
           </p>
@@ -55,7 +55,7 @@ export default function APIFeatures() {
           </p>
         </div>
 
-        <div className="bg-white rounded-[50px] px-[40px] py-[30px]">
+        <div className="bg-white rounded-[30px] px-[40px] py-[30px]">
           <p className="self-stretch  text-black text-[2.2rem] font-poppinsM    ml-4">
             Food API
           </p>
@@ -69,7 +69,7 @@ export default function APIFeatures() {
           </p>
         </div>
 
-        <div className="bg-white rounded-[50px] px-[40px] py-[30px]">
+        <div className="bg-white rounded-[30px] px-[40px] py-[30px]">
           <p className="self-stretch  text-black text-[2.2rem] font-poppinsM   ml-4">
             Local Customs API
           </p>
@@ -83,7 +83,7 @@ export default function APIFeatures() {
           </p>
         </div>
 
-        <div className="bg-white rounded-[50px] px-[40px] py-[30px]">
+        <div className="bg-white rounded-[30px] px-[40px] py-[30px]">
           <p className="self-stretch  text-black text-[2.2rem] font-poppinsM    ml-4">
             Flight API
           </p>
