@@ -3,7 +3,7 @@ import ServicesList from "../services/services-list";
 
 export default function PlanYourTrip() {
   return (
-    <div className="w-screen min-h-screen h-auto bg-light-sky-blue px-8 pt-2 pb-[20rem] mt-[-8rem] rounded-tl-[3%] rounded-tr-[3%]">
+    <div className="w-screen min-h-screen h-auto bg-light-sky-blue px-8 pt-2 pb-[20rem] mt-[-8rem] rounded-tl-[3rem] rounded-tr-[3rem]">
       <h2 className="self-stretch font-poppinsM text-black text-[4.25rem] mt-[68px] font-normal  leading-normal">
         Plan Your Trip
       </h2>

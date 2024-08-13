@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function TravelExperience() {
   return (
-    <div className="w-screen z-[100]   shadow-[0px_0px_50px_rgba(255,_255,_255,_0.46)] h-auto bg-pale-cyan px-12 py-[6rem] mt-[-8rem] rounded-tl-[3%] rounded-tr-[3%] ">
+    <div className="w-screen z-[100]   shadow-[0px_0px_50px_rgba(255,_255,_255,_0.46)] h-auto bg-pale-cyan px-12 py-[6rem] mt-[-2rem] rounded-tl-[3%] rounded-tr-[3%] ">
       <div className="flex flex-row justify-between items-center w-full h-full my-auto pb-[7rem] pt-[4rem]">
         <div className="w-[50%]">
           <h2 className="self-stretch font-poppinsM text-black text-[4.25rem] mt-[68px] leading-[5rem]">

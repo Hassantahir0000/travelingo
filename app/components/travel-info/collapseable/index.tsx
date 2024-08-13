@@ -5,7 +5,12 @@ import Image from "next/image";
 import DownArrow from "../../shared/down-arrow";
 import { useState } from "react";
 
-export default function Collapseable() {
+interface CollapseableProps {
+  name: string;
+  image: string;
+}
+
+export default function Collapseable({ name, image }: CollapseableProps) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const expandMenu = async () => {
@@ -13,8 +18,8 @@ export default function Collapseable() {
   };
 
   return (
-    <div className="h-fit pb-10 min-h-[200vh] w-full bg-[#5FBEFF] flex items-start justify-center">
-      <div className="w-[85%]">
+    <div className="h-fit w-full flex items-start justify-center">
+      <div className="w-[95%]">
         <div className="relative">
           <Image
             src={"/images/travel-info/container.png"}
@@ -24,13 +29,14 @@ export default function Collapseable() {
             height={500}
           />
 
-          <div className="absolute z-40 top-[8%] left-[6%] w-[300px]">
-            <p className="text-[35px]">Airfare</p>
+          <div className="absolute z-40 top-[8%] left-[6%] ">
+            <p className="text-[35px] font-poppinsM mt-1">{name}</p>
           </div>
 
           <div className="absolute z-40 right-0 left-0 ml-auto mr-auto bottom-[17%] w-[90%] h-[65%] rounded-[27px]">
             <Image
-              src={"/images/travel-info/image.png"}
+              id="test"
+              src={image}
               alt="image"
               className="w-full h-full"
               objectFit="container"
@@ -41,13 +47,13 @@ export default function Collapseable() {
 
           <div
             onClick={expandMenu}
-            className="absolute z-40 right-[6%] p-5 bottom-[7%] duration-500 ease-out hover:cursor-pointer hover:bottom-[6%]"
+            className="absolute right-[6%] z-[1000000] p-5 bottom-[7%] duration-500 ease-out hover:cursor-pointer hover:bottom-[6%]"
           >
             <DownArrow />
           </div>
 
           <div
-            className={`absolute flex items-start pb-10 justify-center top-[77%] w-[90%] right-0 left-0 ml-auto mr-auto ${
+            className={`absolute flex items-start pb-10 z-[100000] justify-center top-[77%] w-[90%] right-0 left-0 ml-auto mr-auto ${
               isExpanded ? "h-[fit] opacity-100" : "top-[15%] opacity-0"
             } bg-white rounded-br-[30px] rounded-bl-[30px] z-0 duration-300 ease-out`}
           >

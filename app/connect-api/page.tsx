@@ -7,8 +7,10 @@ export default function ConnectAPI() {
   return (
     <main className=" min-h-screen">
       <ConnectBanner />
-      <TravelExperience />
-      <APIFeatures />
+      <div className="absolute z-[10]">
+        <TravelExperience />
+        <APIFeatures />
+      </div>
     </main>
   );
 }
