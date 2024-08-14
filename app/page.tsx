@@ -16,6 +16,7 @@ export default function Home() {
       <LanguageLearner />
       <LanguageTranslator />
       <HowItWorks />
+
       <Footer
         heading={"Travelingo API"}
         description={""}

@@ -4,9 +4,16 @@ import { countriesList } from "@/data/countries";
 import Image from "next/image";
 import { useState } from "react";
 
-export default function PassportOrigin() {
+type Props = {
+  onPassportChange: (destination: string) => void;
+};
+
+export default function PassportOrigin({ onPassportChange }: Props) {
   const [showCountries, setShowCountries] = useState<boolean>(false);
-  const [destination, setDestination] = useState<string>("");
+
+  const handleSelect = (selectedCountry: string) => {
+    onPassportChange(selectedCountry);
+  };
 
   return (
     <div className="container mx-auto flex items-center flex-col">
@@ -38,7 +45,7 @@ export default function PassportOrigin() {
             {countriesList?.map((country, index) => (
               <div
                 onClick={() => {
-                  setDestination(country?.name);
+                  handleSelect(country);
                 }}
                 className="flex gap-x-2 w-full justify-start hover:opacity-50 cursor-pointer"
                 key={index}

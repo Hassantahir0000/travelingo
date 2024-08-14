@@ -5,14 +5,15 @@ export default function Banner() {
     <div className="w-screen h-screen">
       <Image
         src="/images/home/main-bg.png"
-        width={500}
-        height={500}
+        priority
+        width={5000}
+        height={5000}
         className="w-full h-full object-cover"
         alt=""
       />
 
-      <div className="flex justify-center items-center">
-        <div className="  bg-blue-blur/50  absolute bottom-[10rem] py-[1.875rem] px-[2.75rem] rounded-[50px] backdrop-blur-[0.5rem] md:w-[90%] block mx-auto">
+      <div className="flex  justify-center items-center">
+        <div className="container  bg-blue-blur/50  absolute bottom-[10rem] py-[1.875rem] px-[2.75rem] rounded-[50px] backdrop-blur-[0.5rem] md:w-[90%] block mx-auto">
           <div className="md:flex-row flex-col flex">
             <div className=" flex-col justify-center items-center gap-[34px] inline-flex md:w-[70%]">
               <h2 className="self-stretch font-poppinsM text-white text-[2rem] font-normal  leading-normal">
@@ -34,7 +35,7 @@ export default function Banner() {
           </div>
         </div>
 
-        <div className="  bg-blue-blur/50  absolute items-center  bottom-10 py-5 px-[1.75rem] rounded-full backdrop-blur-[0.5rem] md:w-[90%] block mx-auto">
+        <div className="container  bg-blue-blur/50  absolute items-center  bottom-10 py-5 px-[1.75rem] rounded-full backdrop-blur-[0.5rem] md:w-[90%] block mx-auto">
           <div className="flex items-center justify-between">
             <div className="flex ">
               <Image

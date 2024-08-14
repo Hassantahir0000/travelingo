@@ -4,10 +4,16 @@ import { countriesList } from "@/data/countries";
 import Image from "next/image";
 import { useState } from "react";
 
-export default function Origin() {
-  const [showCountries, setShowCountries] = useState<boolean>(false);
-  const [origin, setOrigin] = useState<string>("");
+type Props = {
+  onOriginChange: (destination: string) => void;
+};
 
+export default function Destination({ onOriginChange }: Props) {
+  const [showCountries, setShowCountries] = useState<boolean>(false);
+
+  const handleSelect = (selectedCountry: string) => {
+    onOriginChange(selectedCountry);
+  };
   return (
     <div className="container mx-auto flex items-center flex-col">
       <h2 className="self-stretch text-center font-poppinsM mb-5 text-black text-[5.5rem]">
@@ -38,7 +44,7 @@ export default function Origin() {
             {countriesList?.map((country, index) => (
               <div
                 onClick={() => {
-                  setOrigin(country?.name);
+                  handleSelect(country);
                 }}
                 className="flex gap-x-2 w-full justify-start hover:opacity-50 cursor-pointer"
                 key={index}

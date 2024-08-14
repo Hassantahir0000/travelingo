@@ -1,6 +1,5 @@
 "use client";
 
-import { countriesList } from "@/data/countries";
 import { CircularProgress } from "@nextui-org/react";
 import Image from "next/image";
 import { useState } from "react";
@@ -10,14 +9,29 @@ import PassportOrigin from "./passpor-origin";
 
 export default function StepForm() {
   const [step, setStep] = useState<number>(1);
-  const [showCountries, setShowCountries] = useState<boolean>(false);
   const [destination, setDestination] = useState<string>("");
+  const [origin, setOrigin] = useState<string>("");
+  const [passport, setPassport] = useState<string>("");
+
+  const handleDestinationChange = (value: string) => {
+    setDestination(value);
+  };
+
+  const handleOriginChange = (value: string) => {
+    setOrigin(value);
+  };
+
+  const handlePassportChange = (value: string) => {
+    setPassport(value);
+  };
 
   return (
     <div className="container mx-auto flex items-center flex-col">
-      {step == 1 && <Destination />}
-      {step == 2 && <Origin />}
-      {step == 3 && <PassportOrigin />}
+      {step == 1 && (
+        <Destination onDestinationChange={handleDestinationChange} />
+      )}
+      {step == 2 && <Origin onOriginChange={handleOriginChange} />}
+      {step == 3 && <PassportOrigin onPassportChange={handlePassportChange} />}
 
       <div className="absolute bottom-0 right-0 mr-5 mt-[-2rem] w-fit rounded-full">
         <div className="relative">
