@@ -34,7 +34,7 @@ export default function StepForm() {
       {step == 3 && <PassportOrigin onPassportChange={handlePassportChange} />}
 
       <div className="absolute bottom-0 right-0 mr-5 mt-[-2rem] w-fit rounded-full">
-        <div className="relative">
+        <div className="relative hover:opacity-50 transition-all delay-200 ease-in-out">
           <CircularProgress
             classNames={{
               svg: "w-[7rem] h-[7rem] drop-shadow-lg",
