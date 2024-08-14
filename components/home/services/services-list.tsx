@@ -79,7 +79,7 @@ const ServicesList: FC = () => {
     <div
       ref={ref}
       data-cursor-text
-      className="card-container hello py-8 mb-[50rem] px-10 min-h-screen md:py-1"
+      className="card-container hello py-8 mb-[120vh] px-10 min-h-screen md:py-1"
     >
       {CountriesCards.length > 0 &&
         CountriesCards?.map((country, index) => (

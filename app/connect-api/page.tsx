@@ -1,9 +1,9 @@
 import Image from "next/image";
-import ConnectBanner from "../components/connect-api/banner";
-import TravelExperience from "../components/connect-api/travel-experience";
-import APIFeatures from "../components/connect-api/api-features";
-import ContactUs from "../components/connect-api/contact-us";
-import Footer from "../components/shared/footer";
+import ConnectBanner from "../../components/connect-api/banner";
+import TravelExperience from "../../components/connect-api/travel-experience";
+import APIFeatures from "../../components/connect-api/api-features";
+import ContactUs from "../../components/connect-api/contact-us";
+import Footer from "../../components/shared/footer";
 
 export default function ConnectAPI() {
   return (
