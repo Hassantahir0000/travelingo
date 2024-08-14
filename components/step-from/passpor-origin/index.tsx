@@ -10,9 +10,12 @@ type Props = {
 
 export default function PassportOrigin({ onPassportChange }: Props) {
   const [showCountries, setShowCountries] = useState<boolean>(false);
+  const [passport, setPassport] = useState<string>("");
 
   const handleSelect = (selectedCountry: string) => {
+    setPassport(selectedCountry);
     onPassportChange(selectedCountry);
+    setShowCountries(false);
   };
 
   return (
@@ -27,7 +30,9 @@ export default function PassportOrigin({ onPassportChange }: Props) {
         className="rounded-[40px] relative flex justify-between bg-blue-blur/50 shadow-lg cursor-pointer w-full shadow-blue-blur/50 px-4 md:px-6  h-auto py-3 md:py-6 md:w-[80%] mx-auto  hover:opacity-50 transition-all duration-300 focus-visible:outline-none"
       >
         <p className="font-poppinsM text-black text-start my-auto text-[0.8rem] md:text-[1.3rem] ps-1 md:ps-4">
-          Choose as per your passport for visa info...
+          {passport
+            ? passport
+            : " Choose as per your passport for visa info..."}
         </p>
 
         <Image
@@ -45,7 +50,7 @@ export default function PassportOrigin({ onPassportChange }: Props) {
             {countriesList?.map((country, index) => (
               <div
                 onClick={() => {
-                  handleSelect(country);
+                  handleSelect(country.name);
                 }}
                 className="flex gap-x-2 w-full justify-start hover:opacity-50 cursor-pointer"
                 key={index}
