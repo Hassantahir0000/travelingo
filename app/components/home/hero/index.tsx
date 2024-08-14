@@ -24,7 +24,7 @@ export default function Banner() {
                 Partner!
               </h2>
             </div>
-            <div className=" text-white font-poppinsR  text-md md:w-[30%] mt-5 md:mt-auto">
+            <div className=" text-white font-poppinsR  text-[0.9rem] md:w-[30%] mt-5 md:mt-auto">
               Dive into the heart of each destination with tailored cultural
               insights, visa guidance, and essential travel tips. Our app
               provides in-depth country-specific information to enrich your

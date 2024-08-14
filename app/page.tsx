@@ -5,6 +5,7 @@ import PlanYourTrip from "@/app/components/home/plan";
 import LanguageLearner from "@/app/components/home/language-learner";
 import LanguageTranslator from "@/app/components/home/language-translator";
 import HowItWorks from "@/app/components/home/how-travelingo-works";
+import Footer from "./components/shared/footer";
 
 export default function Home() {
   return (
@@ -15,6 +16,11 @@ export default function Home() {
       <LanguageLearner />
       <LanguageTranslator />
       <HowItWorks />
+      <Footer
+        heading={"Travelingo API"}
+        description={""}
+        buttonLabel={"Get Our API"}
+      />
     </main>
   );
 }
