@@ -1,6 +1,38 @@
+"use client";
+
+import { useAnimation, motion } from "framer-motion";
 import Image from "next/image";
+import { useEffect } from "react";
 
 export default function Banner() {
+  const welcomeBannerAnimation = useAnimation();
+  const playstoreAnimation = useAnimation();
+
+  useEffect(() => {
+    const makeHeadingAnimation = async () => {
+      welcomeBannerAnimation.start({
+        opacity: 1,
+        y: 0,
+        transition: {
+          type: "bounce",
+          duration: 0.2,
+        },
+      });
+
+      playstoreAnimation.start({
+        opacity: 1,
+        y: 0,
+        transition: {
+          type: "bounce",
+          duration: 0.2,
+          delay: 0.4,
+        },
+      });
+    };
+
+    makeHeadingAnimation();
+  }, []);
+
   return (
     <div className="w-screen h-screen">
       <Image
@@ -13,7 +45,11 @@ export default function Banner() {
       />
 
       <div className="flex  justify-center items-center">
-        <div className="container  bg-blue-blur/50  absolute bottom-[10rem] py-[1.875rem] px-[2.75rem] rounded-[50px] backdrop-blur-[0.5rem] md:w-[90%] block mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={welcomeBannerAnimation}
+          className="container  bg-blue-blur/50  absolute bottom-[10rem] py-[1.875rem] px-[2.75rem] rounded-[50px] backdrop-blur-[0.5rem] md:w-[90%] block mx-auto"
+        >
           <div className="md:flex-row flex-col flex">
             <div className=" flex-col justify-center items-center gap-[34px] inline-flex md:w-[70%]">
               <h2 className="self-stretch font-poppinsM text-white text-[2rem] font-normal  leading-normal">
@@ -33,9 +69,13 @@ export default function Banner() {
               confidently with every detail you need right at your fingertips.
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="container  bg-blue-blur/50  absolute items-center  bottom-10 py-5 px-[1.75rem] rounded-full backdrop-blur-[0.5rem] md:w-[90%] block mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={playstoreAnimation}
+          className="container  bg-blue-blur/50  absolute items-center  bottom-10 py-5 px-[1.75rem] rounded-full backdrop-blur-[0.5rem] md:w-[90%] block mx-auto"
+        >
           <div className="flex items-center justify-between">
             <div className="flex ">
               <Image
@@ -58,7 +98,7 @@ export default function Banner() {
               className="h-10"
             />
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
