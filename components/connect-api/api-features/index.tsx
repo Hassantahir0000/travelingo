@@ -1,19 +1,44 @@
+"use client";
+
 import Image from "next/image";
+import { useInView } from "react-intersection-observer";
+import { useAnimation, motion } from "framer-motion";
 
 export default function APIFeatures() {
+  const animation = (delay: number) => ({
+    offscreen: {
+      opacity: 0,
+      y: 30, // Use the parameter here
+    },
+    onscreen: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        ease: "easeOut",
+        duration: 0.2,
+        delay: delay,
+      },
+    },
+  });
+
   return (
-    <div className="w-screen min-h-screen px-10  h-auto bg-light-sky-blue  pt-2 pb-[20rem] mt-[-4rem] rounded-tl-[3rem] rounded-tr-[3rem]">
+    <motion.section
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ amount: 0.2 }}
+      className="w-screen min-h-screen px-10  h-auto bg-light-sky-blue  pt-2 pb-[20rem] mt-[-4rem] rounded-tl-[3rem] rounded-tr-[3rem]"
+    >
       <div className="container mx-auto">
-        <h2 className="self-stretch font-poppinsM text-black text-[4.25rem] mt-[68px] font-normal  leading-normal">
+        <motion.h2 variants={animation(0)} className="self-stretch font-poppinsM text-black text-[4.25rem] mt-[68px] font-normal  leading-normal">
           Our API&apos;s Features
-        </h2>
-        <p className="self-stretch  text-black text-[1.9rem] font-poppinsR  font-normal mt-4 ml-4 mb-5 leading-[2.5rem]">
+        </motion.h2>
+        <motion.p variants={animation(0.2)} className="self-stretch  text-black text-[1.9rem] font-poppinsR  font-normal mt-4 ml-4 mb-5 leading-[2.5rem]">
           Your all-in-one solution for Visa Information, Weather, Culture, and
           more!
-        </p>
+        </motion.p>
 
         <div className="flex flex-col gap-y-5 mt-16">
-          <div className="bg-white rounded-[30px] px-[40px] py-[30px]">
+          <motion.div variants={animation(0.4)} className="bg-white rounded-[30px] px-[40px] py-[30px]">
             <p className="self-stretch  text-black text-[2.2rem] font-poppinsM   ml-4">
               Visa API
             </p>
@@ -25,9 +50,9 @@ export default function APIFeatures() {
               health and insurance requirements. Additionally, it offers
               guidance on visa extensions and rules regarding overstaying.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="bg-white rounded-[30px] px-[40px] py-[30px]">
+          <motion.div variants={animation(0.6)} className="bg-white rounded-[30px] px-[40px] py-[30px]">
             <p className="self-stretch  text-black text-[2.2rem] font-poppinsM   ml-4">
               Travel Budget API
             </p>
@@ -41,9 +66,9 @@ export default function APIFeatures() {
               prices, and gift shopping tips. Commute: Average fare for
               commuting within the destination.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="bg-white rounded-[30px] px-[40px] py-[30px]">
+          <motion.div variants={animation(0.8)} className="bg-white rounded-[30px] px-[40px] py-[30px]">
             <p className="self-stretch  text-black text-[2.2rem] font-poppinsM    ml-4">
               Weather API
             </p>
@@ -55,9 +80,9 @@ export default function APIFeatures() {
               hour, weather conditions (such as sunny, rainy, etc.), weather
               pictures, humidity levels, and cloud cover.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="bg-white rounded-[30px] px-[40px] py-[30px]">
+          <motion.div variants={animation(1)} className="bg-white rounded-[30px] px-[40px] py-[30px]">
             <p className="self-stretch  text-black text-[2.2rem] font-poppinsM    ml-4">
               Food API
             </p>
@@ -69,9 +94,9 @@ export default function APIFeatures() {
               types of restaurants, ensuring that users can find suitable dining
               options that match their preferences.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="bg-white rounded-[30px] px-[40px] py-[30px]">
+          <motion.div variants={animation(1.2)} className="bg-white rounded-[30px] px-[40px] py-[30px]">
             <p className="self-stretch  text-black text-[2.2rem] font-poppinsM   ml-4">
               Local Customs API
             </p>
@@ -83,9 +108,9 @@ export default function APIFeatures() {
               saying, and areas to avoid, helping travelers to navigate social
               interactions respectfully and safely.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="bg-white rounded-[30px] px-[40px] py-[30px]">
+          <motion.div variants={animation(1.4)} className="bg-white rounded-[30px] px-[40px] py-[30px]">
             <p className="self-stretch  text-black text-[2.2rem] font-poppinsM    ml-4">
               Flight API
             </p>
@@ -99,9 +124,9 @@ export default function APIFeatures() {
               ensuring they have access to relevant information about their
               destinations.
             </p>
-          </div>
+          </motion.div>
         </div>
       </div>
-    </div>
+    </motion.section>
   );
 }
