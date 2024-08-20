@@ -26,9 +26,9 @@ export default function HowItWorks() {
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ amount: 0.3 }}
-      className="w-screen shadow-[0px_0px_50px_rgba(255,_255,_255,_0.46)] min-h-screen h-auto bg-sky-blue px-12 pt-2 pb-[20rem] mt-[-8rem] rounded-tl-[3%] rounded-tr-[3%] "
+      className="w-screen how_travelingo_container shadow-[0px_0px_50px_rgba(255,_255,_255,_0.46)] min-h-screen h-auto bg-sky-blue px-12 pt-2 pb-[20rem] mt-[-8rem] rounded-tl-[3%] rounded-tr-[3%] "
     >
-      <div className="container flex relative   md:flex-row mx-auto">
+      <div className="flex relative how_travelingo_works_container">
         <Image
           className="absolute right-0 w-[50%]"
           src={"/images/blob.svg"}
@@ -37,12 +37,12 @@ export default function HowItWorks() {
           alt=""
         />
 
-        <div>
-          <motion.h2 variants={animation(0.2)} className="self-stretch  text-black text-[6.25rem] mt-[68px] font-poppinsM  font-normal  leading-[6.5rem] w-[40%]">
+        <div className="how_to_travel_heading">
+          <motion.h2 variants={animation(0.2)} className="self-stretch section_heading text-black text-[6.25rem] mt-[68px] font-poppinsM  font-normal  leading-[6.5rem] w-[40%]">
             How <br></br> Travelingo <br></br> Works
           </motion.h2>
 
-          <motion.button variants={animation(0.4)} className=" bg-black rounded-full px-6 w-full items-center gap-x-5 py-5 mt-[3rem] text-white flex justify-between">
+          <motion.button variants={animation(0.4)} className=" bg-black rounded-full how_travelling_works_play_store_btn px-6 w-full items-center gap-x-5 py-5 mt-[3rem] text-white flex justify-between">
             <div className="flex gap-x-5">
               <Image
                 src={"/icons/play-button.svg"}
@@ -58,9 +58,9 @@ export default function HowItWorks() {
           </motion.button>
         </div>
 
-        <div className="wrapper flex flex-col z-[10] ml-auto w-[50%] gap-y-5 mt-8">
-          <motion.div variants={animation(0.6)} className="rounded-[50px] border-4 border-black flex gap-x-[5rem] bg-white/10 px-4 py-1 relative">
-            <h2 className="self-stretch pl-4  font-poppinsM  text-black m-auto text-[6.5rem]   font-normal  leading-normal">
+        <div className="how_to_travel_panels_container flex flex-col z-[10] ml-auto w-[50%] gap-y-5 mt-8">
+          <motion.div variants={animation(0.6)} className="rounded-[50px] how_to_travel_panel border-4 border-black flex flex-row gap-x-[2rem] bg-white/10 px-4 py-1 relative">
+            <h2 className="self-stretch pl-4 font-poppinsM how_travel_panel_number text-black m-auto text-[6.5rem] font-normal leading-normal">
               01
             </h2>
             <p className="self-stretch  text-black text-[1.2rem] font-poppinsR m-auto font-normal pr-[5rem]">
@@ -76,8 +76,8 @@ export default function HowItWorks() {
               alt=""
             />
           </motion.div>
-          <motion.div variants={animation(0.8)} className="rounded-[50px] border-4 border-black flex gap-x-[5rem] bg-white/10 px-4 py-1 relative">
-            <h2 className="self-stretch pl-4 font-poppinsM text-black m-auto text-[6.5rem]   font-normal  leading-normal">
+          <motion.div variants={animation(0.8)} className="how_to_travel_panel rounded-[50px] border-4 border-black flex gap-x-[2rem] bg-white/10 px-4 py-1 relative">
+            <h2 className="self-stretch pl-4 font-poppinsM how_travel_panel_number text-black m-auto text-[6.5rem]   font-normal  leading-normal">
               02
             </h2>
             <p className="self-stretch  text-black text-[1.2rem] font-poppinsR m-auto font-normal pr-[5rem]">
@@ -93,8 +93,8 @@ export default function HowItWorks() {
               alt=""
             />
           </motion.div>
-          <motion.div variants={animation(1)} className="rounded-[50px] border-4 border-black flex gap-x-[5rem] bg-white/10 px-4 py-1 relative">
-            <h2 className="self-stretch pl-4 font-poppinsM  text-black m-auto text-[6.5rem]   font-normal  leading-normal">
+          <motion.div variants={animation(1)} className="how_to_travel_panel rounded-[50px] border-4 border-black flex gap-x-[2rem] bg-white/10 px-4 py-1 relative">
+            <h2 className="self-stretch pl-4 font-poppinsM how_travel_panel_number text-black m-auto text-[6.5rem]   font-normal  leading-normal">
               03
             </h2>
             <p className="self-stretch font-poppinsR text-black text-[1.2rem] m-auto font-normal pr-[5rem]">
@@ -110,8 +110,8 @@ export default function HowItWorks() {
               alt=""
             />
           </motion.div>
-          <motion.div variants={animation(1.2)} className="rounded-[50px] border-4 border-black flex gap-x-[5rem] bg-white/10 px-4 py-1 relative">
-            <h2 className="self-stretch pl-4 font-poppinsM text-black m-auto text-[6.5rem]   font-normal  leading-normal">
+          <motion.div variants={animation(1.2)} className="how_to_travel_panel rounded-[50px] border-4 border-black flex gap-x-[2rem] bg-white/10 px-4 py-1 relative">
+            <h2 className="self-stretch pl-4 font-poppinsM how_travel_panel_number text-black m-auto text-[6.5rem]   font-normal  leading-normal">
               04
             </h2>
             <p className="self-stretch font-poppinsR text-black text-[1.2rem] m-auto font-normal pr-[5rem]">
@@ -127,8 +127,8 @@ export default function HowItWorks() {
               alt=""
             />
           </motion.div>
-          <motion.div variants={animation(1.4)} className="rounded-[50px] border-4 border-black flex gap-x-[5rem] bg-white/10 px-4 py-1 relative">
-            <h2 className="self-stretch pl-4 font-poppinsM text-black m-auto text-[6.5rem]   font-normal  leading-normal">
+          <motion.div variants={animation(1.4)} className="how_to_travel_panel rounded-[50px] border-4 border-black flex gap-x-[2rem] bg-white/10 px-4 py-1 relative">
+            <h2 className="self-stretch pl-4 font-poppinsM how_travel_panel_number text-black m-auto text-[6.5rem]   font-normal  leading-normal">
               05
             </h2>
             <p className="self-stretch font-poppinsR text-black text-[1.2rem] m-auto font-normal pr-[5rem]">

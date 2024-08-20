@@ -26,24 +26,24 @@ export default function APIFeatures() {
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ amount: 0.2 }}
-      className="w-screen min-h-screen px-10  h-auto bg-light-sky-blue  pt-2 pb-[20rem] mt-[-4rem] rounded-tl-[3rem] rounded-tr-[3rem]"
+      className="w-screen min-h-screen px-10 connect_api_container h-auto bg-light-sky-blue  pt-2 pb-[20rem] mt-[-4rem] rounded-tl-[3rem] rounded-tr-[3rem]"
     >
       <div className="container mx-auto">
-        <motion.h2 variants={animation(0)} className="self-stretch font-poppinsM text-black text-[4.25rem] mt-[68px] font-normal  leading-normal">
+        <motion.h2 variants={animation(0)} className="self-stretch section_heading font-poppinsM text-black text-[4.25rem] mt-[68px] font-normal  leading-normal">
           Our API&apos;s Features
         </motion.h2>
-        <motion.p variants={animation(0.2)} className="self-stretch  text-black text-[1.9rem] font-poppinsR  font-normal mt-4 ml-4 mb-5 leading-[2.5rem]">
+        <motion.p variants={animation(0.2)} className="self-stretch section_para  text-black text-[1.9rem] font-poppinsR  font-normal mt-4 ml-4 mb-5 leading-[2.5rem]">
           Your all-in-one solution for Visa Information, Weather, Culture, and
           more!
         </motion.p>
 
         <div className="flex flex-col gap-y-5 mt-16">
-          <motion.div variants={animation(0.4)} className="bg-white rounded-[30px] px-[40px] py-[30px]">
-            <p className="self-stretch  text-black text-[2.2rem] font-poppinsM   ml-4">
+          <motion.div variants={animation(0.4)} className="bg-white api_feature_panel rounded-[30px] px-[40px] py-[30px]">
+            <p className="self-stretch section_heading text-black text-[2.2rem] font-poppinsM   ml-4">
               Visa API
             </p>
 
-            <p className="self-stretch  text-black text-[1.2rem] mt-3 font-poppinsR ml-4">
+            <p className="self-stretch section_para text-black text-[1.2rem] mt-3 font-poppinsR ml-4">
               The Visa API is essential for travelers needing information about
               entry requirements. It details the documents required for visa
               applications, provides embassy contact information, and covers
@@ -52,12 +52,12 @@ export default function APIFeatures() {
             </p>
           </motion.div>
 
-          <motion.div variants={animation(0.6)} className="bg-white rounded-[30px] px-[40px] py-[30px]">
-            <p className="self-stretch  text-black text-[2.2rem] font-poppinsM   ml-4">
+          <motion.div variants={animation(0.6)} className="bg-white api_feature_panel rounded-[30px] px-[40px] py-[30px]">
+            <p className="self-stretch section_heading text-black text-[2.2rem] font-poppinsM   ml-4">
               Travel Budget API
             </p>
 
-            <p className="self-stretch  text-black text-[1.2rem] mt-3 font-poppinsR ml-4">
+            <p className="self-stretch section_para text-black text-[1.2rem] mt-3 font-poppinsR ml-4">
               The Travel Budget API assists travelers in planning their
               expenses. It covers various aspects such as: Lodging/Hotel:
               Information about hotel names, fare ranges, and star ratings. Food
@@ -68,12 +68,12 @@ export default function APIFeatures() {
             </p>
           </motion.div>
 
-          <motion.div variants={animation(0.8)} className="bg-white rounded-[30px] px-[40px] py-[30px]">
-            <p className="self-stretch  text-black text-[2.2rem] font-poppinsM    ml-4">
+          <motion.div variants={animation(0.8)} className="bg-white api_feature_panel rounded-[30px] px-[40px] py-[30px]">
+            <p className="self-stretch section_heading text-black text-[2.2rem] font-poppinsM    ml-4">
               Weather API
             </p>
 
-            <p className="self-stretch  text-black text-[1.2rem] mt-3 font-poppinsR ml-4">
+            <p className="self-stretch section_para text-black text-[1.2rem] mt-3 font-poppinsR ml-4">
               The Weather API provides comprehensive weather information for a
               given country or city. This includes the name of the country,
               local time, temperature in Celsius, wind speed in kilometers per
@@ -82,12 +82,12 @@ export default function APIFeatures() {
             </p>
           </motion.div>
 
-          <motion.div variants={animation(1)} className="bg-white rounded-[30px] px-[40px] py-[30px]">
-            <p className="self-stretch  text-black text-[2.2rem] font-poppinsM    ml-4">
+          <motion.div variants={animation(1)} className="bg-white api_feature_panel rounded-[30px] px-[40px] py-[30px]">
+            <p className="self-stretch section_heading text-black text-[2.2rem] font-poppinsM    ml-4">
               Food API
             </p>
 
-            <p className="self-stretch  text-black text-[1.2rem] mt-3 font-poppinsR ml-4">
+            <p className="self-stretch section_para text-black text-[1.2rem] mt-3 font-poppinsR ml-4">
               The Food API helps travelers explore the culinary scene of their
               destination. It lists the best bars and cafes, street food
               options, fine dining establishments, snack spots, and various
@@ -96,12 +96,12 @@ export default function APIFeatures() {
             </p>
           </motion.div>
 
-          <motion.div variants={animation(1.2)} className="bg-white rounded-[30px] px-[40px] py-[30px]">
-            <p className="self-stretch  text-black text-[2.2rem] font-poppinsM   ml-4">
+          <motion.div variants={animation(1.2)} className="bg-white api_feature_panel rounded-[30px] px-[40px] py-[30px]">
+            <p className="self-stretch section_heading text-black text-[2.2rem] font-poppinsM   ml-4">
               Local Customs API
             </p>
 
-            <p className="self-stretch  text-black text-[1.2rem] mt-3 font-poppinsR ml-4">
+            <p className="self-stretch section_para text-black text-[1.2rem] mt-3 font-poppinsR ml-4">
               The Local Customs API provides crucial information on the social
               and cultural etiquette of a destination. It includes do&apos;s and
               don&apos;ts, local etiquettes, dress codes, things to avoid
@@ -110,12 +110,12 @@ export default function APIFeatures() {
             </p>
           </motion.div>
 
-          <motion.div variants={animation(1.4)} className="bg-white rounded-[30px] px-[40px] py-[30px]">
-            <p className="self-stretch  text-black text-[2.2rem] font-poppinsM    ml-4">
+          <motion.div variants={animation(1.4)} className="bg-white api_feature_panel rounded-[30px] px-[40px] py-[30px]">
+            <p className="self-stretch section_heading text-black text-[2.2rem] font-poppinsM    ml-4">
               Flight API
             </p>
 
-            <p className="self-stretch  text-black text-[1.2rem] mt-3 font-poppinsR ml-4">
+            <p className="self-stretch section_para text-black text-[1.2rem] mt-3 font-poppinsR ml-4">
               The Flights API provides essential information regarding air
               travel. It includes details about departure and arrival locations
               and the airfare costs, helping travelers to plan and book their

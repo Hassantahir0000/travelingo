@@ -49,13 +49,13 @@ export default function PlanYourTrip() {
         className="container mx-auto"
       >
         <h2
-          className="self-stretch font-poppinsM text-black text-[4.25rem] mt-[68px] font-normal  leading-normal"
+          className="self-stretch section_heading font-poppinsM text-black text-[4.25rem] mt-[68px] font-normal  leading-normal"
         >
           Plan Your Trip
         </h2>
 
         <p
-          className="self-stretch  text-black text-[1.9rem] font-poppinsR  font-normal mt-4 mb-5 leading-[2.5rem]"
+          className="self-stretch section_para  text-black text-[1.9rem] font-poppinsR  font-normal mt-4 mb-5 leading-[2.5rem]"
         >
           Lorem ipsum dolor sit amet consectetur. Tristique cursus faucibus
           aliquet amet massa. Viverra elit tempor libero sit mattis ut ac
@@ -65,7 +65,7 @@ export default function PlanYourTrip() {
 
         <ServicesList />
 
-        <div className="w-[90%] mx-auto mt-5">
+        <div className="w-[100%] mx-auto mt-5">
           <Image
             src={"/images/home/plan-trip/map.svg"}
             width={1000}

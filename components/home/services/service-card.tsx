@@ -13,7 +13,7 @@ const ServiceCard: FC<CardProps> = ({ data }) => {
         <div className="justify-center text-center text-nk-black w-full">
           <div
             rel="noopener noreferrer"
-            className="block relative sm:w-1/2 lg:w-full min-h-[18.75rem] lg:min-h-[29rem] 2xl:min-h-[36rem] w-full h-full rounded-xl overflow-hidden items-center justify-center my-auto"
+            className="block relative service_card min-h-[18.75rem] lg:min-h-[29rem] 2xl:min-h-[36rem] w-full h-full rounded-xl overflow-hidden items-center justify-center my-auto"
           >
             <Image
               src={data.image}
