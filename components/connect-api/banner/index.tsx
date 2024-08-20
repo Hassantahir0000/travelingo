@@ -37,17 +37,17 @@ export default function ConnectBanner() {
       />
 
       <div className="flex justify-center items-center">
-        <motion.div variants={animation(0)} className=" bg-blue-blur/50  absolute bottom-[2rem] py-[2.875rem] px-[2.75rem] rounded-[50px] backdrop-blur-[0.5rem] md:w-[90%] block mx-auto">
-          <div className="md:flex-row flex-col flex">
-            <div className=" flex-col justify-center items-center inline-flex md:w-[70%]">
-              <h2 className="self-stretch font-poppinsM  text-white text-[5.5rem]">
+        <motion.div variants={animation(0)} className="banner_first_panel bg-blue-blur/50  absolute bottom-[2rem] py-[2.875rem] px-[2.75rem] rounded-[50px] backdrop-blur-[0.5rem] md:w-[90%] block mx-auto">
+          <div className="banner_heading_main_container flex-col flex">
+            <div className="banner_heading_container flex-col justify-center items-center inline-flex md:w-[70%]">
+              <h2 className="banner_heading self-stretch font-poppinsM  text-white text-[5.5rem]">
                 Travelingo
               </h2>
-              <h2 className="self-stretch font-poppinsM  text-white text-[5.5rem]">
+              <h2 className="self-stretch banner_heading font-poppinsM  text-white text-[5.5rem]">
                 Connect API
               </h2>
             </div>
-            <div className=" text-white font-poppinsR  text-md md:w-[30%] mt-5 md:mt-auto">
+            <div className="banner_para text-white font-poppinsR  text-md md:w-[30%] mt-5 md:mt-auto">
               Integrate comprehensive travel information effortlessly with
               Travelingo Connect API. Access visa details, cultural insights,
               travel budgeting, and language learning resources—all in one
