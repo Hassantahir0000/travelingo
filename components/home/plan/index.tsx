@@ -43,10 +43,9 @@ export default function PlanYourTrip() {
   };
 
   return (
-    <div className="w-screen min-h-screen h-auto bg-light-sky-blue px-8 pt-2 pb-[20rem] mt-[-8rem] rounded-tl-[3rem] rounded-tr-[3rem]">
+    <div className="w-screen centralise min-h-screen h-auto bg-light-sky-blue px-8 pt-2 pb-[20rem] mt-[-8rem] rounded-tl-[3rem] rounded-tr-[3rem]">
       <div
-  
-        className="container mx-auto"
+        className="container max_width_container mx-auto"
       >
         <h2
           className="self-stretch section_heading font-poppinsM text-black text-[4.25rem] mt-[68px] font-normal  leading-normal"
@@ -55,7 +54,7 @@ export default function PlanYourTrip() {
         </h2>
 
         <p
-          className="self-stretch section_para  text-black text-[1.9rem] font-poppinsR  font-normal mt-4 mb-5 leading-[2.5rem]"
+          className="self-stretch section_para mb-16 text-black text-[1.9rem] font-poppinsR  font-normal mt-4 leading-[2.5rem]"
         >
           Lorem ipsum dolor sit amet consectetur. Tristique cursus faucibus
           aliquet amet massa. Viverra elit tempor libero sit mattis ut ac

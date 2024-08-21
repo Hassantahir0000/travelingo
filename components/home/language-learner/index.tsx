@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 import { useAnimation, motion } from "framer-motion";
+import blob1 from "../../../public/images/language-translator/language_translator_blob_1.png";
+import blob2 from "../../../public/images/language-translator/language_translator_blob_2.png";
 
 export default function LanguageLearner() {
 
@@ -27,9 +29,12 @@ export default function LanguageLearner() {
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ amount: 0.2 }}
-      className="w-screen language_learner_container shadow-[0px_0px_50px_rgba(255,_255,_255,_0.46)] min-h-screen h-auto bg-maya-blue px-12 pt-2 pb-[20rem] mt-[-8rem] rounded-tl-[3%] rounded-tr-[3%] "
+      className="w-screen relative centralise language_learner_container min-h-screen h-auto bg-maya-blue px-12 pt-2 pb-[20rem] mt-[-8rem] rounded-tl-[3%] rounded-tr-[3%] "
     >
-      <div className="container mx-auto">
+
+      <Image src={blob1} alt="blob_1" className="absolute w-[40%] top-0 right-0 z-0"/>
+      <Image src={blob2} alt="blob_2" className="absolute w-[80%] bottom-0 left-0 z-0"/>
+      <div className="container mx-auto z-10 max_width_container relative">
         <motion.h2 variants={animation(0)} className="self-stretch section_heading font-poppinsM text-black text-[4.25rem] mt-[68px] font-normal  leading-normal">
           Language Learner
         </motion.h2>
@@ -41,17 +46,17 @@ export default function LanguageLearner() {
           consequat faucibus tortor amet est.
         </motion.p>
 
-        <motion.div className="bg-dodger-blue language_expert_container p-10 rounded-[20px] shadow-[0px_0px_50px_rgba(255,_255,_255,_0.46)] mt-[5rem]">
+        <motion.div className="bg-dodger-blue language_expert_container p-10 rounded-[20px] shadow-[0_35px_60px_-15px_rgba(24,161,255,0.9)] mt-[5rem]">
           <div className="flex flex-row gap-x-[30px] becoming_language_expert_container">
             <div className="w-[55%] becoming_language_expert_heading">
-              <motion.h2 variants={animation(0.6)} className="self-stretch section_heading font-poppinsM text-black text-[4.25rem] mt-5 font-normal  leading-[4.5rem]">
+              <motion.h2 variants={animation(0.6)} className="self-stretch section_heading font-poppinsR text-black text-[4.25rem] mt-5 font-normal  leading-[4.5rem]">
                 Become a Language Expert with
               </motion.h2>
               <motion.h2 variants={animation(0.8)} className="self-stretch section_heading font-poppinsB text-black text-[4.25rem] my-5 font-normal  leading-[4.5rem]">
                 Travelingo
               </motion.h2>
 
-              <motion.p variants={animation(1)} className="self-stretch section_para font-poppinsR  text-black text-[1.5rem]  font-normal  leading-[2.5rem]">
+              <motion.p variants={animation(1)} className="self-stretch section_para font-poppinsL  text-black text-[1.5rem]  font-normal  leading-[2.5rem]">
                 Lorem ipsum dolor sit amet consectetur. Auctor rhoncus at
                 bibendum sed ac urna dui aliquet aliquam. Amet leo habitant amet
                 quam suspendisse donec. Sit aliquet elementum elit sit sit
@@ -97,8 +102,8 @@ export default function LanguageLearner() {
             </div>
           </div>
           <div className="flex justify-between items-baseline language_learner_btns">
-            <button className="border-2 ll_flient_btn border-black rounded-full px-6 w-fit items-center h-fit gap-x-5 py-3  text-black flex justify-between">
-              <p className="text-black font-poppinsR">Get Fluent</p>
+            <button className="border-2 ll_flient_btn border-white rounded-full px-6 w-fit items-center h-fit gap-x-5 py-3  text-black flex justify-between">
+              <p className="text-white font-poppinsR">Get Fluent</p>
 
               <Image
                 src={"/icons/arrow-small.svg"}
@@ -108,8 +113,8 @@ export default function LanguageLearner() {
               />
             </button>
 
-            <button className="border-2 ll_get_api_btn border-black rounded-full px-6 w-[30rem] items-center gap-x-5 py-3 mt-[6rem] text-black flex justify-between">
-              <p className="text-black text-[1.5rem]">Get Our API</p>
+            <button className="border-2 ll_get_api_btn border-white rounded-full px-6 w-[30rem] items-center gap-x-5 py-3 mt-[6rem] text-black flex justify-between">
+              <p className="text-white text-[1.5rem]">Get Our API</p>
 
               <Image
                 src={"/icons/arrow-black.svg"}
