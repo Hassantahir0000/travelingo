@@ -8,7 +8,7 @@ import TravelInfoCards from "../../components/travel-info/travel-info-cards";
 import VisaInfo from "../../components/travel-info/visa-info";
 import Culture from "@/components/travel-info/culture";
 import LocalCustoms from "@/components/travel-info/local-customs";
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { BounceLoader } from "react-spinners";
 import {
   fetchCulture,
@@ -20,7 +20,7 @@ import {
 } from "@/api/travel-info";
 import { useSearchParams } from "next/navigation";
 
-export default function TravelInfo() {
+function TravelInfoContent() {
   const searchParams = useSearchParams();
   const origin = searchParams.get("origin");
   const destination = searchParams.get("destination");
@@ -93,7 +93,7 @@ export default function TravelInfo() {
   }, [destination]);
 
   return (
-    <main className=" min-h-screen">
+    <main className="min-h-screen">
       {loading ? (
         <div className="h-screen w-screen flex flex-col mx-auto my-auto justify-center items-center">
           <BounceLoader color="#04d9ff" />
@@ -101,7 +101,7 @@ export default function TravelInfo() {
         </div>
       ) : (
         <>
-          <TravelInfoBanner destination={destination}/>
+          <TravelInfoBanner destination={destination} />
           <div className="absolute z-[10]">
             <TravelInfoCards />
             {visaInfo && visaInfo?.length && <VisaInfo data={visaInfo} />}
@@ -124,5 +124,13 @@ export default function TravelInfo() {
         </>
       )}
     </main>
+  );
+}
+
+export default function TravelInfo() {
+  return (
+    <Suspense fallback={<div>Loading page...</div>}>
+      <TravelInfoContent />
+    </Suspense>
   );
 }
