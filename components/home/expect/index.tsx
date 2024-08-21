@@ -79,30 +79,30 @@ export default function WhatToExpect() {
       whileInView="onscreen"
       viewport={{ amount: 0.2 }}
       ref={ref}
-      className="w-screen min-h-screen h-auto bg-pale-cyan px-12 pt-2 pb-[20rem]"
+      className="w-screen min-h-screen expect_container h-auto bg-pale-cyan px-12 pt-2 pb-[20rem]"
     >
-      <div className="container mx-auto">
-        <h2 className="self-stretch font-poppinsM text-black text-[4.25rem] mt-[68px] mb-[98px] font-normal  leading-normal">
+      <div className="w-full">
+        <h2 className="self-stretch font-poppinsM text-black text-[4.25rem] mt-[68px] mb-[98px] font-normal section_heading leading-normal">
           What to Expect
         </h2>
 
-        <div className="flex md:flex-row flex-col gap-x-4">
-          <div className="flex flex-col gap-y-4 w-[70%]">
+        <div className="flex flex-row gap-x-4 extent_panels_container">
+          <div className="flex flex-col gap-y-4 expect_left_panel_container w-[70%]">
             <motion.div
               variants={panel1Animation}
-              className="bg-white rounded-[50px] px-8 py-5 flex flex-col md:flex-row justify-center"
+              className="bg-white expect_panel_1 rounded-[50px] px-8 py-5 flex flex-col md:flex-row justify-center"
             >
-              <div className="flex flex-col mb-auto md:w-[60%] pt-4">
-                <h2 className="self-stretch font-poppinsM  text-black text-[2.5rem] font-normal leading-[3rem] ">
+              <div className="flex flex-col expect_panel_desc">
+                <h2 className="expect_panel_heading self-stretch font-poppinsM  text-black text-[2.5rem] font-normal leading-[3rem] ">
                   Your Perfect Trip <br></br> Planner
                 </h2>
-                <div className=" text-black text-[1.4rem] font-poppinsL mt-5">
+                <div className="expect_panel_para text-black text-[1.4rem] font-poppinsL mt-5">
                   Travel planning made easy, with tailored travel information
                   from visa requirements to cultural dos and don&apos;ts,
                   ensuring you re well-prepared for any journey.
                 </div>
               </div>
-              <div className="md:w-[40%]">
+              <div className="my-auto md:w-[40%]">
                 <Image
                   src={"/images/home/what-to-expect/perfect-trip.png"}
                   width={400}
@@ -113,32 +113,32 @@ export default function WhatToExpect() {
               </div>
             </motion.div>
 
-            <div className="flex flex-row gap-x-4">
+            <div className="flex expect_lower_panel_container flex-row gap-x-4">
               <motion.div
                 variants={panel3Animation}
-                className="bg-white rounded-[50px] h-[80%] w-[33%]"
+                className="expect_panel_3 expect_panel_heading bg-white rounded-[50px] h-[80%] w-[33%]"
               ></motion.div>
               <motion.div
-                variants={panel4Animation}
-                className="bg-white w-[67%] flex flex-row rounded-[50px] pl-8 py-6 relative "
+                variants={panel2Animation}
+                className="bg-white expect_panel_4 w-[67%] flex flex-row rounded-[50px] pl-8 py-6 relative "
               >
-                <div className="flex flex-col w-[60%] mb-auto">
-                  <h2 className="self-stretch font-poppinsM  text-black text-[2.5rem] font-normal leading-[3rem] ">
+                <div className="flex flex-col w-[60%] expect_panel_desc">
+                  <h2 className="expect_panel_heading self-stretch font-poppinsM  text-black text-[2.5rem] font-normal leading-[3rem] ">
                     Break Language Barriers
                   </h2>
-                  <div className=" text-black text-[1.4rem] font-poppinsL mt-5">
+                  <div className="expect_panel_para text-black text-[1.4rem] font-poppinsL mt-5">
                     Communicate without borders, providing accurate and quick
                     translations for everyday conversations, enhancing both
                     personal and business communications.
                   </div>
                 </div>
-                <div className="mt-auto w-[50%]">
+                <div className="w-[50%] my-auto">
                   <Image
                     src={"/images/home/what-to-expect/language-barrier.png"}
                     width={500}
                     height={500}
                     alt=""
-                    className=" mt-[10rem] w-[18rem] bottom-0 right-0"
+                    className="mt-[10rem] w-[18rem] my-auto bottom-0 right-0"
                   />
                 </div>
               </motion.div>
@@ -146,14 +146,14 @@ export default function WhatToExpect() {
           </div>
 
           <motion.div
-            variants={panel2Animation}
-            className="bg-white rounded-[50px] p-8 flex flex-col justify-center w-[30%] h-fit"
+            variants={panel3Animation}
+            className="bg-white expect_panel_2 rounded-[50px] p-8 flex flex-col justify-center w-[30%] h-fit"
           >
-            <div className="flex flex-col mb-auto">
-              <h2 className="self-stretch font-poppinsM  text-black text-[2.5rem] font-normal leading-[3rem] ">
+            <div className="flex flex-col expect_panel_desc">
+              <h2 className="self-stretch font-poppinsM expect_panel_heading text-black text-[2.5rem] font-normal leading-[3rem] ">
                 Speak and Sound Like Locals
               </h2>
-              <div className=" text-black text-[1.4rem] font-poppinsL mt-5">
+              <div className="expect_panel_para text-black text-[1.4rem] font-poppinsL mt-5">
                 Travel planning made easy, with tailored travel information from
                 visa requirements to cultural dos and don&apos;ts, ensuring you
                 re well-prepared for any journey.

@@ -27,20 +27,20 @@ export default function VisaInfo() {
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ amount: 0.2 }}
-      className="w-screen z-[100]   shadow-[0px_0px_50px_rgba(255,_255,_255,_0.46)] h-auto bg-light-sky-blue px-12 pt-[3rem] pb-[20rem] mt-[-12rem] rounded-[4rem] "
+      className="w-screen z-[100] visa_info_container visa_info_container shadow-[0px_0px_50px_rgba(255,_255,_255,_0.46)] h-auto bg-light-sky-blue px-12 pt-[3rem] pb-[20rem] mt-[-12rem] rounded-[4rem] "
     >
       <div className="container mx-auto">
         <div className="w-full">
           <motion.h2
             variants={animation(0)}
-            className="self-stretch font-poppinsM text-black text-[4.25rem] font-normal  leading-normal"
+            className="self-stretch section_heading section_heading font-poppinsM text-black text-[4.25rem] font-normal  leading-normal"
           >
             VISA INFO
           </motion.h2>
 
           <motion.p
             variants={animation(0.2)}
-            className="self-stretch  text-black text-[1.9rem] font-poppinsR  font-normal mt-4 mb-5 leading-[2.5rem]"
+            className="self-stretch section_para section_para text-black text-[1.9rem] font-poppinsR  font-normal mt-4 mb-5 leading-[2.5rem]"
           >
             Lorem ipsum dolor sit amet consectetur. Tristique cursus faucibus
             aliquet amet massa. Viverra elit tempor libero sit mattis ut ac

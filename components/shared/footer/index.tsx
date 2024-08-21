@@ -14,7 +14,7 @@ export default function Footer({
   return (
     <div className="w-screen min-h-screen px-10 h-auto bg-blue-blur pt-[4rem] mt-[-4rem] rounded-tl-[3rem] rounded-tr-[3rem]">
       <div className="bg-white flex-col mx-auto rounded-[28px] pt-[3rem] pb-[7rem] flex items-center justify-center">
-        <h2 className="self-stretch font-poppinsM text-center text-blue-blur text-[6.25rem] mt-[68px] font-normal leading-normal">
+        <h2 className="self-stretch footer_big_text font-poppinsM text-center text-blue-blur text-[6.25rem] mt-[68px] font-normal leading-normal">
           {heading}
         </h2>
 
@@ -22,9 +22,9 @@ export default function Footer({
           {description}
         </p>
 
-        <button className="bg-blue-blur rounded-full w-[30rem] px-10 items-center gap-x-5 py-5 mt-[3rem] text-white flex justify-between">
+        <button className="bg-blue-blur rounded-full w-[90%] max-w-[30rem] px-10 items-center gap-x-5 py-5 mt-[3rem] text-white flex justify-between">
           <div className="flex gap-x-5 justify-between">
-            <p className="text-white text-[1.8rem] font-poppinsR">
+            <p className="text-white text-[1.8rem] footer_btn_p font-poppinsR">
               {buttonLabel}
             </p>
           </div>
