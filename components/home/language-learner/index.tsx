@@ -1,63 +1,93 @@
+"use client";
+
 import Image from "next/image";
+import { useInView } from "react-intersection-observer";
+import { useAnimation, motion } from "framer-motion";
 
 export default function LanguageLearner() {
-  return (
-    <div className="w-screen  shadow-[0px_0px_50px_rgba(255,_255,_255,_0.46)] min-h-screen h-auto bg-maya-blue px-12 pt-2 pb-[20rem] mt-[-8rem] rounded-tl-[3%] rounded-tr-[3%] ">
-      <div className="container mx-auto">
-        <h2 className="self-stretch font-poppinsM text-black text-[4.25rem] mt-[68px] font-normal  leading-normal">
-          Language Learner
-        </h2>
 
-        <p className="self-stretch  text-black text-[1.9rem] font-poppinsR  font-normal mt-4 mb-5 leading-[2.5rem]">
+  const animation = (delay: number) => ({
+    offscreen: {
+      opacity: 0,
+      y: 30, // Use the parameter here
+    },
+    onscreen: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        ease: "easeOut",
+        duration: 0.2,
+        delay: delay
+      },
+    },
+  });
+
+  return (
+    <motion.section
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ amount: 0.2 }}
+      className="w-screen  shadow-[0px_0px_50px_rgba(255,_255,_255,_0.46)] min-h-screen h-auto bg-maya-blue px-12 pt-2 pb-[20rem] mt-[-8rem] rounded-tl-[3%] rounded-tr-[3%] "
+    >
+      <div className="container mx-auto">
+        <motion.h2 variants={animation(0)} className="self-stretch font-poppinsM text-black text-[4.25rem] mt-[68px] font-normal  leading-normal">
+          Language Learner
+        </motion.h2>
+
+        <motion.p variants={animation(0.4)} className="self-stretch  text-black text-[1.9rem] font-poppinsR  font-normal mt-4 mb-5 leading-[2.5rem]">
           Lorem ipsum dolor sit amet consectetur. Tristique cursus faucibus
           aliquet amet massa. Viverra elit tempor libero sit mattis ut ac
           pharetra. Ultrices lectus et sagittis aliquet nam ornare. Iaculis
           consequat faucibus tortor amet est.
-        </p>
+        </motion.p>
 
-        <div className="bg-dodger-blue p-10 rounded-[20px] shadow-[0px_0px_50px_rgba(255,_255,_255,_0.46)] mt-[5rem]">
-          <div className="flex flex-row">
+        <motion.div className="bg-dodger-blue p-10 rounded-[20px] shadow-[0px_0px_50px_rgba(255,_255,_255,_0.46)] mt-[5rem]">
+          <div className="flex flex-row gap-x-[30px]">
             <div className="w-[55%] ">
-              <h2 className="self-stretch font-poppinsM text-black text-[4.25rem] mt-5 font-normal  leading-[4.5rem]">
+              <motion.h2 variants={animation(0.6)} className="self-stretch font-poppinsM text-black text-[4.25rem] mt-5 font-normal  leading-[4.5rem]">
                 Become a Language Expert with
-              </h2>
-              <h2 className="self-stretch font-poppinsB text-black text-[4.25rem] my-5 font-normal  leading-[4.5rem]">
+              </motion.h2>
+              <motion.h2 variants={animation(0.8)} className="self-stretch font-poppinsB text-black text-[4.25rem] my-5 font-normal  leading-[4.5rem]">
                 Travelingo
-              </h2>
+              </motion.h2>
 
-              <p className="self-stretch font-poppinsR  text-black text-[1.5rem]  font-normal  leading-[2.5rem]">
+              <motion.p variants={animation(1)} className="self-stretch font-poppinsR  text-black text-[1.5rem]  font-normal  leading-[2.5rem]">
                 Lorem ipsum dolor sit amet consectetur. Auctor rhoncus at
                 bibendum sed ac urna dui aliquet aliquam. Amet leo habitant amet
                 quam suspendisse donec. Sit aliquet elementum elit sit sit
                 phasellus. Libero urna a in cras.
-              </p>
+              </motion.p>
             </div>
 
             <div className=" ml-auto pr-10 w-auto gap-x-5 ">
               <div className="grid  grid-cols-2 h-fit gap-y-2  gap-x-5 ">
-                <Image
+                <motion.img
+                 variants={animation(1.2)}
                   src={"/images/language-learner/avatar1.png"}
                   width={800}
                   height={800}
                   alt=""
                   className="w-[15rem]"
                 />
-                <Image
-                  src={"/images/language-learner/avatar2.png"}
+                <motion.img
+                variants={animation(1.4)}
+                 src={"/images/language-learner/avatar2.png"}
                   width={800}
                   height={800}
                   alt=""
                   className="w-[15rem]"
                 />
-                <Image
-                  src={"/images/language-learner/avatar3.png"}
+                <motion.img
+                 variants={animation(1.6)}
+                 src={"/images/language-learner/avatar3.png"}
                   width={800}
                   height={800}
                   alt=""
                   className="w-[15rem]"
                 />
-                <Image
-                  src={"/images/language-learner/avatar4.png"}
+                <motion.img
+                 variants={animation(1.8)}
+                 src={"/images/language-learner/avatar4.png"}
                   width={800}
                   height={800}
                   alt=""
@@ -89,8 +119,8 @@ export default function LanguageLearner() {
               />
             </button>
           </div>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.section>
   );
 }

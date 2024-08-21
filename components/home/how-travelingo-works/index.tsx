@@ -1,8 +1,33 @@
+"use client";
+
 import Image from "next/image";
+import { useInView } from "react-intersection-observer";
+import { useAnimation, motion } from "framer-motion";
 
 export default function HowItWorks() {
+  const animation = (delay: number) => ({
+    offscreen: {
+      opacity: 0,
+      y: 30, // Use the parameter here
+    },
+    onscreen: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        ease: "easeOut",
+        duration: 0.2,
+        delay: delay,
+      },
+    },
+  });
+
   return (
-    <div className="w-screen shadow-[0px_0px_50px_rgba(255,_255,_255,_0.46)] min-h-screen h-auto bg-sky-blue px-12 pt-2 pb-[20rem] mt-[-8rem] rounded-tl-[3%] rounded-tr-[3%] ">
+    <motion.section
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ amount: 0.3 }}
+      className="w-screen shadow-[0px_0px_50px_rgba(255,_255,_255,_0.46)] min-h-screen h-auto bg-sky-blue px-12 pt-2 pb-[20rem] mt-[-8rem] rounded-tl-[3%] rounded-tr-[3%] "
+    >
       <div className="container flex relative   md:flex-row mx-auto">
         <Image
           className="absolute right-0 w-[50%]"
@@ -13,11 +38,11 @@ export default function HowItWorks() {
         />
 
         <div>
-          <h2 className="self-stretch  text-black text-[6.25rem] mt-[68px] font-poppinsM  font-normal  leading-[6.5rem] w-[40%]">
+          <motion.h2 variants={animation(0.2)} className="self-stretch  text-black text-[6.25rem] mt-[68px] font-poppinsM  font-normal  leading-[6.5rem] w-[40%]">
             How <br></br> Travelingo <br></br> Works
-          </h2>
+          </motion.h2>
 
-          <button className=" bg-black rounded-full px-6 w-full items-center gap-x-5 py-5 mt-[3rem] text-white flex justify-between">
+          <motion.button variants={animation(0.4)} className=" bg-black rounded-full px-6 w-full items-center gap-x-5 py-5 mt-[3rem] text-white flex justify-between">
             <div className="flex gap-x-5">
               <Image
                 src={"/icons/play-button.svg"}
@@ -30,11 +55,11 @@ export default function HowItWorks() {
               </p>
             </div>
             <Image src={"/icons/arrow.svg"} width={30} height={30} alt="" />
-          </button>
+          </motion.button>
         </div>
 
         <div className="wrapper flex flex-col z-[10] ml-auto w-[50%] gap-y-5 mt-8">
-          <div className="rounded-[50px] border-4 border-black flex gap-x-[5rem] bg-white/10 px-4 py-1 relative">
+          <motion.div variants={animation(0.6)} className="rounded-[50px] border-4 border-black flex gap-x-[5rem] bg-white/10 px-4 py-1 relative">
             <h2 className="self-stretch pl-4  font-poppinsM  text-black m-auto text-[6.5rem]   font-normal  leading-normal">
               01
             </h2>
@@ -50,8 +75,8 @@ export default function HowItWorks() {
               height={500}
               alt=""
             />
-          </div>
-          <div className="rounded-[50px] border-4 border-black flex gap-x-[5rem] bg-white/10 px-4 py-1 relative">
+          </motion.div>
+          <motion.div variants={animation(0.8)} className="rounded-[50px] border-4 border-black flex gap-x-[5rem] bg-white/10 px-4 py-1 relative">
             <h2 className="self-stretch pl-4 font-poppinsM text-black m-auto text-[6.5rem]   font-normal  leading-normal">
               02
             </h2>
@@ -67,8 +92,8 @@ export default function HowItWorks() {
               height={500}
               alt=""
             />
-          </div>
-          <div className="rounded-[50px] border-4 border-black flex gap-x-[5rem] bg-white/10 px-4 py-1 relative">
+          </motion.div>
+          <motion.div variants={animation(1)} className="rounded-[50px] border-4 border-black flex gap-x-[5rem] bg-white/10 px-4 py-1 relative">
             <h2 className="self-stretch pl-4 font-poppinsM  text-black m-auto text-[6.5rem]   font-normal  leading-normal">
               03
             </h2>
@@ -84,8 +109,8 @@ export default function HowItWorks() {
               height={500}
               alt=""
             />
-          </div>
-          <div className="rounded-[50px] border-4 border-black flex gap-x-[5rem] bg-white/10 px-4 py-1 relative">
+          </motion.div>
+          <motion.div variants={animation(1.2)} className="rounded-[50px] border-4 border-black flex gap-x-[5rem] bg-white/10 px-4 py-1 relative">
             <h2 className="self-stretch pl-4 font-poppinsM text-black m-auto text-[6.5rem]   font-normal  leading-normal">
               04
             </h2>
@@ -101,8 +126,8 @@ export default function HowItWorks() {
               height={500}
               alt=""
             />
-          </div>
-          <div className="rounded-[50px] border-4 border-black flex gap-x-[5rem] bg-white/10 px-4 py-1 relative">
+          </motion.div>
+          <motion.div variants={animation(1.4)} className="rounded-[50px] border-4 border-black flex gap-x-[5rem] bg-white/10 px-4 py-1 relative">
             <h2 className="self-stretch pl-4 font-poppinsM text-black m-auto text-[6.5rem]   font-normal  leading-normal">
               05
             </h2>
@@ -118,9 +143,9 @@ export default function HowItWorks() {
               height={500}
               alt=""
             />
-          </div>
+          </motion.div>
         </div>
       </div>
-    </div>
+    </motion.section>
   );
 }

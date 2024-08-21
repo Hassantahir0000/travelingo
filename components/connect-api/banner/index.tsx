@@ -1,8 +1,33 @@
+"use client";
+
 import Image from "next/image";
+import { useInView } from "react-intersection-observer";
+import { useAnimation, motion } from "framer-motion";
 
 export default function ConnectBanner() {
+
+  const animation = (delay: number) => ({
+    offscreen: {
+      opacity: 0,
+      y: 30, // Use the parameter here
+    },
+    onscreen: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        ease: "easeOut",
+        duration: 0.2,
+        delay: delay
+      },
+    },
+  });
+
   return (
-    <div className="w-screen  h-[120vh]">
+    <motion.section
+    initial="offscreen"
+    whileInView="onscreen"
+    viewport={{ amount: 0.2 }}
+    className="w-screen  h-[120vh]">
       <Image
         src="/images/connect-api/banner.png"
         width={500}
@@ -12,7 +37,7 @@ export default function ConnectBanner() {
       />
 
       <div className="flex justify-center items-center">
-        <div className="  bg-blue-blur/50  absolute bottom-[2rem] py-[2.875rem] px-[2.75rem] rounded-[50px] backdrop-blur-[0.5rem] md:w-[90%] block mx-auto">
+        <motion.div variants={animation(0)} className=" bg-blue-blur/50  absolute bottom-[2rem] py-[2.875rem] px-[2.75rem] rounded-[50px] backdrop-blur-[0.5rem] md:w-[90%] block mx-auto">
           <div className="md:flex-row flex-col flex">
             <div className=" flex-col justify-center items-center inline-flex md:w-[70%]">
               <h2 className="self-stretch font-poppinsM  text-white text-[5.5rem]">
@@ -29,8 +54,8 @@ export default function ConnectBanner() {
               place.
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.section >
   );
 }
