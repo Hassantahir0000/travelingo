@@ -82,7 +82,7 @@ export default function WhatToExpect() {
       className="w-screen min-h-screen flex flex-col centralise expect_container h-auto bg-pale-cyan px-12 pt-2 pb-[20rem]"
     >
       <div className="w-full max_width_container">
-        <h2 className="self-stretch font-poppinsM text-[4.25rem] mt-[68px] mb-[50px] font-normal section_heading leading-normal">
+        <h2 className="self-stretch font-poppinsM text-[4.25rem] mt-[38px] mb-[50px] font-normal section_heading leading-normal">
           What to Expect
         </h2>
 
