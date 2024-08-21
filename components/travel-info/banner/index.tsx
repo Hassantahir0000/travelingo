@@ -37,7 +37,7 @@ export default function TravelInfoBanner() {
       />
 
       <div className="flex justify-center items-center ">
-        <motion.div variants={animation(0)} className="max_width_container banner_first_panel bg-blue-blur/50  absolute bottom-[10rem] pt-[3rem] pb-[2.875rem] px-[2.75rem] rounded-[30px] backdrop-blur-[0.5rem] md:w-[90%] block mx-auto">
+        <motion.div variants={animation(0)} className="max_width_container_banner banner_first_panel bg-blue-blur/50  absolute bottom-[10rem] pt-[3rem] pb-[2.875rem] px-[2.75rem] rounded-[30px] backdrop-blur-[0.5rem] md:w-[90%] block mx-auto">
           <div className="md:flex-row banner_heading_main_container flex-col flex">
             <div className="banner_heading_container flex-col justify-start items-start gap-[34px] inline-flex md:w-[70%]">
               <h2 className="banner_heading self-stretch font-poppinsM  text-white text-[5.5rem] leading-[6rem]">
