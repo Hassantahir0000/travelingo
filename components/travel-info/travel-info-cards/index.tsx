@@ -26,20 +26,20 @@ export default function TravelInfoCards() {
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ amount: 0.2 }}
-      className="w-screen z-[100] travel_info_card_container shadow-[0px_0px_50px_rgba(255,_255,_255,_0.46)] h-auto bg-pale-cyan px-12 pt-[3rem] pb-[20rem] mt-[-1rem] rounded-tl-[3rem] rounded-tr-[3rem] "
+      className="w-screen centralise z-[100] travel_info_card_container h-auto bg-white px-12 pt-[3rem] pb-[20rem] mt-[-1rem] rounded-tl-[3rem] rounded-tr-[3rem] "
     >
-      <div className="container mx-auto">
+      <div className="container max_width_container mx-auto">
         <div className="w-full">
           <motion.h2
             variants={animation(0)}
-            className="self-stretch section_heading font-poppinsM text-black text-[4.25rem] font-normal  leading-normal"
+            className="self-stretch section_heading_white_bg font-poppinsM text-black text-[4.25rem] font-normal  leading-normal"
           >
             Travel Info
           </motion.h2>
 
           <motion.p
             variants={animation(0.2)}
-            className="self-stretch section_para text-black text-[1.9rem] font-poppinsR  font-normal mt-4 mb-5 leading-[2.5rem]"
+            className="self-stretch section_para_white_bg text-black text-[1.9rem] font-poppinsR  font-normal mt-4 mb-5 leading-[2.5rem]"
           >
             Lorem ipsum dolor sit amet consectetur. Tristique cursus faucibus
             aliquet amet massa. Viverra elit tempor libero sit mattis ut ac
@@ -48,7 +48,7 @@ export default function TravelInfoCards() {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-3 travel_info_cards_container">
+        <div className="grid grid-cols-3 gap-4 travel_info_cards_container">
           <motion.img
             variants={animation(0.4)}
             src={"/images/travel-info/info-cards/visa-info.png"}

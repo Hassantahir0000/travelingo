@@ -5,7 +5,6 @@ import { useInView } from "react-intersection-observer";
 import { useAnimation, motion } from "framer-motion";
 
 export default function ConnectBanner() {
-
   const animation = (delay: number) => ({
     offscreen: {
       opacity: 0,
@@ -17,17 +16,18 @@ export default function ConnectBanner() {
       transition: {
         ease: "easeOut",
         duration: 0.2,
-        delay: delay
+        delay: delay,
       },
     },
   });
 
   return (
     <motion.section
-    initial="offscreen"
-    whileInView="onscreen"
-    viewport={{ amount: 0.2 }}
-    className="w-screen  h-[120vh]">
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ amount: 0.2 }}
+      className="w-screen centralise h-[120vh]"
+    >
       <Image
         src="/images/connect-api/banner.png"
         width={500}
@@ -37,10 +37,13 @@ export default function ConnectBanner() {
       />
 
       <div className="flex justify-center items-center">
-        <motion.div variants={animation(0)} className="banner_first_panel bg-blue-blur/50  absolute bottom-[2rem] py-[2.875rem] px-[2.75rem] rounded-[50px] backdrop-blur-[0.5rem] md:w-[90%] block mx-auto">
+        <motion.div
+          variants={animation(0)}
+          className="banner_first_panel max_width_container_banner bg-blue-blur/50  absolute bottom-[2rem] py-[2.875rem] px-[2.75rem] rounded-[30px] backdrop-blur-[0.5rem] md:w-[90%] block mx-auto"
+        >
           <div className="banner_heading_main_container flex-col flex">
             <div className="banner_heading_container flex-col justify-center items-center inline-flex md:w-[70%]">
-              <h2 className="banner_heading self-stretch font-poppinsM  text-white text-[5.5rem]">
+              <h2 className="banner_heading self-stretch font-poppinsL text-white text-[5.5rem]">
                 Travelingo
               </h2>
               <h2 className="self-stretch banner_heading font-poppinsM  text-white text-[5.5rem]">
@@ -56,6 +59,6 @@ export default function ConnectBanner() {
           </div>
         </motion.div>
       </div>
-    </motion.section >
+    </motion.section>
   );
 }

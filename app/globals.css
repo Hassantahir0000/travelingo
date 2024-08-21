@@ -34,12 +34,40 @@
 .banner_para {
   width: 30%;
 }
-.section_heading {
+.section_heading, .section_heading_white_bg {
   margin-left: 0;
+  color: white;
+}
+.section_para, .section_para_white_bg {
+  color: white;
+  font-size: 1.3rem;
+  line-height: 28px;
+}
+.section_para_white_bg{
+  color: black !important;
 }
 
 body {
   overflow-x: hidden;
+}
+
+.max_width_container, .max_width_container_banner {
+  max-width: 1250px;
+}
+.centralise {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section_heading_white_bg {
+  color: #18A1FF !important;
+}
+
+.travel_experience_container {
+  display: flex;
+  flex-direction: row;
+  column-gap: 40px;
 }
 
 @media (max-width: 1060px) {
@@ -100,11 +128,11 @@ body {
   .expect_left_panel_container {
     width: 100%;
   }
-  .section_heading {
+  .section_heading, .section_heading_white_bg {
     font-size: 2.8rem;
     line-height: 52px;
   }
-  .section_para {
+  .section_para, .section_para_white_bg {
     font-size: 1.4rem;
     line-height: 35px;
     margin-left: 0;
@@ -160,6 +188,10 @@ body {
     padding-left: 20px;
     padding-right: 20px;
   }
+  .expect_panel_1 img {
+    min-width: initial;
+    width: 100%;
+  }
 }
 
 .app_drawer {
@@ -172,7 +204,7 @@ body {
     line-height: 40px;
   }
   .banner_heading_container {
-    row-gap: 10px;
+    row-gap: 0px;
     flex-direction: column;
   }
   .banner_heading_main_container {
@@ -218,8 +250,8 @@ body {
   .how_travelingo_container,
   .expect_container,
   .language_learner_container, .visa_info_container, .travel_info_card_container, .connect_api_container, .contact_us_container {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   .how_travelling_works_play_store_btn {
     padding-top: 15px;
@@ -237,11 +269,15 @@ body {
   .how_travelling_works_play_store_btn p {
     font-size: 1rem;
   }
-  .banner_first_panel {
-    width: 92%;
+  .banner_first_panel, .max_width_container_banner {
+    width: 92% !important;
     border-radius: 20px !important;
     padding-left: 20px;
     padding-right: 20px;
+  }
+  .max_width_container {
+    padding-left: 0px;
+    padding-right: 0px;
   }
   .banner_second_panel {
     width: 92%;
@@ -259,12 +295,12 @@ body {
   .banner_second_panel img {
     width: 25px;
   }
-  .section_heading {
+  .section_heading, .section_heading_white_bg {
     font-size: 2rem;
     line-height: 42px;
   }
-  .section_para {
-    font-size: 1.2rem;
+  .section_para, .section_para_white_bg {
+    font-size: 1.0rem;
     line-height: 25px;
   }
   .expect_panel_heading,
@@ -293,6 +329,7 @@ body {
   }
   .language_expert_container {
     padding: 20px;
+    color: #037aca;
   }
   .becoming_language_expert_pics_container {
     padding: 0px;
@@ -320,7 +357,7 @@ body {
 }
 
 .EZDrawer .EZDrawer__container {
-  background-color: #83CCFF !important;
+  background-color: #18A1FF !important;
 }
 
 @media (max-width: 450px) {
