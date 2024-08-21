@@ -6,8 +6,12 @@ import { useState } from "react";
 import Destination from "./destination";
 import Origin from "./origin";
 import PassportOrigin from "./passpor-origin";
+import { toast, Toaster } from "sonner";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function StepForm() {
+  const router = useRouter();
   const [step, setStep] = useState<number>(1);
   const [destination, setDestination] = useState<string>("");
   const [origin, setOrigin] = useState<string>("");
@@ -27,6 +31,7 @@ export default function StepForm() {
 
   return (
     <div className="container mx-auto flex items-center flex-col">
+      <Toaster richColors position="top-right" />
       {step == 1 && (
         <Destination onDestinationChange={handleDestinationChange} />
       )}
@@ -50,18 +55,50 @@ export default function StepForm() {
           <div
             onClick={() => {
               if (step < 3) {
-                setStep(step + 1);
+                if (step == 1 && !destination) {
+                  toast.error("Please select a destination");
+                  return;
+                } else if (step == 2 && !origin) {
+                  toast.error("Please select a country you are traveling from");
+                  return;
+                } else if (step == 3 && !passport) {
+                  toast.error("Please select passport origin country");
+                  return;
+                } else {
+                  setStep(step + 1);
+                }
               }
             }}
             className="absolute top-0 bottom-0 left-0 right-0 bg-blue-blur/50 w-[70%] justify-center cursor-pointer h-[70%] flex items-center m-auto rounded-full"
           >
-            <Image
-              src={"/icons/next.svg"}
-              width={30}
-              height={30}
-              alt=""
-              className="w-8 h-8"
-            />
+            {step == 3 && passport ? (
+              <Link
+                href={{
+                  pathname: `/travel-info`,
+                  query: {
+                    origin: origin,
+                    destination: destination,
+                    passportOrigin: passport,
+                  },
+                }}
+              >
+                <Image
+                  src={"/icons/next.svg"}
+                  width={30}
+                  height={30}
+                  alt=""
+                  className="w-8 h-8"
+                />
+              </Link>
+            ) : (
+              <Image
+                src={"/icons/next.svg"}
+                width={30}
+                height={30}
+                alt=""
+                className="w-8 h-8"
+              />
+            )}
           </div>
         </div>
       </div>

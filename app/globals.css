@@ -192,6 +192,12 @@ body {
     min-width: initial;
     width: 100%;
   }
+  .collapsable_name {
+    top: 7%;
+  }
+  .collapsable_name p {
+    font-size: 21px;
+  }
 }
 
 .app_drawer {
@@ -212,6 +218,12 @@ body {
   }
   .banner_para {
     width: 100%;
+  }
+  .collapsable_name {
+    top: 7%;
+  }
+  .collapsable_name p {
+    font-size: 24px;
   }
 }
 
@@ -237,6 +249,21 @@ body {
     width: 100%;
     margin-top: 0px;
   }
+  .collapsable_container {
+    width: 94%;
+  }
+  .collapsable_name {
+    top: 6%;
+  }
+  .collapsable_name p {
+    font-size: 20px;
+  }
+  .collapsable_arrow {
+    bottom: 8%;
+    right: 9%;
+    height: 15px;
+    width: 15px;
+  }
 }
 
 @media (max-width: 650px) {
@@ -245,6 +272,15 @@ body {
   }
   .footer_btn_p {
     font-size: 2rem;
+  }
+  .collapsable_inner_container {
+    flex-direction: column;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    row-gap: 20px;
+  }
+  .collapsable_inner_desc {
+    width: 90%;
   }
   .language_translator_container,
   .how_travelingo_container,
@@ -354,6 +390,25 @@ body {
   .api_feature_panel {
     padding: 25px;
   }
+  .collapsable_name {
+    top: 6%;
+  }
+  .collapsable_name p {
+    font-size: 17px;
+  }
+  .collapsable_arrow {
+    bottom: 7%;
+    right: 9%;
+    height: 15px;
+    width: 15px;
+  }
+  .footer_content {
+    flex-direction: column;
+    row-gap: 40px;
+  }
+  .footer_cols {
+    width: 100%;
+  }
 }
 
 .EZDrawer .EZDrawer__container {
@@ -369,6 +424,18 @@ body {
   }
   .travel_info_cards_container {
     grid-template-columns: 1fr;
+  }
+  .collapsable_name {
+    top: 5%;
+  }
+  .collapsable_name p {
+    font-size: 10px;
+  }
+  .collapsable_arrow {
+    bottom: 4%;
+    right: 8%;
+    height: 15px;
+    width: 15px;
   }
 }
 

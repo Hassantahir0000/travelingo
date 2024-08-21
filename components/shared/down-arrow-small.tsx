@@ -1,10 +1,10 @@
 import React from "react";
 
-function DownArrow() {
+function DownArrowSmall() {
   return (
     <svg
-      width="37"
-      height="17"
+      width="31"
+      height="11"
       viewBox="0 0 43 23"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -17,4 +17,4 @@ function DownArrow() {
   );
 }
 
-export default DownArrow;
+export default DownArrowSmall;
