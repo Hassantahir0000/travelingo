@@ -29,8 +29,8 @@ export default function Collapseable({ name, image }: CollapseableProps) {
             height={500}
           />
 
-          <div className="absolute z-40 top-[8%] left-[6%] ">
-            <p className="text-[35px] font-poppinsM mt-1">{name}</p>
+          <div className="absolute z-40 top-[7%] left-[6%] ">
+            <p className="text-[35px] text-white font-poppinsM mt-1">{name}</p>
           </div>
 
           <div className="absolute z-40 right-0 left-0 ml-auto mr-auto bottom-[17%] w-[90%] h-[65%] rounded-[27px]">
