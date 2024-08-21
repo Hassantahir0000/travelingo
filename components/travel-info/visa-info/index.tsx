@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 import { useAnimation, motion } from "framer-motion";
 import Collapseable from "../collapseable";
 
-export default function VisaInfo() {
+export default function VisaInfo({ data }: { data: any }) {
   const animation = (delay: number) => ({
     offscreen: {
       opacity: 0,
@@ -21,6 +21,8 @@ export default function VisaInfo() {
       },
     },
   });
+
+  console.log("Visa Info: ", data);
 
   return (
     <motion.section
@@ -49,28 +51,34 @@ export default function VisaInfo() {
           </motion.p>
         </div>
 
-        <motion.div variants={animation(0.4)} className="flex flex-col ">
+        <div className="flex flex-col ">
           <Collapseable
+            data={data && data[0]?.targetCountries[0]?.visatype}
             name={"Visa Type"}
             image={"/images/travel-info/visa-info/visa-type.png"}
           />
+
           <Collapseable
+            data={data && data[0]?.targetCountries[0]?.documentsRequired}
             name={"Documents Required"}
             image={"/images/travel-info/visa-info/documents.png"}
           />
           <Collapseable
+            data={data && data[0]?.targetCountries[0]?.embassyInfo}
             name={"Embassy Info"}
             image={"/images/travel-info/visa-info/embassy.png"}
           />
           <Collapseable
+            data={data && data[0]?.targetCountries[0]?.healthAndInsurance}
             name={"Health Insurance"}
             image={"/images/travel-info/visa-info/health.png"}
           />
           <Collapseable
+            data={data && data[0]?.targetCountries[0]?.extensionAndOverstay}
             name={"Extension and Overstay"}
             image={"/images/travel-info/visa-info/extension.png"}
           />
-        </motion.div>
+        </div>
       </div>
     </motion.section>
   );

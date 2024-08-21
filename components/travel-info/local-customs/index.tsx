@@ -1,7 +1,9 @@
 import Image from "next/image";
 import Collapseable from "../collapseable";
 
-export default function LocalCustoms() {
+export default function LocalCustoms({ data }: { data: any }) {
+  console.log("Local Custom!!!!: ", data);
+
   return (
     <div className="w-screen centralise z-[100] visa_info_container shadow-[0px_0px_50px_rgba(255,_255,_255,_0.46)] h-auto bg-[#2EA5F7] px-12 pt-[3rem] pb-[20rem] mt-[-12rem] rounded-[4rem] ">
       <div className="container max_width_container mx-auto">
@@ -20,24 +22,29 @@ export default function LocalCustoms() {
 
         <div className="flex flex-col ">
           <Collapseable
-            name={"Bars & Cafes"}
-            image={"/images/travel-info/visa-info/visa-type.png"}
+            data={data && data[0]?.localCustomsData[0]?.dosAndDonts}
+            name={"Dos & Donts"}
+            image={"/images/travel-info/visa-info/do_dont.png"}
           />
           <Collapseable
-            name={"Street Food"}
-            image={"/images/travel-info/visa-info/documents.png"}
+            data={data && data[0]?.localCustomsData[0]?.etiquettes}
+            name={"Etiquettes"}
+            image={"/images/travel-info/visa-info/etiquette.png"}
           />
           <Collapseable
-            name={"Fine Dinning"}
-            image={"/images/travel-info/visa-info/embassy.png"}
+            data={data && data[0]?.localCustomsData[0]?.howToDress}
+            name={"How to Dress"}
+            image={"/images/travel-info/visa-info/how_to_dress.png"}
           />
           <Collapseable
-            name={"Snacks"}
-            image={"/images/travel-info/visa-info/health.png"}
+            data={data && data[0]?.localCustomsData[0]?.noGoAreas}
+            name={"No Go Areas"}
+            image={"/images/travel-info/visa-info/donotenter.png"}
           />
           <Collapseable
-            name={"Restaurants"}
-            image={"/images/travel-info/visa-info/extension.png"}
+            data={data && data[0]?.localCustomsData[0]?.whatNotToSay}
+            name={"What not to say"}
+            image={"/images/travel-info/visa-info/go_or_no.png"}
           />
         </div>
       </div>

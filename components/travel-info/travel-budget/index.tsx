@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Collapseable from "../collapseable";
 
-export default function TravelBudget() {
+export default function TravelBudget({ data }: { data: any }) {
+
   return (
     <div className="w-screen centralise z-[100] visa_info_container shadow-[0px_0px_50px_rgba(255,_255,_255,_0.46)] h-auto bg-[#E2E2E2] px-12 pt-[3rem] pb-[20rem] mt-[-12rem] rounded-[4rem] ">
       <div className="container max_width_container mx-auto">
@@ -20,24 +21,24 @@ export default function TravelBudget() {
 
         <div className="flex flex-col ">
           <Collapseable
+            data={data && data[0]?.infoData[0]?.averageFare}
             name={"Airfare"}
-            image={"/images/travel-info/visa-info/visa-type.png"}
+            image={"/images/travel-info/visa-info/airfare.png"}
           />
           <Collapseable
+            data={data && data[0]?.infoData[0]?.SightSeeing}
             name={"Sightseeing"}
-            image={"/images/travel-info/visa-info/documents.png"}
+            image={"/images/travel-info/visa-info/sightseeing.png"}
           />
           <Collapseable
+            data={data && data[0]?.infoData[0]?.food}
             name={"Food"}
-            image={"/images/travel-info/visa-info/embassy.png"}
+            image={"/images/travel-info/visa-info/food.png"}
           />
           <Collapseable
+            data={data && data[0]?.infoData[0]?.giftShopping}
             name={"Gift Shopping"}
-            image={"/images/travel-info/visa-info/health.png"}
-          />
-          <Collapseable
-            name={"Commute"}
-            image={"/images/travel-info/visa-info/extension.png"}
+            image={"/images/travel-info/visa-info/gift.png"}
           />
         </div>
       </div>

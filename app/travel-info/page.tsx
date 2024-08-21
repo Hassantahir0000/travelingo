@@ -14,6 +14,7 @@ import {
   fetchCulture,
   fetchFood,
   fetchLocalCustoms,
+  fetchTravelBudget,
   fetchVisaInfo,
   fetchWeather,
 } from "@/api/travel-info";
@@ -30,51 +31,66 @@ export default function TravelInfo() {
   const [foodData, setFoodData] = useState<any>();
   const [cultureData, setCultureData] = useState<any>();
   const [localCustomsData, setLocalCustomsData] = useState<any>();
+  const [weatherData, setWeatherData] = useState<any>();
   const [language, setLanguage] = useState<string>("English");
 
   const getCulture = async () => {
     if (destination) {
       const resp = await fetchCulture(destination, language);
-      console.log("culture", resp);
+      setCultureData(resp);
     }
   };
 
   const getFood = async () => {
     if (destination) {
       const resp = await fetchFood(destination, language);
-      console.log("food", resp);
+      setFoodData(resp);
     }
   };
 
   const getLocalCustoms = async () => {
     if (destination) {
       const resp = await fetchLocalCustoms(destination, language);
-      console.log("local custom", resp);
+      setLocalCustomsData(resp);
     }
   };
 
   const getVisaInfo = async () => {
     if (origin && destination) {
       const resp = await fetchVisaInfo(origin, destination);
-      console.log("visa info", resp);
+      console.log("VISA!!!!: ", resp);
+      setVisaInfoData(resp);
     }
   };
 
   const getWeather = async () => {
     if (destination) {
       const resp = await fetchWeather(destination);
-      console.log("weather", resp);
+      setWeatherData(resp);
+    }
+  };
+
+  const getTravelBudget = async () => {
+    if (destination) {
+      const resp = await fetchTravelBudget(destination);
+      console.log("TRAVEL BUDGET!!!!: ", resp);
+      setTravelBudgetData(resp);
     }
   };
 
   useEffect(() => {
-    getCulture();
-    getFood();
-    getLocalCustoms();
-    getVisaInfo();
-    getWeather();
-    setLoading(false);
-  }, []);
+    if (destination) {
+      getCulture();
+      getFood();
+      getLocalCustoms();
+      getVisaInfo();
+      getWeather();
+      getTravelBudget();
+      setLoading(false);
+    }
+
+    console.log("HELLOOO");
+  }, [destination]);
 
   return (
     <main className=" min-h-screen">
@@ -85,14 +101,20 @@ export default function TravelInfo() {
         </div>
       ) : (
         <>
-          <TravelInfoBanner />
+          <TravelInfoBanner destination={destination}/>
           <div className="absolute z-[10]">
             <TravelInfoCards />
-            <VisaInfo />
-            <TravelBudget />
-            <Food />
-            <Culture />
-            <LocalCustoms />
+            {visaInfo && visaInfo?.length && <VisaInfo data={visaInfo} />}
+            {travelBudgetData && travelBudgetData?.length > 0 && (
+              <TravelBudget data={travelBudgetData} />
+            )}
+            {foodData && foodData?.length && <Food data={foodData} />}
+            {cultureData && cultureData?.length && (
+              <Culture data={cultureData} />
+            )}
+            {localCustomsData && localCustomsData?.length && (
+              <LocalCustoms data={localCustomsData} />
+            )}
             <Footer
               heading={"Travelingo API"}
               description={""}

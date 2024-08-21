@@ -71,6 +71,20 @@ export const fetchVisaInfo = async (
   }
 };
 
+export const fetchTravelBudget = async (
+  country: string,
+) => {
+  try {
+    const params: any = {
+      country,
+    };
+    const resp = await axiosClient.get(`/fetchinfodata/`, { params });
+    return resp?.data;
+  } catch (err: any) {
+    return false;
+  }
+};
+
 export const fetchWeather = async (location: string) => {
   try {
     const params: any = {
