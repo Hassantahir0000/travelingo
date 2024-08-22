@@ -39,14 +39,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <NextUIProvider>
+      <body
+        className={`${inter.className} ${poppins_bold.variable} ${poppins_medium.variable} ${poppins_light.variable}  ${poppins_regular.variable}`}
+      >
         <Navbar />
-        <body
-          className={`${inter.className} ${poppins_bold.variable} ${poppins_medium.variable} ${poppins_light.variable}  ${poppins_regular.variable}`}
-        >
-          {children}
-        </body>
-      </NextUIProvider>
+        <NextUIProvider>{children}</NextUIProvider>
+      </body>
     </html>
   );
 }
