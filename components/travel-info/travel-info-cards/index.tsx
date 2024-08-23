@@ -26,13 +26,13 @@ export default function TravelInfoCards() {
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ amount: 0.2 }}
-      className="w-screen centralise z-[100] travel_info_card_container h-auto bg-white px-12 pt-[3rem] pb-[20rem] mt-[-1rem] rounded-tl-[3rem] rounded-tr-[3rem] "
+      className="w-screen centralise z-[100] travel_info_card_container h-auto bg-[#94D4FF] px-12 pt-[3rem] pb-[20rem] mt-[-1rem] rounded-tl-[3rem] rounded-tr-[3rem] "
     >
-      <div className="container max_width_container mx-auto">
+      <div className="container max_width_container mx-auto flex flex-col items-center gap-y-8">
         <div className="w-full">
           <motion.h2
             variants={animation(0)}
-            className="self-stretch section_heading_white_bg font-poppinsM text-black text-[4.25rem] font-normal  leading-normal"
+            className="self-stretch section_heading font-poppinsM text-black text-[4.25rem] font-normal  leading-normal"
           >
             Travel Info
           </motion.h2>
@@ -48,7 +48,7 @@ export default function TravelInfoCards() {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-3 gap-4 travel_info_cards_container">
+        <div className="grid grid-cols-3 gap-4 w-[95%] travel_info_cards_container">
           <motion.img
             variants={animation(0.4)}
             src={"/images/travel-info/info-cards/visa-info.png"}
