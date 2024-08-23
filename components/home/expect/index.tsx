@@ -79,7 +79,7 @@ export default function WhatToExpect() {
       whileInView="onscreen"
       viewport={{ amount: 0.2 }}
       ref={ref}
-      className="w-screen min-h-screen flex flex-col centralise expect_container h-auto bg-pale-cyan px-12 pt-2 pb-[20rem]"
+      className="w-screen min-h-screen flex flex-col centralise expect_container h-auto bg-pale-cyan px-12 pt-2 pb-[14rem]"
     >
       <div className="w-full max_width_container">
         <h2 className="self-stretch font-poppinsM text-[4.25rem] mt-[38px] mb-[50px] font-normal section_heading leading-normal">
@@ -93,7 +93,7 @@ export default function WhatToExpect() {
               className="bg-white expect_panel_1 rounded-[30px] px-8 py-5 gap-x-[40px] flex flex-col md:flex-row justify-center"
             >
               <div className="flex flex-col expect_panel_desc">
-                <h2 className="expect_panel_heading self-stretch font-poppinsM  text-dodger-blue text-[2.2rem] font-normal leading-[3rem] ">
+                <h2 className="expect_panel_heading self-stretch font-poppinsM  text-black text-[2.2rem] font-normal leading-[3rem] ">
                   Your Perfect Trip <br></br> Planner
                 </h2>
                 <div className="expect_panel_para text-black text-[1.0rem] font-poppinsL mt-5">
@@ -123,7 +123,7 @@ export default function WhatToExpect() {
                 className="bg-white expect_panel_4 w-[67%] flex flex-row rounded-[30px] pl-8 py-6 relative "
               >
                 <div className="flex flex-col w-[60%] expect_panel_desc">
-                  <h2 className="expect_panel_heading self-stretch font-poppinsM  text-dodger-blue text-[2.2rem] font-normal leading-[3rem] ">
+                  <h2 className="expect_panel_heading self-stretch font-poppinsM  text-black text-[2.2rem] font-normal leading-[3rem] ">
                     Break Language Barriers
                   </h2>
                   <div className="expect_panel_para text-black text-[1.0rem] font-poppinsL mt-5">
@@ -150,7 +150,7 @@ export default function WhatToExpect() {
             className="bg-white expect_panel_2 rounded-[30px] p-8 flex flex-col justify-center w-[30%] h-fit"
           >
             <div className="flex flex-col expect_panel_desc">
-              <h2 className="self-stretch font-poppinsM expect_panel_heading text-dodger-blue text-[2.2rem] font-normal leading-[3rem] ">
+              <h2 className="self-stretch font-poppinsM expect_panel_heading text-black text-[2.2rem] font-normal leading-[3rem] ">
                 Speak and Sound Like Locals
               </h2>
               <div className="expect_panel_para text-black text-[1.0rem] font-poppinsL mt-5">

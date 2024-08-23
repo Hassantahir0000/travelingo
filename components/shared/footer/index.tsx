@@ -46,34 +46,36 @@ export default function Footer({
               src={"/images/logo.png"}
               width={500}
               height={500}
-              className="h-[3rem] w-[100%]"
+              className="min-w-[150px] w-[60%]"
               alt=""
             />
           </div>
 
           <div className="w-[40%] footer_cols grid grid-cols-2 gap-4">
             <div className="flex flex-col gap-y-[20px] w-full">
-              <p className="text-white">TraveLingo</p>
-              <p className="text-white opacity-55">Home</p>
-              <p className="text-white opacity-55">Features</p>
-              <p className="text-white opacity-55">How it works</p>
+              <p className="text-white opacity-55 hover:underline cursor-pointer hover:opacity-45">Home</p>
+              <p className="text-white opacity-55 hover:underline cursor-pointer hover:opacity-45">Features</p>
+              <p className="text-white opacity-55 hover:underline cursor-pointer hover:opacity-45">How it works</p>
             </div>
             <div className="flex flex-col gap-y-[20px] w-full">
-              <p className="text-white">Menu</p>
-              <p className="text-white opacity-55">Language Learner</p>
-              <p className="text-white opacity-55">Language Translator</p>
-              <p className="text-white opacity-55">Plan your trip</p>
+              <p className="text-white opacity-55 hover:underline cursor-pointer hover:opacity-45">Language Learner</p>
+              <p className="text-white opacity-55 hover:underline cursor-pointer hover:opacity-45">Language Translator</p>
+              <p className="text-white opacity-55 hover:underline cursor-pointer hover:opacity-45">Plan your trip</p>
             </div>
           </div>
         </div>
         <div className="w-full h-[1px] bg-white mt-10 opacity-30" />
-        <div className="w-full mt-4 h-fit gap-x-4 flex justify-end">
-          <img src={facebook.src} className="w-[20px] h-[20px]" />
-          <img src={linkedin.src} className="w-[20px] h-[20px]" />
-          <img src={reddit.src} className="w-[20px] h-[20px]" />
-          <img src={tiktok.src} className="w-[20px] h-[20px]" />
-          <img src={youtube.src} className="w-[20px] h-[20px]" />
-          <img src={insta.src} className="w-[20px] h-[20px]" />
+        <div className="w-full mt-4 h-fit footer_last gap-x-4 flex justify-between pb-10">
+          <p className="text-white">2024' TraveLingo® Translate & Learn</p>
+
+          <div className="flex flex-row items-center gap-x-6">
+            <img src={facebook.src} className="w-[20px] h-[20px] duration-400 cursor-pointer hover:opacity-45" />
+            <img src={linkedin.src} className="w-[20px] h-[20px] duration-400 cursor-pointer hover:opacity-45" />
+            <img src={reddit.src} className="w-[20px] h-[20px] duration-400 cursor-pointer hover:opacity-45" />
+            <img src={tiktok.src} className="w-[20px] h-[20px] duration-400 cursor-pointer hover:opacity-45" />
+            <img src={youtube.src} className="w-[20px] h-[20px] duration-400 cursor-pointer hover:opacity-45" />
+            <img src={insta.src} className="w-[20px] h-[20px] duration-400 cursor-pointer hover:opacity-45" />
+          </div>
         </div>
       </div>
     </div>
