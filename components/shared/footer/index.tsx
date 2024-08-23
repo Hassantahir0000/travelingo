@@ -66,7 +66,7 @@ export default function Footer({
         </div>
         <div className="w-full h-[1px] bg-white mt-10 opacity-30" />
         <div className="w-full mt-4 h-fit footer_last gap-x-4 flex justify-between pb-10">
-          <p className="text-white">2024' TraveLingo® Translate & Learn</p>
+          <p className="text-white">2024 TraveLingo® Translate & Learn</p>
 
           <div className="flex flex-row items-center gap-x-6">
             <img src={facebook.src} className="w-[20px] h-[20px] duration-400 cursor-pointer hover:opacity-45" />
