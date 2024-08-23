@@ -34,16 +34,18 @@
 .banner_para {
   width: 30%;
 }
-.section_heading, .section_heading_white_bg {
+.section_heading,
+.section_heading_white_bg {
   margin-left: 0;
   color: black;
 }
-.section_para, .section_para_white_bg {
+.section_para,
+.section_para_white_bg {
   color: black;
   font-size: 1.3rem;
   line-height: 28px;
 }
-.section_para_white_bg{
+.section_para_white_bg {
   color: black !important;
 }
 
@@ -51,7 +53,9 @@ body {
   overflow-x: hidden;
 }
 
-.max_width_container, .max_width_container_banner, .second_banner {
+.max_width_container,
+.max_width_container_banner,
+.second_banner {
   max-width: 1500px;
 }
 
@@ -62,7 +66,7 @@ body {
 .second_banner:hover {
   background-color: #2dabff;
   transition: ease-out 200ms;
-  color: #18A1FF !important;
+  color: #18a1ff !important;
   cursor: pointer;
 }
 .second_banner:hover p {
@@ -76,7 +80,7 @@ body {
 }
 
 .section_heading_white_bg {
-  color: #18A1FF !important;
+  color: #18a1ff !important;
 }
 
 .travel_experience_container {
@@ -145,11 +149,13 @@ body {
   .expect_left_panel_container {
     width: 100%;
   }
-  .section_heading, .section_heading_white_bg {
+  .section_heading,
+  .section_heading_white_bg {
     font-size: 2.8rem;
     line-height: 52px;
   }
-  .section_para, .section_para_white_bg {
+  .section_para,
+  .section_para_white_bg {
     font-size: 1.4rem;
     line-height: 35px;
     margin-left: 0;
@@ -195,7 +201,8 @@ body {
   .how_travel_panel_number {
     font-size: 3rem;
   }
-  .navbar_left_stuff, .navbar_right_stuff {
+  .navbar_left_stuff,
+  .navbar_right_stuff {
     display: none;
   }
   .app_drawer {
@@ -313,7 +320,11 @@ body {
   .language_translator_container,
   .how_travelingo_container,
   .expect_container,
-  .language_learner_container, .visa_info_container, .travel_info_card_container, .connect_api_container, .contact_us_container {
+  .language_learner_container,
+  .visa_info_container,
+  .travel_info_card_container,
+  .connect_api_container,
+  .contact_us_container {
     padding-left: 10px;
     padding-right: 10px;
     border-top-right-radius: 20px;
@@ -335,10 +346,12 @@ body {
   .how_travelling_works_play_store_btn p {
     font-size: 1rem;
   }
-  .how_travelling_works_play_store_btn:hover img{
+  .how_travelling_works_play_store_btn:hover img {
     opacity: 1;
   }
-  .banner_first_panel, .max_width_container_banner, .second_banner {
+  .banner_first_panel,
+  .max_width_container_banner,
+  .second_banner {
     width: 92% !important;
     border-radius: 20px !important;
     padding-left: 20px;
@@ -365,12 +378,14 @@ body {
   .banner_second_panel img {
     width: 25px;
   }
-  .section_heading, .section_heading_white_bg {
+  .section_heading,
+  .section_heading_white_bg {
     font-size: 2rem;
     line-height: 42px;
   }
-  .section_para, .section_para_white_bg {
-    font-size: 1.0rem;
+  .section_para,
+  .section_para_white_bg {
+    font-size: 1rem;
     line-height: 25px;
   }
   .expect_panel_heading,
@@ -411,7 +426,8 @@ body {
   .contact_us_panel {
     padding: 20px;
   }
-  .contact_us_panel input, .contact_us_panel textarea {
+  .contact_us_panel input,
+  .contact_us_panel textarea {
     border-radius: 20px;
     font-size: 1.2rem;
   }
@@ -446,9 +462,8 @@ body {
 }
 
 .EZDrawer .EZDrawer__container {
-  background-color: #18A1FF !important;
+  background-color: #18a1ff !important;
 }
-
 
 @media (max-width: 450px) {
   .footer_big_text {
@@ -491,3 +506,82 @@ body {
     font-size: 1.2rem;
   }
 }
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: absolute !important;
+  width: 1.625rem;
+  height: 1.25rem;
+  position: absolute;
+  right: 0 !important;
+  top: 2.5rem !important;
+  margin-right: 1rem !important;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #373a47;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: #a90000;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 46px !important;
+  width: 46px !important;
+  right: 1.2rem;
+  top: 1.2rem !important;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/*
+Sidebar wrapper styles
+*/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+  right: 0px;
+  top: 0px;
+  min-height: 100vh !important;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #18a1ff;
+  padding: 6.4rem 1.5rem 0;
+  font-size: 2.563rem;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  display: flex;
+  flex-direction: column;
+  align-items: first baseline;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: "#18A1FF";
+  top: 0px;
+  left: 0;
+  min-height: 100vh !important;
+}
+
+/*  */
