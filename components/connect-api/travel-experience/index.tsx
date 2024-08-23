@@ -26,7 +26,7 @@ export default function TravelExperience() {
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ amount: 0.2 }}
-      className="w-screen z-[100] centralise h-auto bg-pale-cyan py-[6rem] mt-[-2rem] rounded-tl-[3rem] rounded-tr-[3rem] "
+      className="w-screen z-[100] centralise h-auto connect_api_container bg-pale-cyan py-[1rem] mt-[-2rem] rounded-tl-[3rem] rounded-tr-[3rem] "
     >
       <div className="container mx-auto max_width_container">
         <div className="flex travel_experience_container flex-row mx-auto justify-between items-center w-full h-full my-auto pb-[7rem] pt-[2rem]">
@@ -81,9 +81,9 @@ export default function TravelExperience() {
 
             <motion.button
               variants={animation(1.6)}
-              className="border-2 border-white rounded-full px-6 w-[100%] items-center gap-x-5 py-3 mt-[3rem]  text-black flex justify-between"
+              className="border-2 border-black rounded-full px-6 w-[100%] items-center gap-x-5 py-3 mt-[3rem]  text-black flex justify-between"
             >
-              <p className="text-white text-[1.5rem] font-poppinsR">
+              <p className="text-black text-[1.5rem] font-poppinsR">
                 Request a Demo
               </p>
 

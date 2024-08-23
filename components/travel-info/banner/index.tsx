@@ -73,7 +73,7 @@ export default function TravelInfoBanner({
 
         <motion.div
           variants={animation(0.2)}
-          className="max_width_container banner_second_panel  bg-blue-blur/50  absolute items-center  bottom-10 py-5 px-[1.75rem] rounded-full backdrop-blur-[0.5rem] md:w-[90%] block mx-auto"
+          className="second_banner banner_second_panel  bg-blue-blur/50  absolute items-center  bottom-10 py-5 px-[1.75rem] rounded-full backdrop-blur-[0.5rem] md:w-[90%] block mx-auto"
         >
           <div className="flex items-center justify-between">
             <div className="flex ">

@@ -5,7 +5,7 @@ export default function LocalCustoms({ data }: { data: any }) {
   console.log("Local Custom!!!!: ", data);
 
   return (
-    <div className="w-screen centralise z-[100] visa_info_container shadow-[0px_0px_50px_rgba(255,_255,_255,_0.46)] h-auto bg-[#2EA5F7] px-12 pt-[3rem] pb-[20rem] mt-[-12rem] rounded-[4rem] ">
+    <div className="w-screen centralise z-[100] visa_info_container drop-shadow-[0_-25px_20px_rgba(255,255,255,0.25)] h-auto bg-[#34ACFF] px-12 pt-[3rem] pb-[20rem] mt-[-12rem] rounded-[4rem] ">
       <div className="container max_width_container mx-auto">
         <div className="w-full">
           <h2 className="self-stretch section_heading font-poppinsM text-black text-[4.25rem] font-normal  leading-normal">

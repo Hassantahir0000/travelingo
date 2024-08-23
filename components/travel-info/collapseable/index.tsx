@@ -26,10 +26,21 @@ export default function Collapseable({ data, name, image }: CollapseableProps) {
   console.log("VISA INFOOOOO: ", data);
 
   useEffect(() => {
-    if (data && data?.length > 0) {
-      setHeight((data?.length * 175 + 1000).toString() + "px");
+    if (width) {
+      if (data && data?.length > 0) {
+        const margin = width! < 800 ? 200 : 175;
+
+        console.log("margin: ", margin);
+        console.log("width: ", width);
+
+        setHeight((data?.length * Number(margin) + 1000).toString() + "px");
+      } else if (data && !data?.length) {
+        const margin = width! < 650 ? 1200 : 175;
+
+        setHeight((1 * margin + 700).toString() + "px");
+      }
     }
-  }, [data]);
+  }, [data, width]);
 
   console.log("HEIGHT: ", height);
 
@@ -49,7 +60,7 @@ export default function Collapseable({ data, name, image }: CollapseableProps) {
           />
 
           <div className="absolute collapsable_name z-40 top-[7%] left-[6%] ">
-            <p className="text-[35px] text-white font-poppinsM mt-1">{name}</p>
+            <p className="text-[35px] text-black font-poppinsM mt-1">{name}</p>
           </div>
 
           <div className="absolute z-40 right-0 left-0 ml-auto mr-auto bottom-[17%] w-[90%] h-[65%] rounded-[27px]">
@@ -66,7 +77,7 @@ export default function Collapseable({ data, name, image }: CollapseableProps) {
 
           <div
             onClick={expandMenu}
-            className="absolute collapsable_arrow right-[6%] z-[1000000] p-5 bottom-[7%] duration-500 ease-out hover:cursor-pointer hover:bottom-[6%]"
+            className={`absolute collapsable_arrow right-[6%] z-[1000000] p-5 bottom-[7%] duration-500 ease-out hover:cursor-pointer hover:bottom-[6%]`}
           >
             {width! > 650 ? <DownArrow /> : <DownArrowSmall />}
           </div>
@@ -89,10 +100,10 @@ export default function Collapseable({ data, name, image }: CollapseableProps) {
                     key={index}
                     className="min-h-[175px] collapsable_inner_container h-fit drop-shadow-[0_6px_10px_rgba(24,161,255,0.5)] rounded-[37px] bg-white w-full flex flex-row items-center gap-x-7"
                   >
-                    <div className="h-full flex items-center justify-center pl-4">
+                    <div className="h-full collapsable_inner_container_pic_container flex items-center justify-center pl-4">
                       <img
                         src={data?.photo}
-                        className="h-[100%] w-[100%] max-w-[150px] max-h-[150px] min-w-[150px] min-h-[150px] rounded-[30px] object-cover"
+                        className="h-[100%] collapsable_inner_container_pic w-[100%] max-w-[150px] max-h-[150px] min-w-[150px] min-h-[150px] rounded-[30px] object-cover"
                         alt="panel_img"
                       />
                     </div>
@@ -104,18 +115,20 @@ export default function Collapseable({ data, name, image }: CollapseableProps) {
                   </div>
                 ))
               ) : (
-                <div className="h-[175px] collapsable_inner_container drop-shadow-[0_6px_10px_rgba(24,161,255,0.5)] rounded-[37px] bg-white w-full flex flex-row items-center gap-x-7">
-                  <div className="h-full">
+                <div className="min-h-[175px] h-fit collapsable_inner_container drop-shadow-[0_6px_10px_rgba(24,161,255,0.5)] rounded-[37px] bg-white w-full flex flex-row items-center gap-x-7">
+                  <div className="h-full collapsable_inner_container_pic_container flex items-center justify-center pl-4">
                     <img
                       src={data?.photo}
-                      className="h-[100%] w-[100%] max-w-[150px] max-h-[150px] rounded-[30px]"
+                      className="h-[100%] collapsable_inner_container_pic w-[100%] max-w-[150px] max-h-[150px] rounded-[30px]"
                       alt="panel_img"
                     />
                   </div>
 
-                  <div className="w-[70%] h-[70%] flex flex-col gap-y-1">
+                  <div className="w-[70%] h-[70%] collapsable_inner_desc flex flex-col gap-y-1">
                     <h1 className="text-[25px] font-bold">{data?.name}</h1>
-                    <p className="text-[15px] collapsable_inner_desc">{data?.description}</p>
+                    <p className="text-[15px]">
+                      {data?.description}
+                    </p>
                   </div>
                 </div>
               )}
