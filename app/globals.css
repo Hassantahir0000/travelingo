@@ -36,10 +36,10 @@
 }
 .section_heading, .section_heading_white_bg {
   margin-left: 0;
-  color: white;
+  color: black;
 }
 .section_para, .section_para_white_bg {
-  color: white;
+  color: black;
   font-size: 1.3rem;
   line-height: 28px;
 }
@@ -51,9 +51,23 @@ body {
   overflow-x: hidden;
 }
 
-.max_width_container, .max_width_container_banner {
-  max-width: 1250px;
+.max_width_container, .max_width_container_banner, .second_banner {
+  max-width: 1500px;
 }
+
+.second_banner {
+  transition: ease-out 200ms;
+}
+
+.second_banner:hover {
+  background-color: #2dabff;
+  transition: ease-out 200ms;
+  color: #18A1FF !important;
+}
+.second_banner:hover p {
+  /* color: #18A1FF !important; */
+}
+
 .centralise {
   display: flex;
   flex-direction: column;
@@ -305,12 +319,16 @@ body {
   .how_travelling_works_play_store_btn p {
     font-size: 1rem;
   }
-  .banner_first_panel, .max_width_container_banner {
+  .how_travelling_works_play_store_btn:hover img{
+    opacity: 1;
+  }
+  .banner_first_panel, .max_width_container_banner, .second_banner {
     width: 92% !important;
     border-radius: 20px !important;
     padding-left: 20px;
     padding-right: 20px;
   }
+
   .max_width_container {
     padding-left: 0px;
     padding-right: 0px;
@@ -436,6 +454,10 @@ body {
     right: 8%;
     height: 15px;
     width: 15px;
+  }
+  .footer_last {
+    flex-direction: column;
+    row-gap: 40px;
   }
 }
 

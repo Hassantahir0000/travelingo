@@ -1,5 +1,6 @@
 "use client";
 
+import PlayButton from "@/components/shared/play-button";
 import { useAnimation, motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect } from "react";
@@ -74,19 +75,13 @@ export default function Banner() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={playstoreAnimation}
-          className="container max_width_container_banner bg-blue-blur/50 banner_second_panel absolute items-center  bottom-10 py-5 px-[1.75rem] rounded-full backdrop-blur-[0.5rem] md:w-[90%] block mx-auto"
+          className="container second_banner bg-blue-blur/50 banner_second_panel absolute items-center  bottom-10 py-5 px-[1.75rem] rounded-full backdrop-blur-[0.5rem] md:w-[90%] block mx-auto"
         >
           <div className="flex items-center justify-between">
             <div className="flex gap-x-4">
-              <Image
-                src={"/icons/play-button.svg"}
-                width={100}
-                height={100}
-                alt="PlayStore"
-                className="h-10"
-              />
-              <div className="self-stretch flex items-center font-poppinsR banner_second_heading text-white text-[30px] uppercase font-normal  leading-normal">
-                Get on play store
+              <PlayButton />
+              <div className="self-stretch flex items-center font-poppinsR banner_second_heading text-white text-[30px] uppercase font-normal leading-normal">
+                <p>Get on play store</p>
               </div>
             </div>
 

@@ -83,7 +83,7 @@ const ServicesList: FC = () => {
     >
       {CountriesCards.length > 0 &&
         CountriesCards?.map((country, index) => (
-          <ServiceCard key={index} data={country} />
+          <ServiceCard key={index} arrayLength={CountriesCards?.length} index={index} data={country} />
         ))}
     </div>
   );

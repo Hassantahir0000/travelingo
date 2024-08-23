@@ -43,12 +43,12 @@ export default function PlanYourTrip() {
   };
 
   return (
-    <div className="w-screen centralise min-h-screen h-auto bg-light-sky-blue px-8 pt-2 pb-[20rem] mt-[-8rem] rounded-tl-[3rem] rounded-tr-[3rem]">
+    <div className="w-screen centralise min-h-screen h-auto drop-shadow-[0_-25px_20px_rgba(255,255,255,0.25)] bg-light-sky-blue px-8 pt-2 pb-[14rem] mt-[-8rem] rounded-tl-[3rem] rounded-tr-[3rem]">
       <div
         className="container max_width_container mx-auto"
       >
         <h2
-          className="self-stretch section_heading font-poppinsM text-black text-[4.25rem] mt-[68px] font-normal  leading-normal"
+          className="self-stretch section_heading font-poppinsM text-black text-[4.25rem] mt-[28px] font-normal  leading-normal"
         >
           Plan Your Trip
         </h2>

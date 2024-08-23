@@ -29,7 +29,7 @@ export default function APIFeatures() {
       className="w-screen centralise min-h-screen px-10 connect_api_container h-auto bg-light-sky-blue  pt-2 pb-[20rem] mt-[-4rem] rounded-tl-[3rem] rounded-tr-[3rem]"
     >
       <div className="container max_width_container mx-auto">
-        <motion.h2 variants={animation(0)} className="self-stretch section_heading font-poppinsM text-black text-[4.25rem] mt-[68px] font-normal  leading-normal">
+        <motion.h2 variants={animation(0)} className="self-stretch section_heading font-poppinsM text-black text-[4.25rem] mt-[28px] font-normal  leading-normal">
           Our API&apos;s Features
         </motion.h2>
         <motion.p variants={animation(0.2)} className="self-stretch section_para  text-black text-[1.9rem] font-poppinsR  font-normal mt-4 ml-4 mb-5 leading-[2.5rem]">
