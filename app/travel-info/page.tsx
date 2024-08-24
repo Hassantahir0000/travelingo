@@ -19,6 +19,8 @@ import {
   fetchWeather,
 } from "@/api/travel-info";
 import { useSearchParams } from "next/navigation";
+import { motion } from "framer-motion";
+import { useRef } from "react";
 
 function TravelInfoContent() {
   const searchParams = useSearchParams();
@@ -33,6 +35,12 @@ function TravelInfoContent() {
   const [localCustomsData, setLocalCustomsData] = useState<any>();
   const [weatherData, setWeatherData] = useState<any>();
   const [language, setLanguage] = useState<string>("English");
+
+  const visaInfoRef = useRef<HTMLDivElement>(null);
+  const travelBudgetRef = useRef<HTMLDivElement>(null);
+  const foodDataRef = useRef<HTMLDivElement>(null);
+  const cultureRef = useRef<HTMLDivElement>(null);
+  const localCustomRef = useRef<HTMLDivElement>(null);
 
   const getCulture = async () => {
     if (destination) {
@@ -92,6 +100,26 @@ function TravelInfoContent() {
     console.log("HELLOOO");
   }, [destination]);
 
+  const animation = (delay: number) => ({
+    offscreen: {
+      opacity: 0,
+      y: 30, // Use the parameter here
+    },
+    onscreen: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        ease: "easeOut",
+        duration: 0.2,
+        delay: delay,
+      },
+    },
+  });
+
+  const handleScroll = (ref: React.RefObject<HTMLDivElement>) => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <main className="min-h-screen">
       {loading ? (
@@ -103,18 +131,125 @@ function TravelInfoContent() {
         <>
           <TravelInfoBanner destination={destination} />
           <div className="absolute z-[10]">
-            <TravelInfoCards />
-            {visaInfo && visaInfo?.length && <VisaInfo data={visaInfo} />}
-            {travelBudgetData && travelBudgetData?.length > 0 && (
-              <TravelBudget data={travelBudgetData} />
-            )}
-            {foodData && foodData?.length && <Food data={foodData} />}
-            {cultureData && cultureData?.length && (
-              <Culture data={cultureData} />
-            )}
-            {localCustomsData && localCustomsData?.length && (
-              <LocalCustoms data={localCustomsData} />
-            )}
+            <motion.section
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ amount: 0.2 }}
+              className="w-screen centralise z-[100] travel_info_card_container h-auto bg-[#94D4FF] px-12 pt-[3rem] pb-[20rem] mt-[-1rem] rounded-tl-[3rem] rounded-tr-[3rem] "
+            >
+              <div className="container max_width_container mx-auto flex flex-col items-center gap-y-8">
+                <div className="w-full">
+                  <motion.h2
+                    variants={animation(0)}
+                    className="self-stretch section_heading font-poppinsM text-black text-[4.25rem] font-normal  leading-normal"
+                  >
+                    Travel Info
+                  </motion.h2>
+
+                  <motion.p
+                    variants={animation(0.2)}
+                    className="self-stretch section_para_white_bg text-black text-[1.9rem] font-poppinsR  font-normal mt-4 mb-5 leading-[2.5rem]"
+                  >
+                    Lorem ipsum dolor sit amet consectetur. Tristique cursus
+                    faucibus aliquet amet massa. Viverra elit tempor libero sit
+                    mattis ut ac pharetra. Ultrices lectus et sagittis aliquet
+                    nam ornare. Iaculis consequat faucibus tortor amet est.
+                  </motion.p>
+                </div>
+
+                <div className="grid grid-cols-3 gap-4 w-[95%] travel_info_cards_container">
+                  <motion.img
+                    variants={animation(0.4)}
+                    src={"/images/travel-info/info-cards/visa-info.png"}
+                    width={500}
+                    height={500}
+                    alt=""
+                    onClick={() => handleScroll(visaInfoRef)}
+                    className="cursor-pointer "
+                  />
+
+                  <motion.img
+                    variants={animation(0.6)}
+                    src={"/images/travel-info/info-cards/travel-budget.png"}
+                    width={500}
+                    height={500}
+                    alt=""
+                    onClick={() => handleScroll(travelBudgetRef)}
+                    className="cursor-pointer "
+                  />
+                  <motion.img
+                    variants={animation(0.8)}
+                    src={"/images/travel-info/info-cards/weather.png"}
+                    width={500}
+                    height={500}
+                    alt=""
+                  />
+
+                  <motion.img
+                    variants={animation(1)}
+                    src={"/images/travel-info/info-cards/food.png"}
+                    width={500}
+                    height={500}
+                    alt=""
+                    onClick={() => handleScroll(foodDataRef)}
+                    className="cursor-pointer "
+                  />
+                  <motion.img
+                    variants={animation(1.2)}
+                    src={"/images/travel-info/info-cards/culture.png"}
+                    width={500}
+                    height={500}
+                    alt=""
+                    onClick={() => handleScroll(cultureRef)}
+                    className="cursor-pointer "
+                  />
+                  <motion.img
+                    variants={animation(1.4)}
+                    src={"/images/travel-info/info-cards/customs.png"}
+                    width={500}
+                    height={500}
+                    alt=""
+                    onClick={() => handleScroll(localCustomRef)}
+                    className="cursor-pointer "
+                  />
+                </div>
+              </div>
+            </motion.section>
+
+            <div id="visa-info" ref={visaInfoRef}>
+              {visaInfo && visaInfo?.length && <VisaInfo data={visaInfo} />}
+            </div>
+
+            <div
+              id="travel-budget"
+              ref={travelBudgetRef}
+              className="cursor-pointer"
+            >
+              {travelBudgetData && travelBudgetData?.length > 0 && (
+                <TravelBudget data={travelBudgetData} />
+              )}
+            </div>
+
+            <div id="food-data" ref={foodDataRef} className="cursor-pointer">
+              {foodData && foodData?.length && <Food data={foodData} />}
+            </div>
+
+            <div id="culture" ref={cultureRef} className="cursor-pointer">
+              {cultureData && cultureData?.length && (
+                <Culture data={cultureData} />
+              )}
+            </div>
+
+            <div
+              id="local-custom"
+              ref={localCustomRef}
+              className="cursor-pointer"
+            >
+              {localCustomsData && localCustomsData?.length && (
+                <LocalCustoms data={localCustomsData} />
+              )}
+            </div>
+
             <Footer
               heading={"Travelingo API"}
               description={""}
