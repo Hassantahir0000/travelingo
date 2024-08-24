@@ -569,11 +569,13 @@ Sidebar wrapper styles
   display: flex;
   flex-direction: column;
   align-items: first baseline;
+  height: 85vh !important;
 }
 
 /* Individual item */
 .bm-item {
-  display: inline-block;
+  display: flex !important;
+  flex-direction: column !important;
 }
 
 /* Styling of overlay */
