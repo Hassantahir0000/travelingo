@@ -38,13 +38,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
       <body
         className={`${inter.className} ${poppins_bold.variable} ${poppins_medium.variable} ${poppins_light.variable}  ${poppins_regular.variable}`}
       >
         <ScrollProvider>
-          <Navbar />
+         <Navbar />
           <NextUIProvider>{children}</NextUIProvider>
         </ScrollProvider>
       </body>
