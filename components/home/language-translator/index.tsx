@@ -3,8 +3,17 @@
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 import { useAnimation, motion } from "framer-motion";
+import { useScroll } from "@/utils/context";
 
 export default function LanguageTranslator() {
+  const {
+    scrollTo,
+    howItWorksRef,
+    langLearnerRef,
+    langTranslatorRef,
+    planYourTripRef,
+  } = useScroll();
+
   const animation = (delay: number) => ({
     offscreen: {
       opacity: 0,
@@ -23,6 +32,7 @@ export default function LanguageTranslator() {
 
   return (
     <motion.section
+      ref={langTranslatorRef}
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ amount: 0.2 }}

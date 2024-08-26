@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 
 import facebook from "../../../public/icons/facebook.svg";
@@ -6,6 +8,8 @@ import linkedin from "../../../public/icons/linkedin.svg";
 import reddit from "../../../public/icons/reddit.svg";
 import insta from "../../../public/icons/insta.svg";
 import tiktok from "../../../public/icons/tiktok.svg";
+import { useScroll } from "@/utils/context";
+import Link from "next/link";
 
 type FooterProps = {
   heading: string;
@@ -18,8 +22,10 @@ export default function Footer({
   description,
   buttonLabel,
 }: FooterProps) {
+  const { scrollTo } = useScroll();
+
   return (
-    <div className="w-screen h-fit relative z-40 px-10 h-auto bg-blue-blur pt-[4rem] mt-[-4rem] rounded-tl-[3rem] rounded-tr-[3rem]">
+    <div className="w-screen h-fit relative z-40 px-10 bg-blue-blur pt-[4rem] mt-[-4rem] rounded-tl-[3rem] rounded-tr-[3rem]">
       <div className="bg-white flex-col mx-auto rounded-[28px] pt-[3rem] pb-[7rem] flex items-center justify-center">
         <h2 className="self-stretch footer_big_text font-poppinsM text-center text-blue-blur text-[6.25rem] mt-[68px] font-normal leading-normal">
           {heading}
@@ -53,14 +59,53 @@ export default function Footer({
 
           <div className="w-[40%] footer_cols grid grid-cols-2 gap-4">
             <div className="flex flex-col gap-y-[20px] w-full">
-              <p className="text-white opacity-55 hover:underline cursor-pointer hover:opacity-45">Home</p>
-              <p className="text-white opacity-55 hover:underline cursor-pointer hover:opacity-45">Features</p>
-              <p className="text-white opacity-55 hover:underline cursor-pointer hover:opacity-45">How it works</p>
+              <Link href={"/"}>
+                <p className="text-white opacity-55 hover:underline cursor-pointer hover:opacity-45">
+                  Home
+                </p>
+              </Link>
+              <p
+                onClick={() => {
+                  scrollTo("features");
+                }}
+                className="text-white opacity-55 hover:underline cursor-pointer hover:opacity-45"
+              >
+                Features
+              </p>
+              <p
+                onClick={() => {
+                  scrollTo("howitworks");
+                }}
+                className="text-white opacity-55 hover:underline cursor-pointer hover:opacity-45"
+              >
+                How it works
+              </p>
             </div>
             <div className="flex flex-col gap-y-[20px] w-full">
-              <p className="text-white opacity-55 hover:underline cursor-pointer hover:opacity-45">Language Learner</p>
-              <p className="text-white opacity-55 hover:underline cursor-pointer hover:opacity-45">Language Translator</p>
-              <p className="text-white opacity-55 hover:underline cursor-pointer hover:opacity-45">Plan your trip</p>
+              <p
+                onClick={() => {
+                  scrollTo("langlearner");
+                }}
+                className="text-white opacity-55 hover:underline cursor-pointer hover:opacity-45"
+              >
+                Language Learner
+              </p>
+              <p
+                onClick={() => {
+                  scrollTo("langtranslator");
+                }}
+                className="text-white opacity-55 hover:underline cursor-pointer hover:opacity-45"
+              >
+                Language Translator
+              </p>
+              <p
+                onClick={() => {
+                  scrollTo("planyourtrip");
+                }}
+                className="text-white opacity-55 hover:underline cursor-pointer hover:opacity-45"
+              >
+                Plan your trip
+              </p>
             </div>
           </div>
         </div>
@@ -69,12 +114,30 @@ export default function Footer({
           <p className="text-white">2024 TraveLingo® Translate & Learn</p>
 
           <div className="flex flex-row items-center gap-x-6">
-            <img src={facebook.src} className="w-[20px] h-[20px] duration-400 cursor-pointer hover:opacity-45" />
-            <img src={linkedin.src} className="w-[20px] h-[20px] duration-400 cursor-pointer hover:opacity-45" />
-            <img src={reddit.src} className="w-[20px] h-[20px] duration-400 cursor-pointer hover:opacity-45" />
-            <img src={tiktok.src} className="w-[20px] h-[20px] duration-400 cursor-pointer hover:opacity-45" />
-            <img src={youtube.src} className="w-[20px] h-[20px] duration-400 cursor-pointer hover:opacity-45" />
-            <img src={insta.src} className="w-[20px] h-[20px] duration-400 cursor-pointer hover:opacity-45" />
+            <img
+              src={facebook.src}
+              className="w-[20px] h-[20px] duration-400 cursor-pointer hover:opacity-45"
+            />
+            <img
+              src={linkedin.src}
+              className="w-[20px] h-[20px] duration-400 cursor-pointer hover:opacity-45"
+            />
+            <img
+              src={reddit.src}
+              className="w-[20px] h-[20px] duration-400 cursor-pointer hover:opacity-45"
+            />
+            <img
+              src={tiktok.src}
+              className="w-[20px] h-[20px] duration-400 cursor-pointer hover:opacity-45"
+            />
+            <img
+              src={youtube.src}
+              className="w-[20px] h-[20px] duration-400 cursor-pointer hover:opacity-45"
+            />
+            <img
+              src={insta.src}
+              className="w-[20px] h-[20px] duration-400 cursor-pointer hover:opacity-45"
+            />
           </div>
         </div>
       </div>

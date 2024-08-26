@@ -302,9 +302,21 @@ body {
     padding-top: 15px;
     padding-bottom: 15px;
     row-gap: 20px;
+    border-radius: 20px;
+    padding-top: 0px;
   }
   .collapsable_inner_desc {
     width: 90%;
+  }
+  .collapsable_inner_desc h1 {
+    font-size: 18px;
+  }
+  .collapsable_inner_desc p {
+    font-size: 12px;
+  }
+  .collapsable_container {
+    padding-left: 10px;
+    padding-right: 10px
   }
   .collapsable_inner_container_pic {
     max-width: 60px !important;

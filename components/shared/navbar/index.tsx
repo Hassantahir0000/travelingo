@@ -1,14 +1,17 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import MobileMenu from "@/components/common/mobile-menu";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { useScroll } from "@/utils/context";
 
 // Use React.FC to define component and its props
 const Navbar: React.FC = () => {
   const router = useRouter();
+  const { scrollTo } = useScroll();
+
   return (
     <>
       <div className="  bg-blue-blur/50  absolute top-0 py-[1.3rem] px-[2.75rem]  backdrop-blur-[0.5rem] w-screen block mx-auto">
@@ -30,10 +33,10 @@ const Navbar: React.FC = () => {
               >
                 Home
               </Link>
-              <p className="font-poppinsR text-white hover:underline cursor-pointer hover:opacity-45">
+              <p onClick={()=>{scrollTo('features')}} className="font-poppinsR text-white hover:underline cursor-pointer hover:opacity-45">
                 Features
               </p>
-              <p className="font-poppinsR text-white hover:underline cursor-pointer hover:opacity-45">
+              <p onClick={()=>{scrollTo('howitworks')}} className="font-poppinsR text-white hover:underline cursor-pointer hover:opacity-45">
                 How it Works
               </p>
             </div>
