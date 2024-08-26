@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "../components/shared/navbar";
 import { NextUIProvider } from "@nextui-org/react";
+import { ScrollProvider } from "@/utils/context";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -42,8 +43,10 @@ export default function RootLayout({
       <body
         className={`${inter.className} ${poppins_bold.variable} ${poppins_medium.variable} ${poppins_light.variable}  ${poppins_regular.variable}`}
       >
-        <Navbar />
-        <NextUIProvider>{children}</NextUIProvider>
+        <ScrollProvider>
+          <Navbar />
+          <NextUIProvider>{children}</NextUIProvider>
+        </ScrollProvider>
       </body>
     </html>
   );

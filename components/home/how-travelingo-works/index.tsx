@@ -3,8 +3,11 @@
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 import { useAnimation, motion } from "framer-motion";
+import { useScroll } from "@/utils/context";
 
 export default function HowItWorks() {
+  const { howItWorksRef } = useScroll();
+
   const animation = (delay: number) => ({
     offscreen: {
       opacity: 0,
@@ -23,6 +26,7 @@ export default function HowItWorks() {
 
   return (
     <motion.section
+      ref={howItWorksRef}
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ amount: 0.3 }}
@@ -38,11 +42,17 @@ export default function HowItWorks() {
         />
 
         <div className="how_to_travel_heading">
-          <motion.h2 variants={animation(0.2)} className="self-stretch section_heading text-black text-[6.25rem] mt-[68px] font-poppinsM  font-normal  leading-[6.5rem] w-[40%]">
+          <motion.h2
+            variants={animation(0.2)}
+            className="self-stretch section_heading text-black text-[6.25rem] mt-[68px] font-poppinsM  font-normal  leading-[6.5rem] w-[40%]"
+          >
             How <br></br> Travelingo <br></br> Works
           </motion.h2>
 
-          <motion.button variants={animation(0.4)} className=" bg-black rounded-full how_travelling_works_play_store_btn px-6 w-full items-center gap-x-5 py-5 mt-[3rem] text-black flex justify-between duration-400 hover:bg-gray-800">
+          <motion.button
+            variants={animation(0.4)}
+            className=" bg-black rounded-full how_travelling_works_play_store_btn px-6 w-full items-center gap-x-5 py-5 mt-[3rem] text-black flex justify-between duration-400 hover:bg-gray-800"
+          >
             <div className="flex gap-x-5">
               <Image
                 src={"/icons/play-button.svg"}
@@ -54,12 +64,21 @@ export default function HowItWorks() {
                 GET ON PLAY STORE
               </p>
             </div>
-            <Image className="opacity-1" src={"/icons/arrow.svg"} width={30} height={30} alt="" />
+            <Image
+              className="opacity-1"
+              src={"/icons/arrow.svg"}
+              width={30}
+              height={30}
+              alt=""
+            />
           </motion.button>
         </div>
 
         <div className="how_to_travel_panels_container flex flex-col z-[10] ml-auto w-[50%] gap-y-5 mt-8">
-          <motion.div variants={animation(0.6)} className="rounded-[50px] how_to_travel_panel border-4 border-black flex flex-row gap-x-[2rem] bg-black/10 px-3 py-1 relative">
+          <motion.div
+            variants={animation(0.6)}
+            className="rounded-[50px] how_to_travel_panel border-4 border-black flex flex-row gap-x-[2rem] bg-black/10 px-3 py-1 relative"
+          >
             <h2 className="self-stretch pl-4 font-poppinsM how_travel_panel_number text-black m-auto text-[7.0rem] font-normal leading-normal">
               01
             </h2>
@@ -76,7 +95,10 @@ export default function HowItWorks() {
               alt=""
             />
           </motion.div>
-          <motion.div variants={animation(0.8)} className="how_to_travel_panel rounded-[50px] border-4 border-black flex gap-x-[2rem] bg-black/10 px-3 py-1 relative">
+          <motion.div
+            variants={animation(0.8)}
+            className="how_to_travel_panel rounded-[50px] border-4 border-black flex gap-x-[2rem] bg-black/10 px-3 py-1 relative"
+          >
             <h2 className="self-stretch pl-4 font-poppinsM how_travel_panel_number text-black m-auto text-[7.0rem]   font-normal  leading-normal">
               02
             </h2>
@@ -93,7 +115,10 @@ export default function HowItWorks() {
               alt=""
             />
           </motion.div>
-          <motion.div variants={animation(1)} className="how_to_travel_panel rounded-[50px] border-4 border-black flex gap-x-[2rem] bg-black/10 px-3 py-1 relative">
+          <motion.div
+            variants={animation(1)}
+            className="how_to_travel_panel rounded-[50px] border-4 border-black flex gap-x-[2rem] bg-black/10 px-3 py-1 relative"
+          >
             <h2 className="self-stretch pl-4 font-poppinsM how_travel_panel_number text-black m-auto text-[7.0rem]   font-normal  leading-normal">
               03
             </h2>
@@ -110,7 +135,10 @@ export default function HowItWorks() {
               alt=""
             />
           </motion.div>
-          <motion.div variants={animation(1.2)} className="how_to_travel_panel rounded-[50px] border-4 border-black flex gap-x-[2rem] bg-black/10 px-3 py-1 relative">
+          <motion.div
+            variants={animation(1.2)}
+            className="how_to_travel_panel rounded-[50px] border-4 border-black flex gap-x-[2rem] bg-black/10 px-3 py-1 relative"
+          >
             <h2 className="self-stretch pl-4 font-poppinsM how_travel_panel_number text-black m-auto text-[7.0rem]   font-normal  leading-normal">
               04
             </h2>
@@ -127,7 +155,10 @@ export default function HowItWorks() {
               alt=""
             />
           </motion.div>
-          <motion.div variants={animation(1.4)} className="how_to_travel_panel rounded-[50px] border-4 border-black flex gap-x-[2rem] bg-black/10 px-3 py-1 relative">
+          <motion.div
+            variants={animation(1.4)}
+            className="how_to_travel_panel rounded-[50px] border-4 border-black flex gap-x-[2rem] bg-black/10 px-3 py-1 relative"
+          >
             <h2 className="self-stretch pl-4 font-poppinsM how_travel_panel_number text-black m-auto text-[7.0rem]   font-normal  leading-normal">
               05
             </h2>

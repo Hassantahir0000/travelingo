@@ -5,8 +5,19 @@ import { useInView } from "react-intersection-observer";
 import { useAnimation, motion } from "framer-motion";
 import blob1 from "../../../public/images/language-translator/language_translator_blob_1.png";
 import blob2 from "../../../public/images/language-translator/language_translator_blob_2.png";
+import { useScroll } from "@/utils/context";
 
 export default function LanguageLearner() {
+  const { features } = useScroll();
+
+  const {
+    scrollTo,
+    howItWorksRef,
+    langLearnerRef,
+    langTranslatorRef,
+    planYourTripRef,
+  } = useScroll();
+
   const animation = (delay: number) => ({
     offscreen: {
       opacity: 0,
@@ -25,6 +36,7 @@ export default function LanguageLearner() {
 
   return (
     <motion.section
+      ref={features}
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ amount: 0.2 }}

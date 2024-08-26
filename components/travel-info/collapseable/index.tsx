@@ -28,7 +28,7 @@ export default function Collapseable({ data, name, image }: CollapseableProps) {
   useEffect(() => {
     if (width) {
       if (data && data?.length > 0) {
-        const margin = width! < 800 ? 200 : 175;
+        const margin = width! < 800 ? 200 : 195;
 
         console.log("margin: ", margin);
         console.log("width: ", width);
@@ -83,7 +83,7 @@ export default function Collapseable({ data, name, image }: CollapseableProps) {
           </div>
 
           <div
-            className={`absolute flex collapsable_container items-start pb-10 z-[0] justify-center top-[77%] w-[90%] right-0 left-0 ml-auto mr-auto ${
+            className={`absolute flex items-start pb-10 z-[0] justify-center top-[77%] w-[90%] right-0 left-0 ml-auto mr-auto ${
               isExpanded
                 ? "h-[fit] opacity-100 flex"
                 : "top-[15%] opacity-0 hidden"
@@ -92,7 +92,7 @@ export default function Collapseable({ data, name, image }: CollapseableProps) {
             <div
               className={`${
                 isExpanded ? "opacity-100" : "opacity-100"
-              } w-[95%] h-[70%] mt-32 p-5 flex flex-col gap-y-8`}
+              } w-[95%] collapsable_container h-[70%] mt-32 p-5 flex flex-col gap-y-8`}
             >
               {data !== undefined && data?.length > 0 ? (
                 data?.map((data: any, index: number) => (
