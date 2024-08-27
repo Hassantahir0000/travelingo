@@ -42,11 +42,11 @@ const Navbar: React.FC = () => {
                   </Link>
                   <p
                     onClick={() => {
-                      scrollTo("features");
+                      scrollTo("planyourtrip");
                     }}
                     className="font-poppinsR text-white hover:underline cursor-pointer hover:opacity-45"
                   >
-                    Features
+                    Plan Your Trip
                   </p>
                   <p
                     onClick={() => {

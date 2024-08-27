@@ -35,7 +35,7 @@ export default function Footer({
           {description}
         </p>
 
-        <button className="bg-blue-blur rounded-full w-[90%] max-w-[30rem] px-10 items-center gap-x-5 py-5 mt-[3rem] text-white flex justify-between">
+        <button className="bg-blue-blur animate_btn rounded-full w-[90%] max-w-[30rem] px-10 items-center gap-x-5 py-5 mt-[3rem] text-white flex justify-between">
           <div className="flex gap-x-5 justify-between">
             <p className="text-white text-[1.8rem] footer_btn_p font-poppinsR">
               {buttonLabel}

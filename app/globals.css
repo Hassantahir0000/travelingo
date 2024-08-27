@@ -90,6 +90,34 @@ body {
   width: 90%;
 }
 
+.animate_btn, .ll_get_api_btn, .how_travelling_works_play_store_btn {
+  position: relative;
+  padding-right: 50px;
+  transition: ease-out 200ms;
+}
+
+.animate_btn:hover, .how_travelling_works_play_store_btn:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: -7px 7px 0px rgba(0, 0, 0);
+}
+
+.ll_get_api_btn:hover{
+  transform: translateY(-5px);
+  box-shadow: -7px 7px 0px rgba(0, 0, 0);
+}
+
+.animate_btn img, .ll_get_api_btn img, .how_travelling_works_play_store_btn > :last-child {
+  transition: ease-out 200ms;
+  position: absolute;
+  right: 25px;
+}
+
+.animate_btn:hover img, .ll_get_api_btn:hover img, .how_travelling_works_play_store_btn:hover > :last-child {
+  transition: ease-out 200ms;
+  position: absolute;
+  right: 15px;
+}
+
 @media (max-width: 1060px) {
   .how_travelingo_works_container {
     display: flex;

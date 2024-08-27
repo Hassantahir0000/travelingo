@@ -17,12 +17,12 @@ export default function PlanYourTrip() {
 
   return (
     <div ref={planYourTripRef} className="w-screen min-h-screen h-auto bg-light-sky-blue px-8 pt-2 pb-[20rem] mt-[-8rem] rounded-tl-[3rem] rounded-tr-[3rem]">
-      <div className="container mx-auto">
+      <div className="container mx-auto mb-[70px]">
         <h2 className="self-stretch font-poppinsM text-[2rem] md:text-[4.25rem] mt-[38px] mb-0 font-normal section_heading leading-normal">
           Plan Your Trip
         </h2>
 
-        <p className="self-stretch section_para text-black text-[0.8rem] mb-[30px] font-poppinsR font-normal mt-2 md:mb-5 md:leading-[2.2rem]">
+        <p className="self-stretch section_para text-black text-[0.8rem] mb-[30px] font-poppinsR font-normal mt-2 md:mb-5 md:leading-[2.1rem]">
           Lorem ipsum dolor sit amet consectetur. Tristique cursus faucibus
           aliquet amet massa. Viverra elit tempor libero sit mattis ut ac
           pharetra. Ultrices lectus et sagittis aliquet nam ornare. Iaculis
