@@ -135,7 +135,7 @@ export default function LanguageLearner() {
             </div>
           </div>
           <div className="flex justify-between items-baseline language_learner_btns">
-            <button className="border-2 ll_flient_btn border-black rounded-full px-6 w-fit items-center h-fit gap-x-5 py-3  text-black flex justify-between">
+            <button className="border-2 animate_btn ll_flient_btn border-black rounded-full px-6 w-fit items-center h-fit gap-x-5 py-3  text-black flex justify-between">
               <p className="text-black font-poppinsR">Get Fluent</p>
 
               <Image
