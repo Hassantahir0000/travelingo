@@ -26,7 +26,7 @@ export default function ConnectBanner() {
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ amount: 0.2 }}
-      className="w-screen centralise h-[120vh]"
+      className="w-screen centralise h-[106vh]"
     >
       <Image
         src="/images/connect-api/banner.png"

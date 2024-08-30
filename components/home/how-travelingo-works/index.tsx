@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 import { useAnimation, motion } from "framer-motion";
 import { useScroll } from "@/utils/context";
+import elipse from "../../../public/images/how-it-works/how-travelingo-works-elipse.png";
 
 export default function HowItWorks() {
   const { howItWorksRef } = useScroll();
@@ -33,13 +34,22 @@ export default function HowItWorks() {
       className="w-screen drop-shadow-[0_-25px_20px_rgba(255,255,255,0.25)] centralise how_travelingo_container relative z-40 min-h-screen h-auto bg-sky-blue px-12 pt-2 pb-[8rem] mt-[-8rem] rounded-tl-[3%] rounded-tr-[3%] "
     >
       <div className="flex max_width_container relative how_travelingo_works_container">
-        <Image
+        {/* <Image
           className="absolute right-0 w-[50%]"
           src={"/images/blob.svg"}
           width={500}
           height={500}
           alt=""
+        /> */}
+
+      <div className="absolute right-20 top-0 w-fit">
+      <Image
+          className="w-[100%]"
+          src={elipse}
+          alt=""
         />
+      </div>
+  
 
         <div className="how_to_travel_heading">
           <motion.h2
@@ -77,7 +87,8 @@ export default function HowItWorks() {
         <div className="how_to_travel_panels_container flex flex-col z-[10] ml-auto w-[50%] gap-y-5 mt-8">
           <motion.div
             variants={animation(0.6)}
-            className="rounded-[50px] how_to_travel_panel border-4 border-black flex flex-row gap-x-[2rem] bg-black/10 px-3 py-1 relative"
+            whileHover={{ translateY: -14 }}
+            className="rounded-[50px] how_to_travel_panel border-4 border-black flex flex-row gap-x-[2rem] px-3 py-1 relative"
           >
             <h2 className="self-stretch pl-4 font-poppinsM how_travel_panel_number text-black m-auto text-[7.0rem] font-normal leading-normal">
               01
@@ -96,8 +107,9 @@ export default function HowItWorks() {
             />
           </motion.div>
           <motion.div
+            whileHover={{ translateY: -14 }}
             variants={animation(0.8)}
-            className="how_to_travel_panel rounded-[50px] border-4 border-black flex gap-x-[2rem] bg-black/10 px-3 py-1 relative"
+            className="how_to_travel_panel rounded-[50px] border-4 border-black flex gap-x-[2rem]   px-3 py-1 relative"
           >
             <h2 className="self-stretch pl-4 font-poppinsM how_travel_panel_number text-black m-auto text-[7.0rem]   font-normal  leading-normal">
               02
@@ -116,8 +128,9 @@ export default function HowItWorks() {
             />
           </motion.div>
           <motion.div
+            whileHover={{ translateY: -14 }}
             variants={animation(1)}
-            className="how_to_travel_panel rounded-[50px] border-4 border-black flex gap-x-[2rem] bg-black/10 px-3 py-1 relative"
+            className="how_to_travel_panel rounded-[50px] border-4 border-black flex gap-x-[2rem]   px-3 py-1 relative"
           >
             <h2 className="self-stretch pl-4 font-poppinsM how_travel_panel_number text-black m-auto text-[7.0rem]   font-normal  leading-normal">
               03
@@ -136,8 +149,9 @@ export default function HowItWorks() {
             />
           </motion.div>
           <motion.div
+            whileHover={{ translateY: -14 }}
             variants={animation(1.2)}
-            className="how_to_travel_panel rounded-[50px] border-4 border-black flex gap-x-[2rem] bg-black/10 px-3 py-1 relative"
+            className="how_to_travel_panel rounded-[50px] border-4 border-black flex gap-x-[2rem]   px-3 py-1 relative"
           >
             <h2 className="self-stretch pl-4 font-poppinsM how_travel_panel_number text-black m-auto text-[7.0rem]   font-normal  leading-normal">
               04
@@ -156,8 +170,9 @@ export default function HowItWorks() {
             />
           </motion.div>
           <motion.div
+            whileHover={{ translateY: -14 }}
             variants={animation(1.4)}
-            className="how_to_travel_panel rounded-[50px] border-4 border-black flex gap-x-[2rem] bg-black/10 px-3 py-1 relative"
+            className="how_to_travel_panel rounded-[50px] border-4 border-black flex gap-x-[2rem]   px-3 py-1 relative"
           >
             <h2 className="self-stretch pl-4 font-poppinsM how_travel_panel_number text-black m-auto text-[7.0rem]   font-normal  leading-normal">
               05

@@ -35,7 +35,7 @@ export default function Banner() {
   }, []);
 
   return (
-    <div className="w-screen h-screen centralise">
+    <div className="w-screen h-[104vh] centralise">
       <Image
         src="/images/home/main-bg.png"
         priority
@@ -45,7 +45,7 @@ export default function Banner() {
         alt=""
       />
 
-      <div className="flex justify-center items-center ">
+      <div className="flex justify-center items-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={welcomeBannerAnimation}
@@ -75,7 +75,7 @@ export default function Banner() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={playstoreAnimation}
-          className="container second_banner bg-blue-blur/50 banner_second_panel absolute items-center  bottom-10 py-5 px-[1.75rem] rounded-full backdrop-blur-[0.5rem] md:w-[90%] block mx-auto"
+          className="container second_banner bg-blue-blur/50 banner_second_panel absolute items-center bottom-10 py-5 px-[1.75rem] rounded-full backdrop-blur-[0.5rem] md:w-[90%] block mx-auto"
         >
           <div className="flex items-center justify-between">
             <div className="flex gap-x-4">

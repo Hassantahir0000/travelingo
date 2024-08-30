@@ -58,6 +58,7 @@ export default function LanguageTranslator() {
 
         <motion.div
           variants={animation(0.6)}
+          whileHover={{ translateY: -14 }}
           className="bg-[#18A1FF] border-[1px] border-white drop-shadow-[0_0px_20px_rgba(255,255,255,0.60)] lang_panel rounded-[20px]  mt-[5rem]"
         >
           <div className="flex flex-row gap-x-[50px] px-10 py-[3rem] lang_translator_panel">
@@ -89,6 +90,7 @@ export default function LanguageTranslator() {
 
         <div className="flex gap-x-10 mt-[2rem] lang_translator_panel_container">
           <motion.div
+            whileHover={{ translateY: -14 }}
             variants={animation(1)}
             className="bg-[#18A1FF] drop-shadow-[0_0px_20px_rgba(255,255,255,0.60)] w-[55%] lang_panel border-[1px] border-white rounded-[20px] "
           >
@@ -117,6 +119,7 @@ export default function LanguageTranslator() {
           </motion.div>
 
           <motion.div
+            whileHover={{ translateY: -14 }}
             variants={animation(1.4)}
             className="bg-[#18A1FF] drop-shadow-[0_0px_20px_rgba(255,255,255,0.60)]  w-[45%] lang_panel border-[1px] border-white rounded-[20px] "
           >
@@ -134,6 +137,7 @@ export default function LanguageTranslator() {
 
         <div className="flex gap-x-10 mt-[2rem] lang_translator_panel_container">
           <motion.div
+            whileHover={{ translateY: -14 }}
             variants={animation(1.8)}
             className="bg-[#18A1FF] drop-shadow-[0_0px_20px_rgba(255,255,255,0.5)] w-[35%] lang_panel border-[1px] border-white rounded-[20px] "
           >
@@ -152,6 +156,7 @@ export default function LanguageTranslator() {
             </div>
           </motion.div>
           <motion.div
+            whileHover={{ translateY: -14 }}
             variants={animation(2.2)}
             className="bg-[#18A1FF] lang_panel w-[65%] rounded-[20px] border-[1px] border-white"
           >

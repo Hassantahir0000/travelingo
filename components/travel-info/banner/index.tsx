@@ -32,7 +32,7 @@ export default function TravelInfoBanner({
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ amount: 0.2 }}
-      className="w-screen h-screen centralise"
+      className="w-screen h-[106vh] centralise"
     >
       <Image
         src={`/images/travel-info/${
