@@ -25,7 +25,7 @@ export default function Footer({
   const { scrollTo } = useScroll();
 
   return (
-    <div className="w-screen h-fit relative z-40 px-10 bg-blue-blur pt-[4rem] mt-[-4rem] rounded-tl-[3rem] rounded-tr-[3rem]">
+    <div className="w-screen h-fit relative drop-shadow-[0_0px_20px_rgba(255,255,255,0.60)] z-40 px-10 bg-blue-blur pt-[4rem] mt-[-4rem] rounded-tl-[3rem] rounded-tr-[3rem]">
       <div className="bg-white flex-col mx-auto rounded-[28px] pt-[3rem] pb-[7rem] flex items-center justify-center">
         <h2 className="self-stretch footer_big_text font-poppinsM text-center text-blue-blur text-[6.25rem] mt-[68px] font-normal leading-normal">
           {heading}

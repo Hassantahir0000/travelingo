@@ -96,8 +96,6 @@ function TravelInfoContent() {
       getTravelBudget();
       setLoading(false);
     }
-
-    console.log("HELLOOO");
   }, [destination]);
 
   const animation = (delay: number) => ({
@@ -135,7 +133,7 @@ function TravelInfoContent() {
               initial="offscreen"
               whileInView="onscreen"
               viewport={{ amount: 0.2 }}
-              className="w-screen centralise z-[100] travel_info_card_container h-auto bg-[#94D4FF] px-12 pt-[3rem] pb-[20rem] mt-[-1rem] rounded-tl-[3rem] rounded-tr-[3rem] "
+              className="w-screen centralise z-[100] travel_info_card_container h-auto bg-[#94D4FF] px-12 pt-[3rem] pb-[20rem] mt-[-2.6rem] rounded-tl-[3rem] rounded-tr-[3rem] "
             >
               <div className="container max_width_container mx-auto flex flex-col items-center gap-y-8">
                 <div className="w-full">
@@ -164,6 +162,7 @@ function TravelInfoContent() {
                     width={500}
                     height={500}
                     alt=""
+                    whileHover={{ translateY: -14 }}
                     onClick={() => handleScroll(visaInfoRef)}
                     className="cursor-pointer "
                   />
@@ -174,6 +173,7 @@ function TravelInfoContent() {
                     width={500}
                     height={500}
                     alt=""
+                    whileHover={{ translateY: -14 }}
                     onClick={() => handleScroll(travelBudgetRef)}
                     className="cursor-pointer "
                   />
@@ -182,6 +182,7 @@ function TravelInfoContent() {
                     src={"/images/travel-info/info-cards/weather.png"}
                     width={500}
                     height={500}
+                    whileHover={{ translateY: -14 }}
                     alt=""
                   />
 
@@ -191,6 +192,7 @@ function TravelInfoContent() {
                     width={500}
                     height={500}
                     alt=""
+                    whileHover={{ translateY: -14 }}
                     onClick={() => handleScroll(foodDataRef)}
                     className="cursor-pointer "
                   />
@@ -200,6 +202,7 @@ function TravelInfoContent() {
                     width={500}
                     height={500}
                     alt=""
+                    whileHover={{ translateY: -14 }}
                     onClick={() => handleScroll(cultureRef)}
                     className="cursor-pointer "
                   />
@@ -209,6 +212,7 @@ function TravelInfoContent() {
                     width={500}
                     height={500}
                     alt=""
+                    whileHover={{ translateY: -14 }}
                     onClick={() => handleScroll(localCustomRef)}
                     className="cursor-pointer "
                   />

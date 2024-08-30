@@ -171,6 +171,10 @@ body {
   .expect_panel_4 {
     width: 100% !important;
   }
+  .expect_panel_1:hover {
+    transform: translateY(20px);
+    cursor: pointer;
+  }
   .expect_lower_panel_container {
     width: 100%;
   }

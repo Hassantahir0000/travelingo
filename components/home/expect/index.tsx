@@ -79,7 +79,7 @@ export default function WhatToExpect() {
       whileInView="onscreen"
       viewport={{ amount: 0.2 }}
       ref={ref}
-      className="w-screen min-h-screen flex flex-col centralise expect_container h-auto bg-pale-cyan px-12 pt-2 pb-[14rem]"
+      className="w-screen min-h-screen flex flex-col centralise expect_container h-auto rounded-[35px] mt-[-30px] relative bg-pale-cyan px-12 pt-2 pb-[14rem]"
     >
       <div className="w-full max_width_container">
         <h2 className="self-stretch font-poppinsM text-[4.25rem] mt-[38px] mb-[50px] font-normal section_heading leading-normal">
@@ -90,7 +90,8 @@ export default function WhatToExpect() {
           <div className="flex flex-col gap-y-4 expect_left_panel_container w-[70%]">
             <motion.div
               variants={panel1Animation}
-              className="bg-white expect_panel_1 rounded-[30px] px-8 py-5 gap-x-[40px] flex flex-col md:flex-row justify-center"
+              whileHover={{ translateY: -14 }}
+              className="bg-white expect_panel_1 rounded-[35px] px-8 py-5 gap-x-[40px] flex flex-col md:flex-row justify-center"
             >
               <div className="flex flex-col expect_panel_desc">
                 <h2 className="expect_panel_heading self-stretch font-poppinsM  text-black text-[2.2rem] font-normal leading-[3rem] ">
@@ -115,12 +116,14 @@ export default function WhatToExpect() {
 
             <div className="flex expect_lower_panel_container flex-row gap-x-4">
               <motion.div
+                whileHover={{ translateY: -14 }}
                 variants={panel3Animation}
-                className="expect_panel_3 expect_panel_heading bg-white rounded-[30px] h-[80%] w-[33%]"
+                className="expect_panel_3 expect_panel_heading duration-400 ease-out hover:translate-y-[-20px] bg-white rounded-[35px] h-[80%] w-[33%]"
               ></motion.div>
               <motion.div
+                whileHover={{ translateY: -14 }}
                 variants={panel2Animation}
-                className="bg-white expect_panel_4 w-[67%] flex flex-row rounded-[30px] pl-8 py-6 relative "
+                className="bg-white expect_panel_4 w-[67%] duration-400 ease-out hover:translate-y-[-20px] flex flex-row rounded-[35px] pl-8 py-6 relative "
               >
                 <div className="flex flex-col w-[60%] expect_panel_desc">
                   <h2 className="expect_panel_heading self-stretch font-poppinsM  text-black text-[2.2rem] font-normal leading-[3rem] ">
@@ -146,8 +149,9 @@ export default function WhatToExpect() {
           </div>
 
           <motion.div
+            whileHover={{ translateY: -14 }}
             variants={panel3Animation}
-            className="bg-white expect_panel_2 rounded-[30px] p-8 flex flex-col justify-center w-[30%] h-fit"
+            className="bg-white expect_panel_2 duration-400 ease-out hover:translate-y-[-20px] rounded-[35px] p-8 flex flex-col justify-center w-[30%] h-fit"
           >
             <div className="flex flex-col expect_panel_desc">
               <h2 className="self-stretch font-poppinsM expect_panel_heading text-black text-[2.2rem] font-normal leading-[3rem] ">

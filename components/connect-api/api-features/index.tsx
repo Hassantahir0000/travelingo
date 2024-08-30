@@ -26,7 +26,7 @@ export default function APIFeatures() {
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ amount: 0.2 }}
-      className="w-screen centralise min-h-screen px-10 connect_api_container h-auto bg-[#83CCFF] drop-shadow-[0_-25px_20px_rgba(255,255,255,0.25)] pt-2 pb-[20rem] mt-[-4rem] rounded-tl-[3rem] rounded-tr-[3rem]"
+      className="w-screen centralise min-h-screen px-10 connect_api_container h-auto bg-[#83CCFF] drop-shadow-[0_-25px_20px_rgba(255,255,255,0.25)] pt-2 pb-[10rem] mt-[-4rem] rounded-tl-[3rem] rounded-tr-[3rem]"
     >
       <div className="container max_width_container mx-auto">
         <motion.h2 variants={animation(0)} className="self-stretch section_heading font-poppinsM text-black text-[4.25rem] mt-[28px] font-normal  leading-normal">

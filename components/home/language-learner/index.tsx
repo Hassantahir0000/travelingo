@@ -70,7 +70,7 @@ export default function LanguageLearner() {
           consequat faucibus tortor amet est.
         </motion.p>
 
-        <motion.div className="bg-dodger-blue border-[2px] border-white drop-shadow-[0_-25px_10px_rgba(255,255,255,0.25)] language_expert_container p-10 rounded-[20px] mt-[5rem]">
+        <motion.div className="bg-[#18a3ff97] border-[2px] border-white drop-shadow-[0_-25px_10px_rgba(255,255,255,0.25)] language_expert_container p-10 rounded-[35px] mt-[5rem]">
           <div className="flex flex-row gap-x-[30px] becoming_language_expert_container">
             <div className="w-[55%] becoming_language_expert_heading">
               <motion.h2
