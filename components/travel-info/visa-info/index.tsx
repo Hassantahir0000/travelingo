@@ -33,22 +33,16 @@ export default function VisaInfo({ data }: { data: any }) {
     >
       <div className="container max_width_container mx-auto">
         <div className="w-full">
-          <motion.h2
-            variants={animation(0)}
-            className="self-stretch section_heading section_heading font-poppinsM text-black text-[4.25rem] font-normal  leading-normal"
-          >
+          <h2 className="self-stretch section_heading section_heading font-poppinsM text-black text-[4.25rem] font-normal  leading-normal">
             VISA INFO
-          </motion.h2>
+          </h2>
 
-          <motion.p
-            variants={animation(0.2)}
-            className="self-stretch section_para_white_bg text-black text-[1.9rem] font-poppinsR  font-normal mt-4 mb-5 leading-[2.5rem]"
-          >
+          <p className="self-stretch section_para_white_bg text-black text-[1.9rem] font-poppinsR  font-normal mt-4 mb-5 leading-[2.5rem]">
             Lorem ipsum dolor sit amet consectetur. Tristique cursus faucibus
             aliquet amet massa. Viverra elit tempor libero sit mattis ut ac
             pharetra. Ultrices lectus et sagittis aliquet nam ornare. Iaculis
             consequat faucibus tortor amet est.
-          </motion.p>
+          </p>
         </div>
 
         <div className="flex flex-col ">
