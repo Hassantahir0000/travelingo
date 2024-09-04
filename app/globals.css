@@ -582,11 +582,14 @@ body {
   .footer_big_text {
     font-size: 2rem;
   }
+  .plan_your_trip {
+    padding-bottom: 12rem;
+  }
   .card_animation_container {
     width: 100%;
     margin-top: 150px;
     margin-bottom: 20px;
-    height: 27vh;
+    height: 22vh;
   }
   .footer_btn_p {
     font-size: 1.3rem;
