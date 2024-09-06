@@ -164,7 +164,7 @@ body {
 }
 
 .animate {
-  animation: card-out 2.2s cubic-bezier(0.8, 0.2, 0.1, 0.8);
+  animation: card-out 2.2s cubic-bezier(0.8, 0.3, 0.1, 0.8);
 }
 
 @keyframes card-out {
@@ -175,9 +175,16 @@ body {
     transform: translateY(0px) rotate(0deg);
   }
   80% {
-    transform: translateY(-80%) rotate(15deg) translateX(10px);
+    transform: translateY(100%);
+  }
+  80.5%{
+    opacity: 1;
+  }
+  80.9% {
+    opacity: 0;
   }
   100% {
+    opacity: 0;
     transform: translateY(0px) rotate(0deg);
   }
 }
@@ -352,7 +359,11 @@ body {
     flex-direction: column;
     row-gap: 1rem;
   }
-
+  .card_animation_container {
+    width: 100%;
+    height: 35vh;
+    /* margin-bottom: 100px; */
+  }
   .expect_panel_desc {
     width: 90%;
   }
@@ -378,11 +389,14 @@ body {
   .collapsable_name p {
     font-size: 20px;
   }
-  .collapsable_arrow {
+  .collapsable_arrow, .collapsable_arrow_flipped {
     bottom: 8%;
     right: 9%;
     height: 15px;
     width: 15px;
+  }
+  .collapsable_arrow_flipped {
+    transform: scaleY(-1);
   }
 }
 
@@ -559,11 +573,14 @@ body {
   .collapsable_name p {
     font-size: 14px;
   }
-  .collapsable_arrow {
+  .collapsable_arrow, .collapsable_arrow_flipped {
     bottom: 7%;
     right: 9%;
     height: 15px;
     width: 15px;
+  }
+  .collapsable_arrow_flipped {
+    transform: scaleY(-1);
   }
   .footer_content {
     flex-direction: column;
@@ -587,8 +604,8 @@ body {
   }
   .card_animation_container {
     width: 100%;
-    margin-top: 150px;
-    margin-bottom: 20px;
+    margin-top: 0px;
+    margin-bottom: 80px;
     height: 22vh;
   }
   .footer_btn_p {
@@ -603,11 +620,14 @@ body {
   .collapsable_name p {
     font-size: 10px;
   }
-  .collapsable_arrow {
+  .collapsable_arrow, .collapsable_arrow_flipped {
     bottom: 4%;
     right: 8%;
     height: 15px;
     width: 15px;
+  }
+  .collapsable_arrow_flipped {
+    transform: scaleY(-1);
   }
   .footer_last {
     flex-direction: column;

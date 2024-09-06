@@ -35,7 +35,7 @@ export default function Banner() {
   }, []);
 
   return (
-    <div className="w-screen h-[104vh] centralise">
+    <div className="w-screen min-h-[750px] h-[104vh] centralise">
       <Image
         src="/images/home/main-bg.png"
         priority
@@ -45,13 +45,13 @@ export default function Banner() {
         alt=""
       />
 
-      <div className="flex justify-center items-center">
+      <div className="flex flex-col absolute w-full h-full min-h-[750px] justify-end pb-[50px] items-center gap-y-5">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={welcomeBannerAnimation}
-          className="container max_width_container_banner bg-blue-blur/50 absolute bottom-[10rem] banner_first_panel py-[1.875rem] px-[2.75rem] rounded-[30px] backdrop-blur-[0.5rem] md:w-[90%] block mx-auto"
+          className="container max_width_container_banner bg-blue-blur/50 banner_first_panel py-[1.875rem] px-[2.75rem] rounded-[30px] backdrop-blur-[0.5rem] md:w-[90%] block mx-auto"
         >
-          <div className="banner_heading_main_container flex-col flex">
+          <div className="banner_heading_main_container  flex-col flex">
             <div className="banner_heading_container flex-col justify-center items-center gap-[34px] inline-flex">
               <h2 className="banner_heading self-stretch font-poppinsL text-white text-[2rem] font-light leading-normal">
                 Welcome to Travelingo
@@ -75,7 +75,7 @@ export default function Banner() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={playstoreAnimation}
-          className="container second_banner bg-blue-blur/50 banner_second_panel absolute items-center bottom-10 py-5 px-[1.75rem] rounded-full backdrop-blur-[0.5rem] md:w-[90%] block mx-auto"
+          className="container second_banner bg-blue-blur/50 banner_second_panel  items-center py-5 px-[1.75rem] rounded-full backdrop-blur-[0.5rem] md:w-[90%] block mx-auto"
         >
           <div className="flex items-center justify-between">
             <div className="flex gap-x-4">

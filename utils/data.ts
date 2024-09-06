@@ -2,6 +2,8 @@ import UK from "@/public/images/home/plan-trip/united-kingdom.png";
 import Switzerland from "@/public/images/home/plan-trip/switzerland.png";
 import Nepal from "@/public/images/home/plan-trip/nepal.png";
 import France from "@/public/images/home/plan-trip/france.png";
+import Serbia from "@/public/images/home/plan-trip/serbia.png";
+import Malaysia from "@/public/images/home/plan-trip/malaysia.png";
 
 export const CountriesCards = [
   {
@@ -31,5 +33,19 @@ export const CountriesCards = [
     description:
       " This text presents my research journey on the topic of Music and Tourism Imaginaries and gives the context which led to the publication of this special issue of Via Tourism Review.vsahgcvsvacvhasavcjsa",
     image: France,
+  },
+  {
+    id: 5,
+    name: "France",
+    description:
+      " This text presents my research journey on the topic of Music and Tourism Imaginaries and gives the context which led to the publication of this special issue of Via Tourism Review.vsahgcvsvacvhasavcjsa",
+    image: Serbia,
+  },
+  {
+    id: 6,
+    name: "France",
+    description:
+      " This text presents my research journey on the topic of Music and Tourism Imaginaries and gives the context which led to the publication of this special issue of Via Tourism Review.vsahgcvsvacvhasavcjsa",
+    image: Malaysia,
   },
 ];

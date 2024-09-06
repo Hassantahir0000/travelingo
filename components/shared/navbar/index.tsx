@@ -21,7 +21,7 @@ const Navbar: React.FC = () => {
         <></>
       ) : (
         <>
-          <div className="  bg-blue-blur/50  absolute top-0 py-[1.3rem] px-[2.75rem]  backdrop-blur-[0.5rem] w-screen block mx-auto">
+          <div className="z-[10000]  bg-blue-blur/50  absolute top-0 py-[1.3rem] px-[2.75rem]  backdrop-blur-[0.5rem] w-screen block mx-auto">
             <div className="wrapper flex  items-center justify-between">
               <div className="flex flex-row gap-x-10 items-center">
                 <Link href={"/"}>

@@ -32,7 +32,7 @@ export default function TravelInfoBanner({
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ amount: 0.2 }}
-      className="w-screen h-[106vh] centralise"
+      className="w-screen h-[106vh] min-h-[750px] centralise"
     >
       <Image
         src={`/images/travel-info/${
@@ -50,7 +50,7 @@ export default function TravelInfoBanner({
         alt=""
       />
 
-      <div className="flex justify-center items-center ">
+      <div className="flex flex-col absolute w-full h-full min-h-[750px] justify-end pb-[50px] items-center gap-y-5">
         <motion.div
           variants={animation(0)}
           className="max_width_container_banner banner_first_panel bg-blue-blur/50  absolute bottom-[10rem] pt-[3rem] pb-[2.875rem] px-[2.75rem] rounded-[30px] backdrop-blur-[0.5rem] md:w-[90%] block mx-auto"

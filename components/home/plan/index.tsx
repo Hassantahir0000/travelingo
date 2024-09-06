@@ -24,6 +24,8 @@ export default function PlanYourTrip() {
     const card2 = document.getElementById("card_2");
     const card3 = document.getElementById("card_3");
     const card4 = document.getElementById("card_4");
+    const card5 = document.getElementById("card_5");
+    const card6 = document.getElementById("card_6");
 
     let currentIndex = 0;
 
@@ -37,85 +39,205 @@ export default function PlanYourTrip() {
       card2!.classList.remove("animate");
       card3!.classList.remove("animate");
       card4!.classList.remove("animate");
+      card5!.classList.remove("animate");
+      card6!.classList.remove("animate");
 
       // Apply styles based on the current index
       if (currentIndex === 0) {
-        // 1,2,3,4
+
+        // 100%, 90%, 80%, 70%, 70%, 70%
+        // 0%,   15%, 20%, 34%, 34%, 34%
+        // 20,   19,  18,  17,  16,  15
+        // 1,    2,   3,   4,   5,   6
+
         card1!.style.width = "100%";
-        card1!.style.top = "0px";
+        card1!.style.bottom = "0px";
         card1!.style.zIndex = "20";
         card1!.classList.add("animate");
 
         card2!.style.width = "90%";
-        card2!.style.top = "-20px";
+        card2!.style.bottom = "15%";
         card2!.style.zIndex = "19";
 
         card3!.style.width = "80%";
-        card3!.style.top = "-40px";
+        card3!.style.bottom = "20%";
         card3!.style.zIndex = "18";
 
         card4!.style.width = "70%";
-        card4!.style.top = "-60px";
+        card4!.style.bottom = "34%";
         card4!.style.zIndex = "17";
+
+        card5!.style.width = "70%";
+        card5!.style.bottom = "34%";
+        card5!.style.zIndex = "16";
+
+        card6!.style.width = "70%";
+        card6!.style.bottom = "34%";
+        card6!.style.zIndex = "15";
+
       } else if (currentIndex === 1) {
-        // 2,3,4,1
+
+        // 100%, 90%, 80%, 70%, 70%, 70%
+        // 0%,   15%, 20%, 34%, 34%, 34%
+        // 20,   19,  18,  17,  16,  15
+        // 2,    3,   4,   5,   6,   1
         card2!.style.width = "100%";
-        card2!.style.top = "0px";
+        card2!.style.bottom = "0px";
         card2!.style.zIndex = "20";
         card2!.classList.add("animate");
 
         card3!.style.width = "90%";
-        card3!.style.top = "-20px";
+        card3!.style.bottom = "15%";
         card3!.style.zIndex = "19";
 
         card4!.style.width = "80%";
-        card4!.style.top = "-40px";
+        card4!.style.bottom = "20%";
         card4!.style.zIndex = "18";
 
         card1!.style.width = "70%";
-        card1!.style.top = "-60px";
-        card1!.style.zIndex = "17";
+        card1!.style.bottom = "34%";
+        card1!.style.zIndex = "15";
+
+        card5!.style.width = "70%";
+        card5!.style.bottom = "34%";
+        card5!.style.zIndex = "17";
+
+        card6!.style.width = "70%";
+        card6!.style.bottom = "34%";
+        card6!.style.zIndex = "16";
+
       } else if (currentIndex === 2) {
-        // 3,4,1,2
+
+        // 100%, 90%, 80%, 70%, 70%, 70%
+        // 0%,   15%, 20%, 34%, 34%, 34%
+        // 20,   19,  18,  17,  16,  15
+        // 3,    4,   5,   6,   1,   2
+
         card3!.style.width = "100%";
-        card3!.style.top = "0px";
+        card3!.style.bottom = "0%";
         card3!.style.zIndex = "20";
         card3!.classList.add("animate");
 
         card4!.style.width = "90%";
-        card4!.style.top = "-20px";
+        card4!.style.bottom = "15%";
         card4!.style.zIndex = "19";
 
-        card1!.style.width = "80%";
-        card1!.style.top = "-40px";
-        card1!.style.zIndex = "18";
+        card1!.style.width = "70%";
+        card1!.style.bottom = "34%";
+        card1!.style.zIndex = "16";
 
         card2!.style.width = "70%";
-        card2!.style.top = "-60px";
-        card2!.style.zIndex = "17";
+        card2!.style.bottom = "34%";
+        card2!.style.zIndex = "15";
+
+        card5!.style.width = "80%";
+        card5!.style.bottom = "20%";
+        card5!.style.zIndex = "18";
+
+        card6!.style.width = "70%";
+        card6!.style.bottom = "34%";
+        card6!.style.zIndex = "17";
+
+
       } else if (currentIndex === 3) {
-        // 4,1,2,3
+        
+        // 100%, 90%, 80%, 70%, 70%, 70%
+        // 0%,   15%, 20%, 34%, 34%, 34%
+        // 20,   19,  18,  17,  16,  15
+        // 4,    5,   6,   1,   2,   3
+
         card4!.style.width = "100%";
-        card4!.style.top = "0px";
+        card4!.style.bottom = "0px";
         card4!.style.zIndex = "20";
         card4!.classList.add("animate");
 
+        card1!.style.width = "70%";
+        card1!.style.bottom = "34%";
+        card1!.style.zIndex = "17";
+
+        card2!.style.width = "70%";
+        card2!.style.bottom = "34%";
+        card2!.style.zIndex = "16";
+
+        card3!.style.width = "70%";
+        card3!.style.bottom = "34%";
+        card3!.style.zIndex = "15";
+
+        card5!.style.width = "90%";
+        card5!.style.bottom = "15%";
+        card5!.style.zIndex = "19";
+
+        card6!.style.width = "80%";
+        card6!.style.bottom = "20%";
+        card6!.style.zIndex = "18";
+
+      } else if (currentIndex === 4) {
+
+        // 100%, 90%, 80%, 70%, 70%, 70%
+        // 0%,   15%, 20%, 34%, 34%, 34%
+        // 20,   19,  18,  17,  16,  15
+        // 5,    6,   1,   2,   3,   4
+
+        card4!.style.width = "70%";
+        card4!.style.bottom = "34%";
+        card4!.style.zIndex = "15";
+
+        card1!.style.width = "80%";
+        card1!.style.bottom = "20%";
+        card1!.style.zIndex = "18";
+
+        card2!.style.width = "70%";
+        card2!.style.bottom = "34%";
+        card2!.style.zIndex = "17";
+
+        card3!.style.width = "70%";
+        card3!.style.bottom = "34%";
+        card3!.style.zIndex = "16";
+
+        card5!.style.width = "100%";
+        card5!.style.bottom = "0%";
+        card5!.style.zIndex = "20";
+        card5!.classList.add("animate");
+
+        card6!.style.width = "90%";
+        card6!.style.bottom = "15%";
+        card6!.style.zIndex = "19";
+
+      } else if (currentIndex === 5) {
+
+        // 100%, 90%, 80%, 70%, 70%, 70%
+        // 0%,   15%, 20%, 34%, 34%, 34%
+        // 20,   19,  18,  17,  16,  15
+        // 6,    1,   2,   3,   4,   5
+
+        card4!.style.width = "70%";
+        card4!.style.bottom = "34%";
+        card4!.style.zIndex = "16";
+
         card1!.style.width = "90%";
-        card1!.style.top = "-20px";
+        card1!.style.bottom = "15%";
         card1!.style.zIndex = "19";
 
         card2!.style.width = "80%";
-        card2!.style.top = "-40px";
+        card2!.style.bottom = "20%";
         card2!.style.zIndex = "18";
 
         card3!.style.width = "70%";
-        card3!.style.top = "-60px";
+        card3!.style.bottom = "34%";
         card3!.style.zIndex = "17";
+
+        card5!.style.width = "70%";
+        card5!.style.bottom = "34%";
+        card5!.style.zIndex = "15";
+
+        card6!.style.width = "100%";
+        card6!.style.bottom = "0%";
+        card6!.style.zIndex = "20";
+        card6!.classList.add("animate");
       }
 
       // Increment currentIndex to move to the next card
       currentIndex++;
-
       // Call animateCard again after 2 seconds
       setTimeout(animateCard, 2000);
     }
@@ -137,7 +259,7 @@ export default function PlanYourTrip() {
   return (
     <div
       ref={planYourTripRef}
-      className="w-screen plan_your_trip min-h-screen h-auto drop-shadow-[0_-25px_20px_rgba(255,255,255,0.25)] bg-light-sky-blue px-8 pt-2 pb-[20rem] mt-[-8rem] rounded-tl-[3rem] rounded-tr-[3rem]"
+      className="w-screen plan_your_trip min-h-screen h-auto drop-shadow-[0_-25px_20px_rgba(255,255,255,0.25)] bg-light-sky-blue px-8 pt-2 pb-[12rem] mt-[-8rem] rounded-tl-[3rem] rounded-tr-[3rem]"
     >
       <div className="container mx-auto mb-[70px]">
         <h2 className="self-stretch font-poppinsM text-[2rem] md:text-[4.25rem] mt-[38px] mb-0 font-normal section_heading leading-normal">
@@ -155,7 +277,7 @@ export default function PlanYourTrip() {
       {/* <ServicesList /> */}
 
       {countryCards?.length > 0 && (
-        <div className="flex relative w-[65%] card_animation_container mx-auto justify-center h-[50vh] mt-[250px] mb-[200px]">
+        <div className="flex relative w-[75%] overflow-y-hidden card_animation_container mx-auto justify-center h-[65vh] mt-[0px] mb-[200px]">
           <img
             onClick={() => {
               router.push("/explore");
@@ -186,6 +308,22 @@ export default function PlanYourTrip() {
             }}
             id="card_4"
             src={countryCards[3]?.image.src}
+            className="img_card"
+          />
+          <img
+            onClick={() => {
+              router.push("/explore");
+            }}
+            id="card_5"
+            src={countryCards[4]?.image.src}
+            className="img_card"
+          />
+          <img
+            onClick={() => {
+              router.push("/explore");
+            }}
+            id="card_6"
+            src={countryCards[5]?.image.src}
             className="img_card"
           />
         </div>
