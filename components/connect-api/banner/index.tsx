@@ -26,7 +26,7 @@ export default function ConnectBanner() {
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ amount: 0.2 }}
-      className="w-screen centralise h-[106vh]"
+      className="w-screen centralise h-[106vh] min-h-[750px]"
     >
       <Image
         src="/images/connect-api/banner.png"
@@ -36,7 +36,7 @@ export default function ConnectBanner() {
         alt=""
       />
 
-      <div className="flex justify-center items-center">
+      <div className="flex flex-col absolute w-full h-full min-h-[750px] justify-end pb-[50px] items-center gap-y-5">
         <motion.div
           variants={animation(0)}
           className="banner_first_panel max_width_container_banner bg-blue-blur/50  absolute bottom-[2rem] py-[2.875rem] px-[2.75rem] rounded-[30px] backdrop-blur-[0.5rem] md:w-[90%] block mx-auto"
