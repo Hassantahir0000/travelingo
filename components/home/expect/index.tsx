@@ -118,14 +118,12 @@ export default function WhatToExpect() {
               <motion.div
                 whileHover={{ translateY: -14 }}
                 variants={panel3Animation}
-                className="expect_panel_3 grid place-items-center expect_panel_heading duration-400 ease-out hover:translate-y-[-20px] bg-white rounded-[35px] h-[80%] w-[33%]"
+                className="expect_panel_3 py-4 grid place-items-center expect_panel_heading duration-400 ease-out hover:translate-y-[-20px] bg-white rounded-[35px] h-[80%] w-[33%]"
               >
-                <Image
+                <img
                   src={"/images/language-translator/play-button.png"}
-                  width={800}
-                  height={800}
                   alt=""
-                  className="w-[6rem] m-auto h-auto "
+                  className="w-[90%] max-w-[150px] m-auto h-auto "
                 />
               </motion.div>
               <motion.div
