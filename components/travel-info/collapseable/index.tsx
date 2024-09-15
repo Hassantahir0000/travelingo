@@ -23,15 +23,10 @@ export default function Collapseable({ data, name, image }: CollapseableProps) {
     setIsExpanded(!isExpanded);
   };
 
-  console.log("VISA INFOOOOO: ", data);
-
   useEffect(() => {
     if (width) {
       if (data && data?.length > 0) {
         const margin = width! < 800 ? 200 : 195;
-
-        console.log("margin: ", margin);
-        console.log("width: ", width);
 
         setHeight((data?.length * Number(margin) + 1000).toString() + "px");
       } else if (data && !data?.length) {
@@ -41,8 +36,6 @@ export default function Collapseable({ data, name, image }: CollapseableProps) {
       }
     }
   }, [data, width]);
-
-  console.log("HEIGHT: ", height);
 
   return (
     <div className="h-fit w-full my-5 flex items-start justify-center">

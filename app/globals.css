@@ -164,7 +164,7 @@ body {
 }
 
 .animate {
-  animation: card-out 2.2s cubic-bezier(0.8, 0.3, 0.1, 0.8);
+  animation: card-out 2s cubic-bezier(0.8, 0.3, 0.1, 0.8);
 }
 
 @keyframes card-out {
@@ -175,17 +175,22 @@ body {
     transform: translateY(0px) rotate(0deg);
   }
   80% {
-    transform: translateY(100%);
+    transform: translateY(140%);
   }
   80.5%{
     opacity: 1;
+    transform: translateY(140%);
   }
   80.9% {
     opacity: 0;
   }
+  95% {
+    opacity: 0;
+    transform: translateY(140%);
+  }
   100% {
     opacity: 0;
-    transform: translateY(0px) rotate(0deg);
+    transform: translateY(140%);
   }
 }
 

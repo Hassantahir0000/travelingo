@@ -66,7 +66,6 @@ function TravelInfoContent() {
   const getVisaInfo = async () => {
     if (origin && destination) {
       const resp = await fetchVisaInfo(origin, destination);
-      console.log("VISA!!!!: ", resp);
       setVisaInfoData(resp);
     }
   };
@@ -81,7 +80,6 @@ function TravelInfoContent() {
   const getTravelBudget = async () => {
     if (destination) {
       const resp = await fetchTravelBudget(destination);
-      console.log("TRAVEL BUDGET!!!!: ", resp);
       setTravelBudgetData(resp);
     }
   };

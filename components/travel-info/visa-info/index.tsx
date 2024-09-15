@@ -22,8 +22,6 @@ export default function VisaInfo({ data }: { data: any }) {
     },
   });
 
-  console.log("Visa Info: ", data);
-
   return (
     <motion.section
       initial="offscreen"
