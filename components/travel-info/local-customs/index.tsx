@@ -2,7 +2,6 @@ import Image from "next/image";
 import Collapseable from "../collapseable";
 
 export default function LocalCustoms({ data }: { data: any }) {
-  console.log("Local Custom!!!!: ", data);
 
   return (
     <div className="w-screen centralise z-[100] visa_info_container drop-shadow-[0_-25px_20px_rgba(255,255,255,0.25)] h-auto bg-[#34ACFF] px-12 pt-[3rem] pb-[20rem] mt-[-12rem] rounded-[4rem] ">

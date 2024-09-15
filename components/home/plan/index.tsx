@@ -10,14 +10,13 @@ import { useRouter } from "next/navigation";
 export default function PlanYourTrip() {
   const router = useRouter();
   const [countryCards, setCountryCards] = useState<any[]>([]);
+  const [cardInFocus, setCardInFocus] = useState<string | undefined>(undefined);
 
   useEffect(() => {
     if (CountriesCards?.length) {
       setCountryCards(CountriesCards);
     }
   }, [CountriesCards]);
-
-  console.log(countryCards);
 
   useEffect(() => {
     const card1 = document.getElementById("card_1");
@@ -26,7 +25,7 @@ export default function PlanYourTrip() {
     const card4 = document.getElementById("card_4");
     const card5 = document.getElementById("card_5");
     const card6 = document.getElementById("card_6");
-
+    setCardInFocus(undefined);
     let currentIndex = 0;
 
     function animateCard() {
@@ -42,6 +41,13 @@ export default function PlanYourTrip() {
       card5!.classList.remove("animate");
       card6!.classList.remove("animate");
 
+      card1!.style.opacity = "1";
+      card2!.style.opacity = "1";
+      card3!.style.opacity = "1";
+      card4!.style.opacity = "1";
+      card5!.style.opacity = "1";
+      card6!.style.opacity = "1";
+
       // Apply styles based on the current index
       if (currentIndex === 0) {
 
@@ -49,6 +55,10 @@ export default function PlanYourTrip() {
         // 0%,   15%, 20%, 34%, 34%, 34%
         // 20,   19,  18,  17,  16,  15
         // 1,    2,   3,   4,   5,   6
+
+        setCardInFocus('card_1');
+
+        card1!.style.opacity = "1";
 
         card1!.style.width = "100%";
         card1!.style.bottom = "0px";
@@ -81,6 +91,11 @@ export default function PlanYourTrip() {
         // 0%,   15%, 20%, 34%, 34%, 34%
         // 20,   19,  18,  17,  16,  15
         // 2,    3,   4,   5,   6,   1
+
+        setCardInFocus('card_2');
+
+        card1!.style.opacity = "0";
+
         card2!.style.width = "100%";
         card2!.style.bottom = "0px";
         card2!.style.zIndex = "20";
@@ -112,6 +127,11 @@ export default function PlanYourTrip() {
         // 0%,   15%, 20%, 34%, 34%, 34%
         // 20,   19,  18,  17,  16,  15
         // 3,    4,   5,   6,   1,   2
+
+        setCardInFocus('card_3');
+
+        card2!.style.opacity = "0";
+        card1!.style.opacity = "1";
 
         card3!.style.width = "100%";
         card3!.style.bottom = "0%";
@@ -146,6 +166,11 @@ export default function PlanYourTrip() {
         // 20,   19,  18,  17,  16,  15
         // 4,    5,   6,   1,   2,   3
 
+        setCardInFocus('card_4');
+
+        card3!.style.opacity = "0";
+        card2!.style.opacity = "1";
+
         card4!.style.width = "100%";
         card4!.style.bottom = "0px";
         card4!.style.zIndex = "20";
@@ -178,6 +203,11 @@ export default function PlanYourTrip() {
         // 20,   19,  18,  17,  16,  15
         // 5,    6,   1,   2,   3,   4
 
+        setCardInFocus('card_5');
+
+        card4!.style.opacity = "0";
+        card3!.style.opacity = "1";
+
         card4!.style.width = "70%";
         card4!.style.bottom = "34%";
         card4!.style.zIndex = "15";
@@ -209,6 +239,11 @@ export default function PlanYourTrip() {
         // 0%,   15%, 20%, 34%, 34%, 34%
         // 20,   19,  18,  17,  16,  15
         // 6,    1,   2,   3,   4,   5
+
+        setCardInFocus('card_6');
+
+        card5!.style.opacity = "0";
+        card4!.style.opacity = "1";
 
         card4!.style.width = "70%";
         card4!.style.bottom = "34%";
@@ -249,12 +284,22 @@ export default function PlanYourTrip() {
   }, [countryCards]);
 
   const {
-    scrollTo,
-    howItWorksRef,
-    langLearnerRef,
-    langTranslatorRef,
     planYourTripRef,
   } = useScroll();
+
+  useEffect(() => {
+    if (cardInFocus) {
+      const card = document.getElementById(cardInFocus);
+
+      setTimeout(() => {
+        card!.style.opacity = '0';
+
+        setTimeout(() => {
+          card!.style.opacity = '1';
+        }, 3000); 
+      }, 1500); 
+    }
+  }, [cardInFocus]);
 
   return (
     <div

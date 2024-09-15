@@ -25,8 +25,6 @@ export default function TravelInfoBanner({
     },
   });
 
-  console.log("destination: ", destination);
-
   return (
     <motion.section
       initial="offscreen"
