@@ -157,14 +157,15 @@ body {
 } */
 
 .img_card {
-  transition: ease-out 100ms;
+  transition: ease-out 300ms;
   position: absolute;
   object-fit: contain;
   cursor: pointer;
 }
 
 .animate {
-  animation: card-out 2s cubic-bezier(0.8, 0.3, 0.1, 0.8);
+  animation: card-out 2s cubic-bezier(0.8, 0.2, 0.1, 0.8);
+  animation-delay: 700ms;
 }
 
 @keyframes card-out {
@@ -175,22 +176,10 @@ body {
     transform: translateY(0px) rotate(0deg);
   }
   80% {
-    transform: translateY(140%);
-  }
-  80.5%{
-    opacity: 1;
-    transform: translateY(140%);
-  }
-  80.9% {
-    opacity: 0;
-  }
-  95% {
-    opacity: 0;
-    transform: translateY(140%);
+    transform: translateY(180%);
   }
   100% {
-    opacity: 0;
-    transform: translateY(140%);
+    transform: translateY(180%);
   }
 }
 
@@ -741,4 +730,14 @@ Sidebar wrapper styles
   min-height: 100vh !important;
 }
 
-/*  */
+@media (min-width: 1500px) {
+    .card_animation_container {
+      min-height: 570px;
+    }
+}
+
+@media (min-width: 1300px) {
+  .card_animation_container {
+    min-height: 520px;
+  }
+}

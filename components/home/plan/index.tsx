@@ -33,6 +33,8 @@ export default function PlanYourTrip() {
         currentIndex = 0;
       }
 
+      console.log("CARD NUMBER: ", currentIndex + 1)
+
       // Remove 'animate' class from all cards first
       card1!.classList.remove("animate");
       card2!.classList.remove("animate");
@@ -274,7 +276,7 @@ export default function PlanYourTrip() {
         setTimeout(() => {
           card!.style.opacity = '1';
         }, 3000); 
-      }, 1500); 
+      }, 1700); 
     }
   }, [cardInFocus]);
 
