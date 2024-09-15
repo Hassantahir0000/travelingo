@@ -41,13 +41,6 @@ export default function PlanYourTrip() {
       card5!.classList.remove("animate");
       card6!.classList.remove("animate");
 
-      card1!.style.opacity = "1";
-      card2!.style.opacity = "1";
-      card3!.style.opacity = "1";
-      card4!.style.opacity = "1";
-      card5!.style.opacity = "1";
-      card6!.style.opacity = "1";
-
       // Apply styles based on the current index
       if (currentIndex === 0) {
 
