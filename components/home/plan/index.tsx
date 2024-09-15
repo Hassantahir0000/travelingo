@@ -51,8 +51,6 @@ export default function PlanYourTrip() {
 
         setCardInFocus('card_1');
 
-        card1!.style.opacity = "1";
-
         card1!.style.width = "100%";
         card1!.style.bottom = "0px";
         card1!.style.zIndex = "20";
@@ -87,8 +85,6 @@ export default function PlanYourTrip() {
 
         setCardInFocus('card_2');
 
-        card1!.style.opacity = "0";
-
         card2!.style.width = "100%";
         card2!.style.bottom = "0px";
         card2!.style.zIndex = "20";
@@ -122,9 +118,6 @@ export default function PlanYourTrip() {
         // 3,    4,   5,   6,   1,   2
 
         setCardInFocus('card_3');
-
-        card2!.style.opacity = "0";
-        card1!.style.opacity = "1";
 
         card3!.style.width = "100%";
         card3!.style.bottom = "0%";
@@ -161,9 +154,6 @@ export default function PlanYourTrip() {
 
         setCardInFocus('card_4');
 
-        card3!.style.opacity = "0";
-        card2!.style.opacity = "1";
-
         card4!.style.width = "100%";
         card4!.style.bottom = "0px";
         card4!.style.zIndex = "20";
@@ -198,9 +188,6 @@ export default function PlanYourTrip() {
 
         setCardInFocus('card_5');
 
-        card4!.style.opacity = "0";
-        card3!.style.opacity = "1";
-
         card4!.style.width = "70%";
         card4!.style.bottom = "34%";
         card4!.style.zIndex = "15";
@@ -234,9 +221,6 @@ export default function PlanYourTrip() {
         // 6,    1,   2,   3,   4,   5
 
         setCardInFocus('card_6');
-
-        card5!.style.opacity = "0";
-        card4!.style.opacity = "1";
 
         card4!.style.width = "70%";
         card4!.style.bottom = "34%";
