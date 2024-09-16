@@ -26,7 +26,7 @@ export default function Collapseable({ data, name, image }: CollapseableProps) {
   useEffect(() => {
     if (width) {
       if (data && data?.length > 0) {
-        const margin = width! < 800 ? 200 : 195;
+        const margin = width! < 800 ? 185 : 185;
 
         setHeight((data?.length * Number(margin) + 1000).toString() + "px");
       } else if (data && !data?.length) {
@@ -38,12 +38,14 @@ export default function Collapseable({ data, name, image }: CollapseableProps) {
   }, [data, width]);
 
   return (
-    <div className="h-fit w-full my-5 flex items-start justify-center">
+    <div className="h-fit w-full my-0 flex items-start justify-center duration-500 ease-out">
       <div
         style={{ height: isExpanded ? height : "fit-content" }}
-        className={`w-[95%]`}
+        className={`w-[95%] duration-500 ease-out 
+       
+        `}
       >
-        <div className="relative">
+        <div className="relative duration-500 ease-out max-w-[1180px] ml-auto mr-auto">
           <Image
             src={"/images/travel-info/container.png"}
             alt="container"
@@ -52,11 +54,11 @@ export default function Collapseable({ data, name, image }: CollapseableProps) {
             height={5000}
           />
 
-          <div className="absolute collapsable_name z-40 top-[7%] left-[6%] ">
-            <p className="text-[35px] text-black font-poppinsM mt-1">{name}</p>
+          <div className="absolute collapsable_name z-40 top-[7%] left-[6%] duration-500 ease-out">
+            <p className="text-[35px] text-black font-poppinsM mt-1 duration-500 ease-out">{name}</p>
           </div>
 
-          <div className="absolute z-40 right-0 left-0 ml-auto mr-auto bottom-[17%] w-[90%] h-[65%] rounded-[27px]">
+          <div className="absolute z-40 right-0 left-0 ml-auto mr-auto bottom-[17%] w-[90%] h-[65%] rounded-[27px] duration-500 ease-out">
             <Image
               id="test"
               src={image}
@@ -70,7 +72,7 @@ export default function Collapseable({ data, name, image }: CollapseableProps) {
 
           <div
             onClick={expandMenu}
-            className={`absolute ${isExpanded && "scale-y-[-1]"} right-[6%] z-[1000000] p-5 bottom-[7%] duration-500 ease-out hover:cursor-pointer hover:bottom-[6%]`}
+            className={`absolute collapsable_arrow ${isExpanded && "scale-y-[-1]"} right-[6%] z-[1000000] p-5 bottom-[7%] duration-500 ease-out hover:cursor-pointer hover:bottom-[6%]`}
           >
             {width! > 650 ? <DownArrow /> : <DownArrowSmall />}
           </div>
@@ -78,14 +80,14 @@ export default function Collapseable({ data, name, image }: CollapseableProps) {
           <div
             className={`absolute flex items-start pb-10 z-[0] justify-center top-[77%] w-[90%] right-0 left-0 ml-auto mr-auto ${
               isExpanded
-                ? "h-[fit] opacity-100 flex"
-                : "top-[15%] opacity-0 hidden"
-            } bg-white rounded-br-[30px] rounded-bl-[30px] z-0 duration-300 ease-out`}
+                ? "h-[fit] top-[77%] opacity-100 flex duration-500 ease-out"
+                : "top-[27%] opacity-0 flex duration-500 ease-out"
+            } bg-white rounded-br-[30px] rounded-bl-[30px] z-0 duration-500 ease-out`}
           >
             <div
               className={`${
                 isExpanded ? "opacity-100" : "opacity-100"
-              } w-[95%] collapsable_container h-[70%] mt-32 p-5 flex flex-col gap-y-8`}
+              } w-[95%] collapsable_container h-[70%] mt-32 p-5 flex flex-col gap-y-8 duration-300 ease-out`}
             >
               {data !== undefined && data?.length > 0 ? (
                 data?.map((data: any, index: number) => (
@@ -112,7 +114,7 @@ export default function Collapseable({ data, name, image }: CollapseableProps) {
                   <div className="h-full collapsable_inner_container_pic_container flex items-center justify-center">
                     <img
                       src={data?.photo}
-                      className="h-[100%] collapsable_inner_container_pic  h-[180px] w-[180px] rounded-[30px]"
+                      className="h-[100%] collapsable_inner_container_pic h-[180px] w-[180px] rounded-[30px]"
                       alt="panel_img"
                     />
                   </div>
