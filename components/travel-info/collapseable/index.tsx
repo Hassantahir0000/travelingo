@@ -59,7 +59,7 @@ export default function Collapseable({ data, name, image }: CollapseableProps) {
           <div
             onClick={expandMenu}
             className={`absolute collapsable_arrow ${
-              isExpanded && "scale-y-[-1] bottom-[1%]"
+              isExpanded && "scale-y-[-1]"
             } right-[6%] z-[1000000] p-5 bottom-[7%] duration-500 ease-out hover:cursor-pointer hover:bottom-[6%]`}
           >
             {width! > 650 ? <DownArrow /> : <DownArrowSmall />}

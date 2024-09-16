@@ -411,7 +411,16 @@ body {
   }
 }
 
+@media (max-width: 1450px) {
+  .collapsable_child_container {
+    width: 87%;
+  }
+}
+
 @media (max-width: 650px) {
+  .collapsable_child_container {
+    width: 93%;
+  }
   .collapsable_child_container_inner {
    padding-top: 80px;
   }
