@@ -153,7 +153,7 @@ function TravelInfoContent() {
                   </motion.p>
                 </div>
 
-                <div className="grid grid-cols-3 gap-4 w-[95%] travel_info_cards_container">
+                <div className="grid grid-cols-3  w-[95%] travel_info_cards_container">
                   <motion.img
                     variants={animation(0.4)}
                     src={"/images/travel-info/info-cards/visa-info.png"}

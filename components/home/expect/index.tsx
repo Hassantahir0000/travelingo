@@ -123,7 +123,7 @@ export default function WhatToExpect() {
                 <img
                   src={"/images/language-translator/play-button.png"}
                   alt=""
-                  className="w-[90%] max-w-[150px] m-auto h-auto "
+                  className="w-[90%] max-w-[80px] m-auto h-auto "
                 />
               </motion.div>
               <motion.div

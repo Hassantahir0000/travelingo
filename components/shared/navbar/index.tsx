@@ -7,6 +7,8 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { useScroll } from "@/utils/context";
 import { usePathname } from "next/navigation";
+import ArrowDown from "@/public/icons-folder/arrow-down";
+import LanguageIcon from "@/public/icons-folder/global";
 
 // Use React.FC to define component and its props
 const Navbar: React.FC = () => {
@@ -60,30 +62,19 @@ const Navbar: React.FC = () => {
               </div>
 
               <div className="hidden md:flex gap-x-5">
-                <button className="border-2 border-white flex rounded-[40px] transition-all py-2 px-3 items-center hover:bg-light-sky-blue hover:delay-100">
-                  <Image
-                    src={"/icons/global.svg"}
-                    className="mr-2"
-                    width={30}
-                    height={30}
-                    alt=""
-                  />
-                  <p className="font-poppinsR text-white">EN</p>
-                  <Image
-                    src={"/icons/arrow-down.svg"}
-                    width={30}
-                    height={30}
-                    alt=""
-                  />
+                <button className="border-2 svgButton hover:text-[#18a1ff] border-white flex rounded-[40px] transition-all py-2 px-3 items-center text-white hover:bg-white hover:delay-100">
+                  <div className="mr-3">
+                    <LanguageIcon />
+                  </div>
+                  <p className="font-poppinsR ">EN</p>
+                  <ArrowDown />
                 </button>
 
                 <Link
                   href={"/connect-api"}
-                  className="border-2 border-white flex rounded-[40px] transition-all px-10 py-2 items-center hover:bg-light-sky-blue hover:delay-100"
+                  className="border-2 border-white flex rounded-[40px] transition-all px-10 py-2 items-center text-white hover:text-[#18a1ff] hover:bg-white hover:delay-100"
                 >
-                  <p className="font-poppinsR text-white text-[1rem]">
-                    Traveling API
-                  </p>
+                  <p className="font-poppinsR  text-[1rem]">Traveling API</p>
                 </Link>
               </div>
             </div>
