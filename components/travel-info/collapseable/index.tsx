@@ -78,10 +78,10 @@ export default function Collapseable({ data, name, image }: CollapseableProps) {
           </div>
 
           <div
-            className={`absolute flex items-start pb-10 z-[0] justify-center top-[77%] w-[90%] right-0 left-0 ml-auto mr-auto ${
+            className={`absolute flex items-start pb-10 z-[0] justify-center w-[90%] right-0 left-0 ml-auto mr-auto ${
               isExpanded
                 ? "h-[fit] top-[77%] opacity-100 flex duration-500 ease-out"
-                : "top-[27%] opacity-0 flex duration-500 ease-out"
+                : "top-[7%] opacity-0 flex duration-500 ease-out"
             } bg-white rounded-br-[30px] rounded-bl-[30px] z-0 duration-500 ease-out`}
           >
             <div
