@@ -1,6 +1,7 @@
 "use client";
 
 import PlayButton from "@/components/shared/play-button";
+import ArrowTilt from "@/public/icons-folder/arrow-tilt";
 import { useAnimation, motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect } from "react";
@@ -77,21 +78,15 @@ export default function Banner() {
           animate={playstoreAnimation}
           className="container second_banner bg-blue-blur/50 banner_second_panel  items-center py-5 px-[1.75rem] rounded-full backdrop-blur-[0.5rem] md:w-[90%] block mx-auto"
         >
-          <div className="flex items-center justify-between">
-            <div className="flex gap-x-4">
+          <div className="flex items-center justify-between svgButton">
+            <div className="flex gap-x-4 ">
               <PlayButton />
-              <div className="self-stretch flex items-center font-poppinsR banner_second_heading text-white text-[30px] uppercase font-normal leading-normal">
+              <div className="self-stretch flex items-center font-poppinsR banner_second_heading  text-[30px] uppercase font-normal leading-normal">
                 <p>Get on play store</p>
               </div>
             </div>
 
-            <Image
-              src={"/icons/arrow.svg"}
-              width={100}
-              height={100}
-              alt="PlayStore"
-              className="h-10"
-            />
+            <ArrowTilt />
           </div>
         </motion.div>
       </div>

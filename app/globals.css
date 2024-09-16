@@ -64,13 +64,17 @@ body {
 }
 
 .second_banner:hover {
-  background-color: #2dabff;
+  background-color: white;
   transition: ease-out 200ms;
-  color: #18a1ff !important;
+  /* color: #18a1ff ; */
   cursor: pointer;
 }
 .second_banner:hover p {
-  /* color: #18A1FF !important; */
+  color: #18a1ff;
+}
+
+.second_banner p {
+  color: white;
 }
 
 .centralise {
@@ -177,7 +181,7 @@ body {
   80% {
     transform: translateY(100%);
   }
-  80.5%{
+  80.5% {
     opacity: 1;
   }
   80.9% {
@@ -328,7 +332,7 @@ body {
   .expect_panel_3 {
     margin-bottom: 30px !important;
   }
-  .expect_panel_3 img{
+  .expect_panel_3 img {
     max-width: 60px;
   }
 }
@@ -398,7 +402,8 @@ body {
   .collapsable_name p {
     font-size: 20px;
   }
-  .collapsable_arrow, .collapsable_arrow_flipped {
+  .collapsable_arrow,
+  .collapsable_arrow_flipped {
     bottom: 8%;
     right: 9%;
     height: 15px;
@@ -581,7 +586,8 @@ body {
   .collapsable_name p {
     font-size: 14px;
   }
-  .collapsable_arrow, .collapsable_arrow_flipped {
+  .collapsable_arrow,
+  .collapsable_arrow_flipped {
     bottom: 7%;
     right: 9%;
     height: 15px;
@@ -628,7 +634,8 @@ body {
   .collapsable_name p {
     font-size: 10px;
   }
-  .collapsable_arrow, .collapsable_arrow_flipped {
+  .collapsable_arrow,
+  .collapsable_arrow_flipped {
     bottom: 4%;
     right: 8%;
     height: 15px;
@@ -737,3 +744,25 @@ Sidebar wrapper styles
 }
 
 /*  */
+
+.svgButton svg {
+  transition: ease-out 300ms;
+}
+.svgButton:hover svg path {
+  fill: #18a1ff;
+  transition: ease-out 300ms;
+}
+.svgButton:hover svg plygon {
+  fill: #18a1ff;
+  transition: ease-out 300ms;
+}
+
+.svgButton:hover svg circle {
+  fill: #18a1ff;
+  transition: ease-out 300ms;
+}
+
+.svgButton:hover svg stroke {
+  fill: #18a1ff;
+  transition: ease-out 300ms;
+}
