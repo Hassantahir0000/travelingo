@@ -19,7 +19,7 @@ export default function TravelBudget({ data }: { data: any }) {
           </p>
         </div>
 
-        <div className="flex flex-col ">
+        <div className="flex flex-col h-fit w-full">
           <Collapseable
             data={data && data[0]?.infoData[0]?.averageFare}
             name={"Airfare"}

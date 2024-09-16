@@ -76,7 +76,7 @@ export default function Banner() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={playstoreAnimation}
-          className="container second_banner bg-blue-blur/50 banner_second_panel  items-center py-5 px-[1.75rem] rounded-full backdrop-blur-[0.5rem] md:w-[90%] block mx-auto"
+          className="container second_banner bg-blue-blur/50 banner_second_panel  items-center py-5 px-[3rem] rounded-full backdrop-blur-[0.5rem] md:w-[90%] block mx-auto"
         >
           <div className="flex items-center justify-between svgButton">
             <div className="flex gap-x-4 ">

@@ -188,6 +188,9 @@ body {
 }
 
 @media (max-width: 1060px) {
+  .collapsable_child_container {
+    width: 94%;
+  }
   .how_travelingo_works_container {
     display: flex;
     flex-direction: column;
@@ -409,6 +412,9 @@ body {
 }
 
 @media (max-width: 650px) {
+  .collapsable_child_container_inner {
+   padding-top: 80px;
+  }
   .card_animation_container {
     width: 85%;
     height: 20vh;

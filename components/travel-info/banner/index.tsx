@@ -3,12 +3,16 @@
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 import { useAnimation, motion } from "framer-motion";
+import { useEffect } from "react";
+import PlayButton from "@/components/shared/play-button";
+import ArrowTilt from "@/public/icons-folder/arrow-tilt";
 
 export default function TravelInfoBanner({
   destination,
 }: {
   destination: string | null;
 }) {
+  const playstoreAnimation = useAnimation();
   const animation = (delay: number) => ({
     offscreen: {
       opacity: 0,
@@ -24,6 +28,24 @@ export default function TravelInfoBanner({
       },
     },
   });
+
+  useEffect(()=>{
+
+    const makeHeadingAnimation = async () => {
+      playstoreAnimation.start({
+        opacity: 1,
+        y: 0,
+        transition: {
+          type: "bounce",
+          duration: 0.2,
+          delay: 0.4,
+        },
+      });
+    };
+
+    makeHeadingAnimation()
+
+  },[])
 
   return (
     <motion.section
@@ -70,30 +92,19 @@ export default function TravelInfoBanner({
         </motion.div>
 
         <motion.div
-          variants={animation(0.2)}
-          className="second_banner banner_second_panel  bg-blue-blur/50  absolute items-center  bottom-10 py-5 px-[1.75rem] rounded-full backdrop-blur-[0.5rem] md:w-[90%] block mx-auto"
+          initial={{ opacity: 0, y: 30 }}
+          animate={playstoreAnimation}
+          className="container second_banner bg-blue-blur/50 banner_second_panel  items-center py-5 px-[3rem] rounded-full backdrop-blur-[0.5rem] md:w-[90%] block mx-auto"
         >
-          <div className="flex items-center justify-between">
-            <div className="flex ">
-              <Image
-                src={"/icons/play-button.svg"}
-                width={100}
-                height={100}
-                alt="PlayStore"
-                className="h-10"
-              />
-              <div className="self-stretch font-poppinsR   text-white text-[30px] uppercase font-normal  leading-normal">
-                Get on play store
+          <div className="flex items-center justify-between svgButton">
+            <div className="flex gap-x-4 ">
+              <PlayButton />
+              <div className="self-stretch flex items-center font-poppinsR banner_second_heading  text-[30px] uppercase font-normal leading-normal">
+                <p>Get on play store</p>
               </div>
             </div>
 
-            <Image
-              src={"/icons/arrow.svg"}
-              width={100}
-              height={100}
-              alt="PlayStore"
-              className="h-10"
-            />
+            <ArrowTilt />
           </div>
         </motion.div>
       </div>
