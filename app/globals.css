@@ -421,6 +421,16 @@ body {
   .collapsable_child_container {
     width: 93%;
   }
+  .footer_text {
+    font-size: 1.2rem;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    line-height: 30px;
+  }
+  .expect_panel_3 {
+    display: none;
+  }
   .collapsable_child_container_inner {
    padding-top: 80px;
   }

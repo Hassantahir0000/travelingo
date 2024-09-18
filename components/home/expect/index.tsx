@@ -6,78 +6,72 @@ import { useInView } from "react-intersection-observer";
 import { useAnimation, motion } from "framer-motion";
 
 export default function WhatToExpect() {
+  const panel1Animation = useAnimation();
+  const panel2Animation = useAnimation();
+  const panel3Animation = useAnimation();
+  const panel4Animation = useAnimation();
+
   const { ref, inView } = useInView({
-    threshold: 0.5,
+    threshold: 0.1,
   });
 
-  const panel1Animation = {
-    offscreen: {
-      opacity: 0,
-      y: 30,
-    },
-    onscreen: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        ease: "easeOut",
-        duration: 0.2,
-      },
-    },
-  };
+  const delay = (ms:number) => new Promise((res) => setTimeout(res, ms));
 
-  const panel2Animation = {
-    offscreen: {
-      opacity: 0,
-      y: 30,
-    },
-    onscreen: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        ease: "easeOut",
-        duration: 0.2,
-        delay: 0.4,
-      },
-    },
-  };
+  useEffect(() => {
+    const upAnimation = async () => {
+      if (inView) {
 
-  const panel3Animation = {
-    offscreen: {
-      opacity: 0,
-      y: 30,
-    },
-    onscreen: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        ease: "easeOut",
-        duration: 0.2,
-        delay: 0.6,
-      },
-    },
-  };
+        await delay(200);
 
-  const panel4Animation = {
-    offscreen: {
-      opacity: 0,
-      y: 30,
-    },
-    onscreen: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        ease: "easeOut",
-        duration: 0.2,
-        delay: 0.8,
-      },
-    },
-  };
+        panel1Animation.start({
+          opacity: 1,
+          y: 0,
+          transition: {
+            ease: "easeOut",
+            duration: 0.2,
+          },
+        });
+
+        await delay(200);
+
+        panel2Animation.start({
+          opacity: 1,
+          y: 0,
+          transition: {
+            ease: "easeOut",
+            duration: 0.2,
+          },
+        });
+
+        await delay(200);
+
+        panel3Animation.start({
+          opacity: 1,
+          y: 0,
+          transition: {
+            ease: "easeOut",
+            duration: 0.2,
+          },
+        });
+
+        await delay(200);
+
+        panel4Animation.start({
+          opacity: 1,
+          y: 0,
+          transition: {
+            ease: "easeOut",
+            duration: 0.2,
+          },
+        });
+      }
+    };
+
+    upAnimation();
+  }, [inView]);
 
   return (
     <motion.section
-      initial="offscreen"
-      whileInView="onscreen"
-      viewport={{ amount: 0.2 }}
       ref={ref}
       className="w-screen min-h-screen flex flex-col centralise expect_container h-auto rounded-[35px] mt-[-30px] relative bg-pale-cyan px-12 pt-2 pb-[14rem]"
     >
@@ -89,7 +83,8 @@ export default function WhatToExpect() {
         <div className="flex flex-row gap-x-4 extent_panels_container">
           <div className="flex flex-col gap-y-4 expect_left_panel_container w-[70%]">
             <motion.div
-              variants={panel1Animation}
+              animate={panel1Animation}
+              initial={{ y: 30, opacity: 0 }}
               whileHover={{ translateY: -14 }}
               className="bg-white expect_panel_1 rounded-[35px] px-8 py-5 gap-x-[40px] flex flex-col md:flex-row justify-center"
             >
@@ -116,8 +111,9 @@ export default function WhatToExpect() {
 
             <div className="flex expect_lower_panel_container flex-row gap-x-4">
               <motion.div
+                initial={{ y: 30, opacity: 0 }}
                 whileHover={{ translateY: -14 }}
-                variants={panel3Animation}
+                animate={panel3Animation}
                 className="expect_panel_3 py-4 grid place-items-center expect_panel_heading duration-400 ease-out hover:translate-y-[-20px] bg-white rounded-[35px] h-[80%] w-[33%]"
               >
                 <img
@@ -127,9 +123,10 @@ export default function WhatToExpect() {
                 />
               </motion.div>
               <motion.div
+                initial={{ y: 30, opacity: 0 }}
                 whileHover={{ translateY: -14 }}
-                variants={panel2Animation}
-                className="bg-white expect_panel_4 w-[67%] duration-400 ease-out hover:translate-y-[-20px] flex flex-row rounded-[35px] pl-8 py-6 relative "
+                animate={panel2Animation}
+                className="bg-white expect_panel_4 w-[67%] duration-400 ease-out hover:translate-y-[-20px] flex flex-row rounded-[35px] p-8 py-6 relative "
               >
                 <div className="flex flex-col w-[60%] expect_panel_desc">
                   <h2 className="expect_panel_heading self-stretch font-poppinsM  text-black text-[2.2rem] font-normal leading-[3rem] ">
@@ -141,7 +138,7 @@ export default function WhatToExpect() {
                     personal and business communications.
                   </div>
                 </div>
-                <div className="w-[50%] my-auto">
+                <div className="mx-auto">
                   <Image
                     src={"/images/home/what-to-expect/language-barrier.png"}
                     width={500}
@@ -155,8 +152,9 @@ export default function WhatToExpect() {
           </div>
 
           <motion.div
+            initial={{ y: 30, opacity: 0 }}
             whileHover={{ translateY: -14 }}
-            variants={panel3Animation}
+            animate={panel4Animation}
             className="bg-white expect_panel_2 duration-400 ease-out hover:translate-y-[-20px] rounded-[35px] p-8 flex flex-col justify-center w-[30%] h-fit"
           >
             <div className="flex flex-col expect_panel_desc">

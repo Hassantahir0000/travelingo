@@ -3,42 +3,160 @@
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 import { useAnimation, motion } from "framer-motion";
+import { useEffect } from "react";
 
 export default function APIFeatures() {
-  const animation = (delay: number) => ({
-    offscreen: {
-      opacity: 0,
-      y: 30, // Use the parameter here
-    },
-    onscreen: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        ease: "easeOut",
-        duration: 0.2,
-        delay: delay,
-      },
-    },
+  const animation1 = useAnimation();
+  const animation2 = useAnimation();
+  const animation3 = useAnimation();
+  const animation4 = useAnimation();
+  const animation5 = useAnimation();
+  const animation6 = useAnimation();
+  const animation7 = useAnimation();
+  const animation8 = useAnimation();
+  const animation9 = useAnimation();
+
+  const { ref, inView } = useInView({
+    threshold: 0.2,
   });
+
+  const delay = (ms: number) => new Promise((res) => setTimeout(res, ms));
+
+  useEffect(() => {
+    const upAnimation = async () => {
+      if (inView) {
+        await delay(200);
+
+        animation1.start({
+          opacity: 1,
+          y: 0,
+          transition: {
+            ease: "easeOut",
+            duration: 0.2,
+          },
+        });
+
+        await delay(200);
+
+        animation2.start({
+          opacity: 1,
+          y: 0,
+          transition: {
+            ease: "easeOut",
+            duration: 0.2,
+          },
+        });
+
+        await delay(200);
+
+        animation3.start({
+          opacity: 1,
+          y: 0,
+          transition: {
+            ease: "easeOut",
+            duration: 0.2,
+          },
+        });
+
+        await delay(200);
+
+        animation4.start({
+          opacity: 1,
+          y: 0,
+          transition: {
+            ease: "easeOut",
+            duration: 0.2,
+          },
+        });
+
+        await delay(200);
+
+        animation5.start({
+          opacity: 1,
+          y: 0,
+          transition: {
+            ease: "easeOut",
+            duration: 0.2,
+          },
+        });
+
+        await delay(200);
+
+        animation6.start({
+          opacity: 1,
+          y: 0,
+          transition: {
+            ease: "easeOut",
+            duration: 0.2,
+          },
+        });
+
+        await delay(200);
+
+        animation7.start({
+          opacity: 1,
+          y: 0,
+          transition: {
+            ease: "easeOut",
+            duration: 0.2,
+          },
+        });
+
+        await delay(200);
+
+        animation8.start({
+          opacity: 1,
+          y: 0,
+          transition: {
+            ease: "easeOut",
+            duration: 0.2,
+          },
+        });
+
+        await delay(200);
+
+        animation9.start({
+          opacity: 1,
+          y: 0,
+          transition: {
+            ease: "easeOut",
+            duration: 0.2,
+          },
+        });
+      }
+    };
+
+    upAnimation();
+  }, [inView]);
 
   return (
     <motion.section
-      initial="offscreen"
-      whileInView="onscreen"
-      viewport={{ amount: 0.2 }}
+      ref={ref}
       className="w-screen centralise min-h-screen px-10 connect_api_container h-auto bg-[#83CCFF] drop-shadow-[0_-25px_20px_rgba(255,255,255,0.25)] pt-2 pb-[10rem] mt-[-4rem] rounded-tl-[3rem] rounded-tr-[3rem]"
     >
       <div className="container max_width_container mx-auto">
-        <motion.h2 variants={animation(0)} className="self-stretch section_heading font-poppinsM text-black text-[4.25rem] mt-[28px] font-normal  leading-normal">
+        <motion.h2
+          animate={animation1}
+          initial={{ y: 30, opacity: 0 }}
+          className="self-stretch section_heading font-poppinsM text-black text-[4.25rem] mt-[28px] font-normal  leading-normal"
+        >
           Our API&apos;s Features
         </motion.h2>
-        <motion.p variants={animation(0.2)} className="self-stretch section_para  text-black text-[1.9rem] font-poppinsR  font-normal mt-4 ml-1 mb-5 leading-[2.5rem]">
+        <motion.p
+          animate={animation2}
+          initial={{ y: 30, opacity: 0 }}
+          className="self-stretch section_para  text-black text-[1.9rem] font-poppinsR  font-normal mt-4 ml-1 mb-5 leading-[2.5rem]"
+        >
           Your all-in-one solution for Visa Information, Weather, Culture, and
           more!
         </motion.p>
 
         <div className="flex flex-col gap-y-5 mt-16">
-          <motion.div variants={animation(0.4)} className="bg-white api_feature_panel rounded-[30px] px-[40px] py-[30px]">
+          <motion.div
+            animate={animation3}
+            initial={{ y: 30, opacity: 0 }}
+            className="bg-white api_feature_panel rounded-[30px] px-[40px] py-[30px]"
+          >
             <p className="self-stretch section_heading text-black text-[2.2rem] font-poppinsM   ml-1">
               Visa API
             </p>
@@ -52,7 +170,11 @@ export default function APIFeatures() {
             </p>
           </motion.div>
 
-          <motion.div variants={animation(0.6)} className="bg-white api_feature_panel rounded-[30px] px-[40px] py-[30px]">
+          <motion.div
+            animate={animation4}
+            initial={{ y: 30, opacity: 0 }}
+            className="bg-white api_feature_panel rounded-[30px] px-[40px] py-[30px]"
+          >
             <p className="self-stretch section_heading text-black text-[2.2rem] font-poppinsM   ml-1">
               Travel Budget API
             </p>
@@ -68,7 +190,11 @@ export default function APIFeatures() {
             </p>
           </motion.div>
 
-          <motion.div variants={animation(0.8)} className="bg-white api_feature_panel rounded-[30px] px-[40px] py-[30px]">
+          <motion.div
+            animate={animation5}
+            initial={{ y: 30, opacity: 0 }}
+            className="bg-white api_feature_panel rounded-[30px] px-[40px] py-[30px]"
+          >
             <p className="self-stretch section_heading text-black text-[2.2rem] font-poppinsM    ml-1">
               Weather API
             </p>
@@ -82,7 +208,11 @@ export default function APIFeatures() {
             </p>
           </motion.div>
 
-          <motion.div variants={animation(1)} className="bg-white api_feature_panel rounded-[30px] px-[40px] py-[30px]">
+          <motion.div
+            animate={animation6}
+            initial={{ y: 30, opacity: 0 }}
+            className="bg-white api_feature_panel rounded-[30px] px-[40px] py-[30px]"
+          >
             <p className="self-stretch section_heading text-black text-[2.2rem] font-poppinsM    ml-1">
               Food API
             </p>
@@ -96,7 +226,11 @@ export default function APIFeatures() {
             </p>
           </motion.div>
 
-          <motion.div variants={animation(1.2)} className="bg-white api_feature_panel rounded-[30px] px-[40px] py-[30px]">
+          <motion.div
+            animate={animation7}
+            initial={{ y: 30, opacity: 0 }}
+            className="bg-white api_feature_panel rounded-[30px] px-[40px] py-[30px]"
+          >
             <p className="self-stretch section_heading text-black text-[2.2rem] font-poppinsM   ml-1">
               Local Customs API
             </p>
@@ -110,7 +244,11 @@ export default function APIFeatures() {
             </p>
           </motion.div>
 
-          <motion.div variants={animation(1.4)} className="bg-white api_feature_panel rounded-[30px] px-[40px] py-[30px]">
+          <motion.div
+            animate={animation8}
+            initial={{ y: 30, opacity: 0 }}
+            className="bg-white api_feature_panel rounded-[30px] px-[40px] py-[30px]"
+          >
             <p className="self-stretch section_heading text-black text-[2.2rem] font-poppinsM    ml-1">
               Flight API
             </p>

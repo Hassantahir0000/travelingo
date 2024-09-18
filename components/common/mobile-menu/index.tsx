@@ -3,9 +3,11 @@ import { slide as Menu } from "react-burger-menu";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { useScroll } from "@/utils/context";
 
 const MobileMenu = () => {
   const router = useRouter();
+  const { scrollTo } = useScroll();
 
   const CustomBurgerIcon = () => (
     <Image src="/icons/menu.svg" width={100} height={50} alt="hamburger-menu" />
@@ -39,13 +41,19 @@ const MobileMenu = () => {
           </Link>
 
           <Link
+            onClick={() => {
+              scrollTo("planyourtrip");
+            }}
             href={"/"}
             className={`menu-item cursor-pointer font-poppinsR text-white text-[1rem] my-1 hover:text-purple transition-all duration-300 ease-in-out`}
           >
-            Features
+            Plan Your Trip
           </Link>
 
           <Link
+            onClick={() => {
+              scrollTo("howitworks");
+            }}
             href={"/"}
             className={`menu-item cursor-pointer font-poppinsR text-white text-[1rem] my-1 hover:text-purple transition-all duration-300 ease-in-out`}
           >

@@ -19,8 +19,9 @@ import {
   fetchWeather,
 } from "@/api/travel-info";
 import { useSearchParams } from "next/navigation";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import { useRef } from "react";
+import { useInView } from "react-intersection-observer";
 
 function TravelInfoContent() {
   const searchParams = useSearchParams();
@@ -96,21 +97,128 @@ function TravelInfoContent() {
     }
   }, [destination]);
 
-  const animation = (delay: number) => ({
-    offscreen: {
-      opacity: 0,
-      y: 30, // Use the parameter here
-    },
-    onscreen: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        ease: "easeOut",
-        duration: 0.2,
-        delay: delay,
-      },
-    },
+  const animation1 = useAnimation();
+  const animation2 = useAnimation();
+  const animation3 = useAnimation();
+  const animation4 = useAnimation();
+  const animation5 = useAnimation();
+  const animation6 = useAnimation();
+  const animation7 = useAnimation();
+  const animation8 = useAnimation();
+  const animation9 = useAnimation();
+
+  const { ref, inView } = useInView({
+    threshold: 0.2,
   });
+
+  const delay = (ms: number) => new Promise((res) => setTimeout(res, ms));
+
+  useEffect(() => {
+    const upAnimation = async () => {
+      if (inView) {
+        await delay(200);
+
+        animation1.start({
+          opacity: 1,
+          y: 0,
+          transition: {
+            ease: "easeOut",
+            duration: 0.2,
+          },
+        });
+
+        await delay(200);
+
+        animation2.start({
+          opacity: 1,
+          y: 0,
+          transition: {
+            ease: "easeOut",
+            duration: 0.2,
+          },
+        });
+
+        await delay(200);
+
+        animation3.start({
+          opacity: 1,
+          y: 0,
+          transition: {
+            ease: "easeOut",
+            duration: 0.2,
+          },
+        });
+
+        await delay(200);
+
+        animation4.start({
+          opacity: 1,
+          y: 0,
+          transition: {
+            ease: "easeOut",
+            duration: 0.2,
+          },
+        });
+
+        await delay(200);
+
+        animation5.start({
+          opacity: 1,
+          y: 0,
+          transition: {
+            ease: "easeOut",
+            duration: 0.2,
+          },
+        });
+
+        await delay(200);
+
+        animation6.start({
+          opacity: 1,
+          y: 0,
+          transition: {
+            ease: "easeOut",
+            duration: 0.2,
+          },
+        });
+
+        await delay(200);
+
+        animation7.start({
+          opacity: 1,
+          y: 0,
+          transition: {
+            ease: "easeOut",
+            duration: 0.2,
+          },
+        });
+
+        await delay(200);
+
+        animation8.start({
+          opacity: 1,
+          y: 0,
+          transition: {
+            ease: "easeOut",
+            duration: 0.2,
+          },
+        });
+
+        await delay(200);
+
+        animation9.start({
+          opacity: 1,
+          y: 0,
+          transition: {
+            ease: "easeOut",
+            duration: 0.2,
+          },
+        });
+      }
+    };
+
+    upAnimation();
+  }, [inView]);
 
   const handleScroll = (ref: React.RefObject<HTMLDivElement>) => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
@@ -128,22 +236,22 @@ function TravelInfoContent() {
           <TravelInfoBanner destination={destination} />
           <div className="absolute z-[10]">
             <motion.section
-              initial="offscreen"
-              whileInView="onscreen"
-              viewport={{ amount: 0.2 }}
+              ref={ref}
               className="w-screen centralise z-[100] travel_info_card_container h-auto bg-[#94D4FF] px-12 pt-[3rem] pb-[20rem] mt-[-2.6rem] rounded-tl-[3rem] rounded-tr-[3rem] "
             >
               <div className="container max_width_container mx-auto flex flex-col items-center gap-y-8">
                 <div className="w-full">
                   <motion.h2
-                    variants={animation(0)}
+                    animate={animation1}
+                    initial={{ y: 30, opacity: 0 }}
                     className="self-stretch section_heading font-poppinsM text-black text-[4.25rem] font-normal  leading-normal"
                   >
                     Travel Info
                   </motion.h2>
 
                   <motion.p
-                    variants={animation(0.2)}
+                    animate={animation2}
+                    initial={{ y: 30, opacity: 0 }}
                     className="self-stretch section_para_white_bg text-black text-[1.9rem] font-poppinsR  font-normal mt-4 mb-5 leading-[2.5rem]"
                   >
                     Lorem ipsum dolor sit amet consectetur. Tristique cursus
@@ -155,7 +263,8 @@ function TravelInfoContent() {
 
                 <div className="grid grid-cols-3  w-[95%] travel_info_cards_container">
                   <motion.img
-                    variants={animation(0.4)}
+                    animate={animation3}
+                    initial={{ y: 30, opacity: 0 }}
                     src={"/images/travel-info/info-cards/visa-info.png"}
                     width={500}
                     height={500}
@@ -166,7 +275,8 @@ function TravelInfoContent() {
                   />
 
                   <motion.img
-                    variants={animation(0.6)}
+                    animate={animation4}
+                    initial={{ y: 30, opacity: 0 }}
                     src={"/images/travel-info/info-cards/travel-budget.png"}
                     width={500}
                     height={500}
@@ -176,7 +286,8 @@ function TravelInfoContent() {
                     className="cursor-pointer "
                   />
                   <motion.img
-                    variants={animation(0.8)}
+                    animate={animation5}
+                    initial={{ y: 30, opacity: 0 }}
                     src={"/images/travel-info/info-cards/weather.png"}
                     width={500}
                     height={500}
@@ -185,7 +296,8 @@ function TravelInfoContent() {
                   />
 
                   <motion.img
-                    variants={animation(1)}
+                    animate={animation6}
+                    initial={{ y: 30, opacity: 0 }}
                     src={"/images/travel-info/info-cards/food.png"}
                     width={500}
                     height={500}
@@ -195,7 +307,8 @@ function TravelInfoContent() {
                     className="cursor-pointer "
                   />
                   <motion.img
-                    variants={animation(1.2)}
+                    animate={animation7}
+                    initial={{ y: 30, opacity: 0 }}
                     src={"/images/travel-info/info-cards/culture.png"}
                     width={500}
                     height={500}
@@ -205,7 +318,8 @@ function TravelInfoContent() {
                     className="cursor-pointer "
                   />
                   <motion.img
-                    variants={animation(1.4)}
+                    animate={animation8}
+                    initial={{ y: 30, opacity: 0 }}
                     src={"/images/travel-info/info-cards/customs.png"}
                     width={500}
                     height={500}

@@ -31,7 +31,7 @@ export default function Footer({
           {heading}
         </h2>
 
-        <p className="self-stretch text-black text-[1.8rem] font-poppinsM font-normal text-center leading-[2.5rem]">
+        <p className="self-stretch footer_text text-black text-[1.8rem] font-poppinsM font-normal text-center leading-[2.5rem]">
           {description}
         </p>
 
