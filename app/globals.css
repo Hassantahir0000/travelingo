@@ -96,14 +96,15 @@ body {
 
 .animate_btn,
 .ll_get_api_btn,
-.how_travelling_works_play_store_btn {
+.how_travelling_works_play_store_btn, .footer_btn {
   position: relative;
   padding-right: 50px;
   transition: ease-out 200ms;
 }
 
 .animate_btn:hover,
-.how_travelling_works_play_store_btn:hover {
+.how_travelling_works_play_store_btn:hover,
+.footer_btn:hover {
   transform: translateY(-5px) !important;
   box-shadow: -7px 7px 0px rgba(0, 0, 0);
 }
@@ -115,7 +116,8 @@ body {
 
 .animate_btn img,
 .ll_get_api_btn img,
-.how_travelling_works_play_store_btn > :last-child {
+.how_travelling_works_play_store_btn > :last-child,
+.footer_btn img {
   transition: ease-out 200ms;
   position: absolute;
   right: 25px;
@@ -123,6 +125,7 @@ body {
 
 .animate_btn:hover img,
 .ll_get_api_btn:hover img,
+.footer_btn:hover img,
 .how_travelling_works_play_store_btn:hover > :last-child {
   transition: ease-out 200ms;
   position: absolute;
@@ -185,6 +188,10 @@ body {
   100% {
     transform: translateY(180%);
   }
+}
+
+.collapsable_arrow {
+  transform-origin: 50% 50%; /* Set the origin to the center */
 }
 
 @media (max-width: 1060px) {
@@ -278,7 +285,7 @@ body {
   }
   .lang_translator_panel_container {
     flex-direction: column;
-    row-gap: 30px;
+    row-gap: 20px;
   }
   .lang_translator_panel p {
     width: 100%;
@@ -287,7 +294,10 @@ body {
     width: 100%;
   }
   .panel_img {
-    width: 13%;
+    width: 23%;
+  }
+  .panel_img img {
+    min-width: 100px;
   }
   .lang_translator_panel {
     flex-direction: column;
@@ -297,7 +307,7 @@ body {
     justify-content: center;
   }
   .panel_img {
-    padding-left: 20px;
+    padding-left: 50px;
     min-width: 80px;
   }
   .lang_translator_panel_heading {
@@ -412,15 +422,11 @@ body {
   .collapsable_name p {
     font-size: 20px;
   }
-  .collapsable_arrow,
-  .collapsable_arrow_flipped {
+  .collapsable_arrow {
     bottom: 8%;
     right: 9%;
     height: 15px;
     width: 15px;
-  }
-  .collapsable_arrow_flipped {
-    transform: scaleY(-1);
   }
 }
 
@@ -431,6 +437,62 @@ body {
 }
 
 @media (max-width: 650px) {
+  .footer_btn_container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .collapseable_main {
+    margin-top: -70px;
+  }
+  .step_form_container {
+    width: 90%;
+  }
+  .travel_info_card_container {
+    padding-bottom: 240px;
+    padding-top: 20px;
+  }
+  .footer_heading {
+    margin-top: 0px;
+  }
+  .footer_btn {
+    padding-left: 17px;
+    padding-right: 12px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-top: 10px;
+  }
+  .footer_btn > img {
+    width: 20px;
+  }
+  .footer_outer {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 30px;
+  }
+  .how_travelling_works_play_store_btn {
+    margin-top: 15px;
+  }
+  .how_to_travel_panels_container {
+    margin-top: 10px;
+  }
+  .google_play_btn {
+    width: 3rem;
+  }
+  .plan_your_trip {
+    padding-bottom: 10rem;
+    height: fit-content;
+    min-height: initial;
+  }
+  .lang_panel {
+    border-radius: 25px;
+  }
+  .banner_heading_container {
+    width: 100%;
+  }
+  .section_heading {
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+  }
   .collapsable_child_container {
     width: 93%;
   }
@@ -445,12 +507,21 @@ body {
     display: none;
   }
   .collapsable_child_container_inner {
-   padding-top: 80px;
+   padding-top: 40px;
+   padding-bottom: 0px;
+   padding-left: 1rem;
+   padding-right: 1rem;
+   row-gap: 15px;
+  }
+  .collapsable_child_container {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-bottom: 21px;
   }
   .card_animation_container {
-    width: 85%;
+    width: 100%;
     height: 20vh;
-    margin-bottom: 100px;
+    margin-bottom: 40px;
   }
   .footer_big_text {
     font-size: 3rem;
@@ -498,10 +569,10 @@ body {
   .travel_info_card_container,
   .connect_api_container,
   .contact_us_container {
-    padding-left: 10px;
-    padding-right: 10px;
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
   }
   .how_travelling_works_play_store_btn {
     padding-top: 15px;
@@ -618,15 +689,11 @@ body {
   .collapsable_name p {
     font-size: 14px;
   }
-  .collapsable_arrow,
-  .collapsable_arrow_flipped {
-    bottom: 7%;
-    right: 9%;
+  .collapsable_arrow {
+    bottom: 6%;
+    right: 8%;
     height: 15px;
     width: 15px;
-  }
-  .collapsable_arrow_flipped {
-    transform: scaleY(-1);
   }
   .footer_content {
     flex-direction: column;
@@ -646,12 +713,12 @@ body {
     font-size: 2rem;
   }
   .plan_your_trip {
-    padding-bottom: 12rem;
+    padding-bottom: 10rem;
   }
   .card_animation_container {
     width: 100%;
     margin-top: 0px;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
     height: 22vh;
   }
   .footer_btn_p {
@@ -666,15 +733,11 @@ body {
   .collapsable_name p {
     font-size: 10px;
   }
-  .collapsable_arrow,
-  .collapsable_arrow_flipped {
-    bottom: 4%;
-    right: 8%;
+  .collapsable_arrow{
+    bottom: 2%;
+    right: 7%;
     height: 15px;
     width: 15px;
-  }
-  .collapsable_arrow_flipped {
-    transform: scaleY(-1);
   }
   .footer_last {
     flex-direction: column;
@@ -685,7 +748,10 @@ body {
 @media (max-width: 500px) {
   .how_to_travel_panel {
     flex-direction: column;
-    padding-bottom: 1.25rem;
+    padding-bottom: 2.25rem;
+    padding-top: 2rem;
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
     border-radius: 20px;
   }
   .how_to_travel_panel p {
@@ -693,6 +759,11 @@ body {
   }
   .banner_second_heading {
     font-size: 1.2rem;
+  }
+  .how_travel_panel_number {
+    font-size: 5rem;
+    padding-left: 0px;
+    margin-left: initial;
   }
 }
 

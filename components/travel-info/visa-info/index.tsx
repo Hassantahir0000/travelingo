@@ -27,7 +27,7 @@ export default function VisaInfo({ data }: { data: any }) {
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ amount: 0.2 }}
-      className="w-screen z-[100] drop-shadow-[0_0px_20px_rgba(255,255,255,0.60)] centralise visa_info_container visa_info_container shadow-[0px_0px_50px_rgba(255,_255,_255,_0.46)] h-auto bg-[#83CCFF] px-12 pt-[3rem] pb-[20rem] mt-[-12rem] rounded-[4rem] "
+      className="w-screen z-[100] drop-shadow-[0_0px_20px_rgba(255,255,255,0.60)] centralise visa_info_container visa_info_container shadow-[0px_0px_50px_rgba(255,_255,_255,_0.46)] h-auto bg-[#83CCFF] px-12 pt-[3rem] pb-[150px] mt-[-12rem] rounded-[4rem] "
     >
       <div className="container max_width_container mx-auto">
         <div className="w-full mb-[130px]">

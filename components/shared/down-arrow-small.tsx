@@ -3,8 +3,8 @@ import React from "react";
 function DownArrowSmall() {
   return (
     <svg
-      width="31"
-      height="11"
+      width="26"
+      height="6"
       viewBox="0 0 43 23"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

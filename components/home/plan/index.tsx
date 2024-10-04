@@ -301,7 +301,7 @@ export default function PlanYourTrip() {
       {/* <ServicesList /> */}
 
       {countryCards?.length > 0 && (
-        <div className="flex relative w-[95%] mb-[40px] max-w-[1500px] overflow-y-hidden card_animation_container mx-auto justify-center h-[65vh] mt-[0px]">
+        <div className="flex relative w-[95%] mb-[90px] max-w-[1500px] overflow-y-hidden card_animation_container mx-auto justify-center h-[65vh] mt-[0px]">
           <img
             onClick={() => {
               router.push("/explore");
@@ -353,9 +353,9 @@ export default function PlanYourTrip() {
         </div>
       )}
 
-      <div className="w-[90%] mx-auto mt-5">
+      <div className="w-[100%] mx-auto mt-5">
         <Image
-          src={"/images/home/plan-trip/map.svg"}
+          src={"/images/home/plan-trip/map.png"}
           width={1000}
           height={1000}
           alt="map"

@@ -30,7 +30,7 @@ export default function StepForm() {
   };
 
   return (
-    <div className="container mx-auto flex items-center flex-col">
+    <div className="container step_form_container mx-auto flex items-center flex-col">
       <Toaster richColors position="top-right" />
       {step == 1 && (
         <Destination onDestinationChange={handleDestinationChange} />

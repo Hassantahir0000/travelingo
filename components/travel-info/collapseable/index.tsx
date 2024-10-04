@@ -25,7 +25,7 @@ export default function Collapseable({ data, name, image }: CollapseableProps) {
 
   return (
     <div
-      className={`h-[fit] mt-[-95px] w-full my-0 flex flex-col items-center justify-start duration-500 ease-out`}
+      className={`h-[fit] collapseable_main mt-[-95px] w-full my-0 flex flex-col items-center justify-start duration-500 ease-out`}
     >
       <div
         className={`w-[95%] duration-500 ease-out ${
@@ -62,9 +62,9 @@ export default function Collapseable({ data, name, image }: CollapseableProps) {
 
           <div
             onClick={expandMenu}
-            className={`absolute collapsable_arrow ${
-              isExpanded && "scale-y-[-1]"
-            } right-[6%] z-[1000000] p-5 bottom-[7%] duration-500 ease-out hover:cursor-pointer hover:bottom-[6%]`}
+            className={`absolute origin-center collapsable_arrow ${
+              isExpanded && width! > 950 && "scale-y-[-1] origin-center"
+            } right-[6%] z-[1000000] p-5 bottom-[7%] duration-500 ease-out hover:cursor-pointer`}
           >
             {width! > 650 ? <DownArrow /> : <DownArrowSmall />}
           </div>
