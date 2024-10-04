@@ -52,7 +52,7 @@ export default function Banner() {
           animate={welcomeBannerAnimation}
           className="container max_width_container_banner bg-blue-blur/50 banner_first_panel py-[1.875rem] px-[2.75rem] rounded-[30px] backdrop-blur-[0.5rem] md:w-[90%] block mx-auto"
         >
-          <div className="banner_heading_main_container  flex-col flex">
+          <div className="banner_heading_main_container flex-col flex">
             <div className="banner_heading_container flex-col justify-center items-center gap-[34px] inline-flex">
               <h2 className="banner_heading self-stretch font-poppinsL text-white text-[2rem] font-light leading-normal">
                 Welcome to Travelingo
@@ -63,7 +63,7 @@ export default function Banner() {
                 Partner!
               </h2>
             </div>
-            <div className="banner_para text-white font-poppinsR  text-[0.9rem] mt-5">
+            <div className="banner_para text-white font-poppinsR flex items-end text-[0.9rem] mt-5">
               Dive into the heart of each destination with tailored cultural
               insights, visa guidance, and essential travel tips. Our app
               provides in-depth country-specific information to enrich your

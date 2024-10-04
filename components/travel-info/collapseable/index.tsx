@@ -24,9 +24,13 @@ export default function Collapseable({ data, name, image }: CollapseableProps) {
   };
 
   return (
-    <div className="h-[fit] w-full my-0 flex flex-col items-center justify-start duration-500 ease-out">
+    <div
+      className={`h-[fit] mt-[-95px] w-full my-0 flex flex-col items-center justify-start duration-500 ease-out`}
+    >
       <div
-        className={`w-[95%] duration-500 ease-out        
+        className={`w-[95%] duration-500 ease-out ${
+          isExpanded && "mb-[95px]"
+        }   
         `}
       >
         <div className="relative duration-500 ease-out max-w-[1180px] ml-auto mr-auto">
@@ -67,7 +71,7 @@ export default function Collapseable({ data, name, image }: CollapseableProps) {
         </div>
 
         <div
-          className={`relative collapsable_child_container mb-[40px] flex items-start pb-10 z-[0] justify-center w-[78%] right-0 left-0 ml-auto mr-auto 
+          className={`relative collapsable_child_container mb-[40px] flex items-start pb-10 z-[0] justify-center w-[74%] right-0 left-0 ml-auto mr-auto 
             ${
               isExpanded
                 ? "h-[fit] mt-[-10%] opacity-100 flex duration-500 ease-out"
@@ -76,7 +80,9 @@ export default function Collapseable({ data, name, image }: CollapseableProps) {
              bg-white rounded-br-[30px] rounded-bl-[30px] z-0 duration-500 ease-out`}
         >
           <div
-            className={`w-full h-fit collapsable_child_container_inner bg-white pt-[130px] pb-6 px-8 flex flex-col gap-y-10 ${
+            className={`w-full ${
+              isExpanded ? "h-fit" : "h-[10px] overflow-y-hidden"
+            } collapsable_child_container_inner bg-white pt-[130px] pb-6 px-8 flex flex-col gap-y-10 ${
               isExpanded ? "" : "h-[10px] opacity-0"
             }`}
           >
@@ -89,7 +95,7 @@ export default function Collapseable({ data, name, image }: CollapseableProps) {
                   <div className="h-full collapsable_inner_container_pic_container flex items-center justify-center">
                     <img
                       src={data?.photo}
-                      className="h-[100%] collapsable_inner_container_pic w-[100%] min-h-[180px] w-[180px] rounded-[30px] object-cover"
+                      className="h-[100%] aspect-square collapsable_inner_container_pic w-[100%] min-h-[180px] w-[180px] rounded-[30px] object-cover"
                       alt="panel_img"
                     />
                   </div>
@@ -105,7 +111,7 @@ export default function Collapseable({ data, name, image }: CollapseableProps) {
                 <div className="h-full collapsable_inner_container_pic_container flex items-center justify-center">
                   <img
                     src={data?.photo}
-                    className="h-[100%] collapsable_inner_container_pic h-[180px] w-[180px] rounded-[30px]"
+                    className="h-[100%] aspect-square collapsable_inner_container_pic w-[100%] min-h-[180px] w-[180px] rounded-[30px] object-cover"
                     alt="panel_img"
                   />
                 </div>

@@ -7,17 +7,13 @@ import blob1 from "../../../public/images/language-translator/language_translato
 import blob2 from "../../../public/images/language-translator/language_translator_blob_2.png";
 import { useScroll } from "@/utils/context";
 import { useEffect } from "react";
+import { useWindowSize } from "@/utils/useWindowSize";
+import { useRouter } from "next/navigation";
 
 export default function LanguageLearner() {
   const { features } = useScroll();
-
-  const {
-    scrollTo,
-    howItWorksRef,
-    langLearnerRef,
-    langTranslatorRef,
-    planYourTripRef,
-  } = useScroll();
+  const { width } = useWindowSize();
+  const router = useRouter();
 
   const animation1 = useAnimation();
   const animation2 = useAnimation();
@@ -208,8 +204,8 @@ export default function LanguageLearner() {
                 </motion.p>
               </div>
 
-              <div className="ml-auto pr-0 w-[45%] gap-x-5 becoming_language_expert_pics_container">
-                <div className="grid  grid-cols-2 h-fit gap-y-2  gap-x-5 ">
+              <div className="ml-auto pr-0 w-[45%] gap-x-5 flex justify-end becoming_language_expert_pics_container">
+                <div className="grid grid-cols-2 h-fit gap-5 place-items-center ">
                   <motion.img
                     animate={animation6}
                     initial={{ y: 30, opacity: 0 }}
@@ -217,7 +213,7 @@ export default function LanguageLearner() {
                     width={800}
                     height={800}
                     alt=""
-                    className="w-[15rem]"
+                    className="w-[100%]"
                   />
                   <motion.img
                     animate={animation7}
@@ -226,7 +222,7 @@ export default function LanguageLearner() {
                     width={800}
                     height={800}
                     alt=""
-                    className="w-[15rem]"
+                    className="w-[100%]"
                   />
                   <motion.img
                     animate={animation8}
@@ -235,7 +231,7 @@ export default function LanguageLearner() {
                     width={800}
                     height={800}
                     alt=""
-                    className="w-[15rem]"
+                    className="w-[100%]"
                   />
                   <motion.img
                     animate={animation9}
@@ -244,13 +240,13 @@ export default function LanguageLearner() {
                     width={800}
                     height={800}
                     alt=""
-                    className="w-[15rem]"
+                    className="w-[100%]"
                   />
                 </div>
               </div>
             </div>
             <div className="flex justify-between items-baseline language_learner_btns">
-              <button className="border-2 animate_btn ll_flient_btn border-black rounded-full px-6 w-fit items-center h-fit gap-x-5 py-3  text-black flex justify-between">
+              <button className="border-2 animate_btn ll_flient_btn border-black rounded-full px-6 w-fit items-center h-fit gap-x-5 py-3 text-black flex justify-between">
                 <p className="text-black font-poppinsR">Get Fluent</p>
 
                 <Image
@@ -261,13 +257,17 @@ export default function LanguageLearner() {
                 />
               </button>
 
-              <button className="border-2 mr-4 ll_get_api_btn border-black rounded-full px-6 w-[42.5%] items-center gap-x-5 py-3 mt-[3rem] text-black flex justify-between">
-                <p className="text-black text-[1.5rem]">Get Our API</p>
+              <button onClick={()=>{
+                router.push('/connect-api')
+              }} className="border-2 mr-4 ll_get_api_btn border-black rounded-full px-6 w-[42.5%] items-center gap-x-5 py-3 mt-[3rem] text-black flex justify-between">
+                <p className="text-black text-[1.5rem] get_our_api_btn">
+                  Get Our API
+                </p>
 
                 <Image
                   src={"/icons/arrow-black.svg"}
-                  width={30}
-                  height={30}
+                  width={width! < 900 ? 16 : 30}
+                  height={width! < 900 ? 16 : 30}
                   alt=""
                 />
               </button>

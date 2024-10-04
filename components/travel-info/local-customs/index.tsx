@@ -4,9 +4,9 @@ import Collapseable from "../collapseable";
 export default function LocalCustoms({ data }: { data: any }) {
 
   return (
-    <div className="w-screen centralise z-[100] visa_info_container drop-shadow-[0_-25px_20px_rgba(255,255,255,0.25)] h-auto bg-[#34ACFF] px-12 pt-[3rem] pb-[20rem] mt-[-12rem] rounded-[4rem] ">
+    <div className="w-screen centralise pb-[50px] z-[100] visa_info_container drop-shadow-[0_-25px_20px_rgba(255,255,255,0.25)] h-auto bg-[#34ACFF] px-12 pt-[3rem] mt-[-12rem] rounded-[4rem] ">
       <div className="container max_width_container mx-auto">
-        <div className="w-full">
+        <div className="w-full mb-[130px]">
           <h2 className="self-stretch section_heading font-poppinsM text-black text-[4.25rem] font-normal  leading-normal">
             Local Customs
           </h2>

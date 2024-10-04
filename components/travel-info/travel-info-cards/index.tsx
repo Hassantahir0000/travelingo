@@ -29,7 +29,7 @@ export default function TravelInfoCards() {
       className="w-screen centralise z-[100] travel_info_card_container h-auto bg-[#94D4FF] px-12 pt-[3rem] pb-[20rem] mt-[-1rem] rounded-tl-[3rem] rounded-tr-[3rem] "
     >
       <div className="container max_width_container mx-auto flex flex-col items-center gap-y-8">
-        <div className="w-full">
+        <div className="w-full mb-[130px]">
           <motion.h2
             variants={animation(0)}
             className="self-stretch section_heading font-poppinsM text-black text-[4.25rem] font-normal  leading-normal"
@@ -48,7 +48,7 @@ export default function TravelInfoCards() {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-3 gap-4 w-[95%] travel_info_cards_container">
+        <div className="grid grid-cols-3 w-[95%] travel_info_cards_container">
           <motion.img
             variants={animation(0.4)}
             src={"/images/travel-info/info-cards/visa-info.png"}

@@ -10,24 +10,28 @@ import insta from "../../../public/icons/insta.svg";
 import tiktok from "../../../public/icons/tiktok.svg";
 import { useScroll } from "@/utils/context";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 type FooterProps = {
   heading: string;
   description: string;
   buttonLabel: string;
+  buttonRedirectURL?: string;
 };
 
 export default function Footer({
   heading,
   description,
   buttonLabel,
+  buttonRedirectURL,
 }: FooterProps) {
   const { scrollTo } = useScroll();
+  const router = useRouter();
 
   return (
-    <div className="w-screen h-fit relative drop-shadow-[0_0px_20px_rgba(255,255,255,0.60)] z-40 px-10 bg-blue-blur pt-[4rem] mt-[-4rem] rounded-tl-[3rem] rounded-tr-[3rem]">
-      <div className="bg-white flex-col mx-auto rounded-[28px] pt-[3rem] pb-[7rem] flex items-center justify-center">
-        <h2 className="self-stretch footer_big_text font-poppinsM text-center text-blue-blur text-[6.25rem] mt-[68px] font-normal leading-normal">
+    <div className="w-screen h-fit footer_outer relative drop-shadow-[0_0px_20px_rgba(255,255,255,0.60)] z-40 px-16 bg-blue-blur pt-[4rem] mt-[-5rem] rounded-tl-[3rem] rounded-tr-[3rem]">
+      <div className="bg-white flex-col mx-auto rounded-[42px] pt-[3rem] pb-[7rem] flex items-center justify-center">
+        <h2 className="self-stretch max-w-[550px] leading-[110px] mx-auto footer_big_text font-poppinsM text-center text-blue-blur text-[7.00rem] mt-[68px] font-normal">
           {heading}
         </h2>
 
@@ -35,7 +39,14 @@ export default function Footer({
           {description}
         </p>
 
-        <button className="bg-blue-blur animate_btn rounded-full w-[90%] max-w-[30rem] px-10 items-center gap-x-5 py-5 mt-[3rem] text-white flex justify-between">
+        <button
+          onClick={() => {
+            if (buttonRedirectURL) {
+              router.push(buttonRedirectURL);
+            }
+          }}
+          className="bg-blue-blur animate_btn rounded-full w-[90%] max-w-[30rem] px-10 items-center gap-x-5 py-5 mt-[3rem] text-white flex justify-between"
+        >
           <div className="flex gap-x-5 justify-between">
             <p className="text-white text-[1.8rem] footer_btn_p font-poppinsR">
               {buttonLabel}

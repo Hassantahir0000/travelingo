@@ -16,6 +16,15 @@ const MobileMenu = () => {
     <Image src="/icons/close.svg" width={30} height={20} alt="close-menu" />
   );
 
+
+  const functionA = () => {
+    console.log("FUNCTION A");
+  }
+
+  const functionB = () => {
+    console.log("FUNCTION B");
+  }
+
   return (
     <div className="flex bg-blue-blur bm-burger-button-custom md:hidden z-[+12000] top-[-0.8rem] left-[98vw] absolute">
       <Menu
@@ -88,6 +97,7 @@ const MobileMenu = () => {
               Traveling API
             </p>
           </Link>
+
         </div>
       </Menu>
     </div>

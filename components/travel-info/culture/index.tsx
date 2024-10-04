@@ -3,9 +3,9 @@ import Collapseable from "../collapseable";
 
 export default function Culture({ data }: { data: any }) {
   return (
-    <div className="w-screen centralise z-[100] visa_info_container shadow-[0px_0px_50px_rgba(255,_255,_255,_0.46)] h-auto bg-[#3CAFFF] drop-shadow-[0_-25px_20px_rgba(255,255,255,0.25)] px-12 pt-[3rem] pb-[20rem] mt-[-12rem] rounded-[4rem] ">
+    <div className="w-screen centralise z-[100] visa_info_container shadow-[0px_0px_50px_rgba(255,_255,_255,_0.46)] h-auto bg-[#3CAFFF] drop-shadow-[0_-25px_20px_rgba(255,255,255,0.25)] px-12 pt-[3rem] pb-[150px] mt-[-12rem] rounded-[4rem] ">
       <div className="container max_width_container mx-auto">
-        <div className="w-full">
+      <div className="w-full mb-[130px]">
           <h2 className="self-stretch section_heading font-poppinsM text-black text-[4.25rem] font-normal  leading-normal">
             Culture
           </h2>

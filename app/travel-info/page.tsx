@@ -261,7 +261,7 @@ function TravelInfoContent() {
                   </motion.p>
                 </div>
 
-                <div className="grid grid-cols-3  w-[95%] travel_info_cards_container">
+                <div className="grid grid-cols-3 gap-4 w-[95%] travel_info_cards_container">
                   <motion.img
                     animate={animation3}
                     initial={{ y: 30, opacity: 0 }}
@@ -370,6 +370,7 @@ function TravelInfoContent() {
               heading={"Travelingo API"}
               description={""}
               buttonLabel={"Get Our API"}
+              buttonRedirectURL={'/connect-api'}
             />
           </div>
         </>

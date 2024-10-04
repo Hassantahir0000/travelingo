@@ -20,6 +20,7 @@ export default function Home() {
       <Footer
         heading={"Travelingo API"}
         description={""}
+        buttonRedirectURL={'/connect-api'}
         buttonLabel={"Get Our API"}
       />
     </main>
