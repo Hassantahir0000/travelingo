@@ -195,7 +195,7 @@ export default function TravelExperience() {
             <motion.button
               animate={animation9}
               initial={{ y: 30, opacity: 0 }}
-              className="border-2 border-black animate_btn rounded-full px-6 w-[100%] items-center gap-x-5 py-3 mt-[3rem]  text-black flex justify-between"
+              className="border-2 border-black demo_btn rounded-full px-6 w-[100%] items-center gap-x-5 py-3 mt-[3rem]  text-black flex justify-between"
             >
               <p className="text-black text-[1.5rem] font-poppinsR">
                 Request a Demo
@@ -213,7 +213,7 @@ export default function TravelExperience() {
           <motion.div
             animate={animation2}
             initial={{ y: 30, opacity: 0 }}
-            className="w-[50%] flex items-center justify-center my-auto"
+            className="w-[50%] travel_experience_img flex items-center justify-center my-auto"
           >
             <Image
               src={"/images/connect-api/travel-exp.png"}

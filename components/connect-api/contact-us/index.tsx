@@ -31,7 +31,7 @@ export default function ContactUs() {
             placeholder="Why you  need our API?"
           />
 
-          <button className="rounded-[50px] text-[2rem] w-fit mx-auto text-white mt-5 px-[3rem] py-4 font-poppinsR bg-blue-blur hover:opacity-50">
+          <button className="rounded-[50px] submit_btn text-[2rem] w-fit mx-auto text-white mt-5 px-[3rem] py-4 font-poppinsR bg-blue-blur hover:opacity-50">
             Submit
           </button>
         </div>

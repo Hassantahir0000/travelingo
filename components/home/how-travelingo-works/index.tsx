@@ -169,7 +169,7 @@ export default function HowItWorks() {
           <motion.button
             animate={animation2}
             initial={{ y: 30, opacity: 0 }}
-            className=" bg-black rounded-full how_travelling_works_play_store_btn px-6 w-full items-center gap-x-5 py-5 mt-[3rem] text-black flex justify-between duration-400 hover:bg-gray-700"
+            className="bg-black rounded-full how_travelling_works_play_store_btn px-6 w-full items-center gap-x-5 py-5 mt-[3rem] text-black flex justify-between duration-400 hover:bg-gray-700"
           >
             <div className="flex gap-x-5">
               <Image

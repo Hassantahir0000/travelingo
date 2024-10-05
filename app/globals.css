@@ -96,7 +96,7 @@ body {
 
 .animate_btn,
 .ll_get_api_btn,
-.how_travelling_works_play_store_btn, .footer_btn {
+.how_travelling_works_play_store_btn, .footer_btn, .demo_btn {
   position: relative;
   padding-right: 50px;
   transition: ease-out 200ms;
@@ -104,7 +104,8 @@ body {
 
 .animate_btn:hover,
 .how_travelling_works_play_store_btn:hover,
-.footer_btn:hover {
+.footer_btn:hover,
+.demo_btn:hover {
   transform: translateY(-5px) !important;
   box-shadow: -7px 7px 0px rgba(0, 0, 0);
 }
@@ -117,7 +118,8 @@ body {
 .animate_btn img,
 .ll_get_api_btn img,
 .how_travelling_works_play_store_btn > :last-child,
-.footer_btn img {
+.footer_btn img,
+.demo_btn img {
   transition: ease-out 200ms;
   position: absolute;
   right: 25px;
@@ -126,7 +128,8 @@ body {
 .animate_btn:hover img,
 .ll_get_api_btn:hover img,
 .footer_btn:hover img,
-.how_travelling_works_play_store_btn:hover > :last-child {
+.how_travelling_works_play_store_btn:hover > :last-child,
+.demo_btn:hover img {
   transition: ease-out 200ms;
   position: absolute;
   right: 15px;
@@ -437,9 +440,45 @@ body {
 }
 
 @media (max-width: 650px) {
+  .contact_us_container {
+    padding-bottom: 50px;
+  }
   .footer_btn_container {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+  }
+  .footer_outer {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+  }
+  .demo_btn p, .footer_btn p {
+    font-size: 16px;
+  }
+  .demo_btn > img, .footer_btn > img {
+    width: 16px;
+  }
+  .contact_us_panel {
+    margin-top: 30px;
+  }
+  .visa_info_container {
+    padding-top: 20px;
+  }
+  .submit_btn {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+  .travel_experience_content_container, .travel_experience_content_container {
+    width: 100%;
+  }
+  .travel_experience_img {
+    width: 100%;
+  }
+  .footer_btn_container {
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
   .collapseable_main {
     margin-top: -70px;
@@ -848,25 +887,52 @@ Sidebar wrapper styles
 
 /*  */
 
+.globeSvg svg {
+  transition: ease-out 300ms;
+}
+.globeSvg:hover svg path {
+  fill: #18a1ff;
+  transition: ease-out 300ms;
+}
+.globeSvg:hover svg plygon {
+  fill: #18a1ff;
+  transition: ease-out 300ms;
+}
+
+.globeSvg:hover svg circle {
+  fill: #18a1ff;
+  transition: ease-out 300ms;
+}
+
+.globeSvg:hover svg stroke {
+  fill: #18a1ff;
+  transition: ease-out 300ms;
+}
+
+
 .svgButton svg {
   transition: ease-out 300ms;
 }
 .svgButton:hover svg path {
   fill: #18a1ff;
+  stroke: #18a1ff;
   transition: ease-out 300ms;
 }
 .svgButton:hover svg plygon {
   fill: #18a1ff;
+  stroke: #18a1ff;
   transition: ease-out 300ms;
 }
 
 .svgButton:hover svg circle {
   fill: #18a1ff;
+  stroke: #18a1ff;
   transition: ease-out 300ms;
 }
 
 .svgButton:hover svg stroke {
   fill: #18a1ff;
+  stroke: #18a1ff;
   transition: ease-out 300ms;
 }
 
