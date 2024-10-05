@@ -441,7 +441,7 @@ body {
 
 @media (max-width: 650px) {
   .contact_us_container {
-    padding-bottom: 50px;
+    padding-bottom: 120px;
   }
   .footer_btn_container {
     border-top-left-radius: 30px;
