@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 import { useAnimation, motion } from "framer-motion";
 import { useScroll } from "@/utils/context";
 import elipse from "../../../public/images/how-it-works/how-travelingo-works-elipse.png";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function HowItWorks() {
   const { howItWorksRef } = useScroll();

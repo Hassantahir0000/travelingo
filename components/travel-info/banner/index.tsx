@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 import { useAnimation, motion } from "framer-motion";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import PlayButton from "@/components/shared/play-button";
 import ArrowTilt from "@/public/icons-folder/arrow-tilt";
 
@@ -12,6 +12,7 @@ export default function TravelInfoBanner({
 }: {
   destination: string | null;
 }) {
+  const [isHovered, setIsHovered] = useState(false);
   const playstoreAnimation = useAnimation();
   const animation = (delay: number) => ({
     offscreen: {
@@ -92,19 +93,21 @@ export default function TravelInfoBanner({
         </motion.div>
 
         <motion.div
+                  onMouseEnter={() => setIsHovered(true)}
+                  onMouseLeave={() => setIsHovered(false)}
           initial={{ opacity: 0, y: 30 }}
           animate={playstoreAnimation}
-          className="container svgButton second_banner bg-blue-blur/50 banner_second_panel  items-center py-5 px-[3rem] rounded-full backdrop-blur-[0.5rem] md:w-[90%] block mx-auto"
+          className="container second_banner bg-blue-blur/50 banner_second_panel  items-center py-5 px-[3rem] rounded-full backdrop-blur-[0.5rem] md:w-[90%] block mx-auto"
         >
           <div className="flex items-center justify-between">
             <div className="flex gap-x-4 ">
-              <PlayButton />
-              <div className="self-stretch flex items-center font-poppinsR banner_second_heading  text-[30px] uppercase font-normal leading-normal">
+            <PlayButton fill={isHovered ? "#18A1FF" : "white"} />
+            <div className="self-stretch flex items-center font-poppinsR banner_second_heading  text-[30px] uppercase font-normal leading-normal">
                 <p>Get on play store</p>
               </div>
             </div>
 
-            <ArrowTilt />
+            <ArrowTilt fill={isHovered ? "#18A1FF" : "white"} />
           </div>
         </motion.div>
       </div>

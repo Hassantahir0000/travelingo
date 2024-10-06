@@ -39,7 +39,7 @@ const MobileMenu = () => {
   return (
     <div className="flex bg-blue-blur bm-burger-button-custom md:hidden z-[+12000] top-[-0.8rem] left-[98vw] absolute">
       <Menu
-        isOpen={isMenuOpen}
+        // isOpen={isMenuOpen}
         width={"280px"}
         customBurgerIcon={<CustomBurgerIcon />}
         customCrossIcon={<CustomCloseIcon />}

@@ -51,6 +51,7 @@ export default function TravelInfoCards() {
         <div className="grid grid-cols-3 w-[95%] travel_info_cards_container">
           <motion.img
             variants={animation(0.4)}
+            className="drop-shadow-[0_-25px_20px_rgba(255,255,255,0.25)]"
             src={"/images/travel-info/info-cards/visa-info.png"}
             width={500}
             height={500}

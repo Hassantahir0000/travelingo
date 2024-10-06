@@ -271,7 +271,7 @@ function TravelInfoContent() {
                     alt=""
                     whileHover={{ translateY: -14 }}
                     onClick={() => handleScroll(visaInfoRef)}
-                    className="cursor-pointer "
+                    className="cursor-pointer info_card_single"
                   />
 
                   <motion.img
@@ -283,7 +283,7 @@ function TravelInfoContent() {
                     alt=""
                     whileHover={{ translateY: -14 }}
                     onClick={() => handleScroll(travelBudgetRef)}
-                    className="cursor-pointer "
+                    className="cursor-pointer info_card_single"
                   />
                   <motion.img
                     animate={animation5}
@@ -292,6 +292,7 @@ function TravelInfoContent() {
                     width={500}
                     height={500}
                     whileHover={{ translateY: -14 }}
+                    className="cursor-pointer info_card_single"
                     alt=""
                   />
 
@@ -304,7 +305,7 @@ function TravelInfoContent() {
                     alt=""
                     whileHover={{ translateY: -14 }}
                     onClick={() => handleScroll(foodDataRef)}
-                    className="cursor-pointer "
+                    className="cursor-pointer info_card_single"
                   />
                   <motion.img
                     animate={animation7}
@@ -315,7 +316,7 @@ function TravelInfoContent() {
                     alt=""
                     whileHover={{ translateY: -14 }}
                     onClick={() => handleScroll(cultureRef)}
-                    className="cursor-pointer "
+                    className="cursor-pointer info_card_single"
                   />
                   <motion.img
                     animate={animation8}
@@ -326,7 +327,7 @@ function TravelInfoContent() {
                     alt=""
                     whileHover={{ translateY: -14 }}
                     onClick={() => handleScroll(localCustomRef)}
-                    className="cursor-pointer "
+                    className="cursor-pointer info_card_single"
                   />
                 </div>
               </div>
@@ -370,7 +371,7 @@ function TravelInfoContent() {
               heading={"Travelingo API"}
               description={""}
               buttonLabel={"Get Our API"}
-              buttonRedirectURL={'/connect-api'}
+              buttonRedirectURL={"/connect-api"}
             />
           </div>
         </>
