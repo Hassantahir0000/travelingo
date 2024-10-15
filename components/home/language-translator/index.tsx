@@ -140,6 +140,7 @@ export default function LanguageTranslator() {
 
   return (
     <div
+      id="languagetranslator"
       ref={langTranslatorRef}
       className="w-screen centralise language_translator_container drop-shadow-[0_0px_20px_rgba(255,255,255,0.60)] relative z-30 min-h-screen h-auto bg-maya-blue px-12 pt-2 pb-[14rem] mt-[-8rem] rounded-tl-[3%] rounded-tr-[3%] "
     >

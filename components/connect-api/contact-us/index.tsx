@@ -1,8 +1,13 @@
-import Image from "next/image";
+"use client";
+
+import { useScroll } from "@/utils/context";
 
 export default function ContactUs() {
+
+  const { contactUsRef } = useScroll();
+
   return (
-    <div className="w-screen centralise min-h-screen px-10 drop-shadow-[0_-25px_20px_rgba(255,255,255,0.25)] contact_us_container h-auto bg-[#5FBEFF]  pt-0 pb-[20rem] mt-[-4rem] rounded-tl-[3rem] rounded-tr-[3rem]">
+    <div ref={contactUsRef} className="w-screen centralise min-h-screen px-10 drop-shadow-[0_-25px_20px_rgba(255,255,255,0.25)] contact_us_container h-auto bg-[#5FBEFF]  pt-0 pb-[20rem] mt-[-4rem] rounded-tl-[3rem] rounded-tr-[3rem]">
       <div className="container max_width_container mx-auto">
         <h2 className="self-stretch  section_heading font-poppinsM text-black text-[4.25rem] mt-[68px] font-normal  leading-normal">
           Contact Us

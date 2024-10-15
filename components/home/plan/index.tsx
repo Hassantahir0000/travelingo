@@ -285,7 +285,7 @@ export default function PlanYourTrip() {
       ref={planYourTripRef}
       className="w-screen plan_your_trip min-h-screen h-auto drop-shadow-[0_-25px_20px_rgba(255,255,255,0.25)] bg-light-sky-blue px-8 pt-2 pb-[12rem] mt-[-8rem] rounded-tl-[3rem] rounded-tr-[3rem]"
     >
-      <div className="container mx-auto mb-[20px]">
+      <div id="plantrip" className="container mx-auto mb-[20px]">
         <h2 className="self-stretch font-poppinsM text-[2rem] md:text-[4.25rem] mt-[38px] mb-0 font-normal section_heading leading-normal">
           Plan Your Trip
         </h2>
@@ -300,7 +300,7 @@ export default function PlanYourTrip() {
 
       {/* <ServicesList /> */}
 
-      {countryCards?.length > 0 && (
+      {countryCards?.length > 0 ? (
         <div className="flex relative w-[95%] mb-[90px] max-w-[1500px] overflow-y-hidden card_animation_container mx-auto justify-center h-[65vh] mt-[0px]">
           <img
             onClick={() => {
@@ -351,7 +351,11 @@ export default function PlanYourTrip() {
             className="img_card"
           />
         </div>
-      )}
+      ) : 
+      <div className="w-full min-h-[650px]">
+
+      </div>
+      }
 
       <div className="w-[100%] mx-auto mt-5">
         <Image

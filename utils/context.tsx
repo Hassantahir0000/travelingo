@@ -11,13 +11,14 @@ interface ScrollContextType {
       | "langlearner"
       | "langtranslator"
       | "planyourtrip"
+      | "contactus"
   ) => void;
   howItWorksRef: React.RefObject<HTMLDivElement>;
   features: React.RefObject<HTMLDivElement>;
   langLearnerRef: React.RefObject<HTMLDivElement>;
   langTranslatorRef: React.RefObject<HTMLDivElement>;
   planYourTripRef: React.RefObject<HTMLDivElement>;
-
+  contactUsRef: React.RefObject<HTMLDivElement>;
 }
 
 // Create a context with an initial value of undefined
@@ -33,6 +34,7 @@ export const ScrollProvider: React.FC<ScrollProviderProps> = ({ children }) => {
   const langLearnerRef = useRef<HTMLDivElement>(null);
   const langTranslatorRef = useRef<HTMLDivElement>(null);
   const planYourTripRef = useRef<HTMLDivElement>(null);
+  const contactUsRef = useRef<HTMLDivElement>(null);
 
   const scrollTo = (
     component:
@@ -41,6 +43,7 @@ export const ScrollProvider: React.FC<ScrollProviderProps> = ({ children }) => {
       | "langlearner"
       | "langtranslator"
       | "planyourtrip"
+      | "contactus"
   ) => {
     if (component === "howitworks" && howItWorksRef.current) {
       howItWorksRef.current.scrollIntoView({ behavior: "smooth" });
@@ -52,12 +55,14 @@ export const ScrollProvider: React.FC<ScrollProviderProps> = ({ children }) => {
       langTranslatorRef.current.scrollIntoView({ behavior: "smooth" });
     } else if (component === "planyourtrip" && planYourTripRef.current) {
       planYourTripRef.current.scrollIntoView({ behavior: "smooth" });
+    } else if (component === "contactus" && contactUsRef.current) {
+      contactUsRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   return (
     <ScrollContext.Provider
-      value={{ scrollTo, howItWorksRef, features, langLearnerRef, langTranslatorRef, planYourTripRef }}
+      value={{ scrollTo, contactUsRef, howItWorksRef, features, langLearnerRef, langTranslatorRef, planYourTripRef }}
     >
       {children}
     </ScrollContext.Provider>

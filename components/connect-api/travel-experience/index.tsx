@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 import { useAnimation, motion } from "framer-motion";
 import { useEffect } from "react";
+import { useScroll } from "@/utils/context";
 
 export default function TravelExperience() {
   const animation1 = useAnimation();
@@ -15,6 +16,8 @@ export default function TravelExperience() {
   const animation7 = useAnimation();
   const animation8 = useAnimation();
   const animation9 = useAnimation();
+
+  const { scrollTo } = useScroll();
 
   const { ref, inView } = useInView({
     threshold: 0.2,

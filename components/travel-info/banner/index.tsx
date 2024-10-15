@@ -30,7 +30,7 @@ export default function TravelInfoBanner({
     },
   });
 
-  useEffect(()=>{
+  useEffect(() => {
 
     const makeHeadingAnimation = async () => {
       playstoreAnimation.start({
@@ -46,7 +46,7 @@ export default function TravelInfoBanner({
 
     makeHeadingAnimation()
 
-  },[])
+  }, [])
 
   return (
     <motion.section
@@ -56,15 +56,14 @@ export default function TravelInfoBanner({
       className="w-screen h-[106vh] min-h-[750px] centralise"
     >
       <Image
-        src={`/images/travel-info/${
-          destination === "France"
-            ? "france"
-            : destination === "Germany"
+        src={`/images/travel-info/${destination === "France"
+          ? "france"
+          : destination === "Germany"
             ? "germany"
             : destination === "Iran"
-            ? "iran"
-            : "usa"
-        }.png`}
+              ? "iran"
+              : "usa"
+          }.png`}
         width={1000}
         height={1000}
         className="w-full h-[120vh] object-cover"
@@ -93,16 +92,16 @@ export default function TravelInfoBanner({
         </motion.div>
 
         <motion.div
-                  onMouseEnter={() => setIsHovered(true)}
-                  onMouseLeave={() => setIsHovered(false)}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
           initial={{ opacity: 0, y: 30 }}
           animate={playstoreAnimation}
           className="container second_banner bg-blue-blur/50 banner_second_panel  items-center py-5 px-[3rem] rounded-full backdrop-blur-[0.5rem] md:w-[90%] block mx-auto"
         >
           <div className="flex items-center justify-between">
             <div className="flex gap-x-4 ">
-            <PlayButton fill={isHovered ? "#18A1FF" : "white"} />
-            <div className="self-stretch flex items-center font-poppinsR banner_second_heading  text-[30px] uppercase font-normal leading-normal">
+              <PlayButton fill={isHovered ? "#18A1FF" : "white"} />
+              <div className="self-stretch flex items-center font-poppinsR banner_second_heading  text-[30px] uppercase font-normal leading-normal">
                 <p>Get on play store</p>
               </div>
             </div>

@@ -11,12 +11,14 @@ import tiktok from "../../../public/icons/tiktok.svg";
 import { useScroll } from "@/utils/context";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 type FooterProps = {
   heading: string;
   description: string;
   buttonLabel: string;
   buttonRedirectURL?: string;
+  onButtonClick?: () => void;
 };
 
 export default function Footer({
@@ -24,9 +26,11 @@ export default function Footer({
   description,
   buttonLabel,
   buttonRedirectURL,
+  onButtonClick
 }: FooterProps) {
   const { scrollTo } = useScroll();
   const router = useRouter();
+  const pathname = usePathname();
 
   return (
     <div className="w-screen h-fit footer_outer relative drop-shadow-[0_0px_20px_rgba(255,255,255,0.60)] z-40 px-16 bg-blue-blur pt-[4rem] mt-[-5rem] rounded-tl-[3rem] rounded-tr-[3rem]">
@@ -43,6 +47,9 @@ export default function Footer({
           onClick={() => {
             if (buttonRedirectURL) {
               router.push(buttonRedirectURL);
+            }
+            else if (onButtonClick) {
+              onButtonClick();
             }
           }}
           className="bg-blue-blur footer_btn rounded-full w-[90%] max-w-[30rem] px-10 items-center gap-x-5 py-5 mt-[3rem] text-white flex justify-between"
@@ -77,7 +84,12 @@ export default function Footer({
               </Link>
               <p
                 onClick={() => {
-                  scrollTo("features");
+                  if (pathname !== '/') {
+                    window.location.href = "/#languagelearner"
+                  }
+                  else {
+                    scrollTo("features");
+                  }
                 }}
                 className="text-white opacity-55 hover:underline cursor-pointer hover:opacity-45"
               >
@@ -85,8 +97,14 @@ export default function Footer({
               </p>
               <p
                 onClick={() => {
-                  scrollTo("howitworks");
+                  if (pathname !== '/') {
+                    window.location.href = "/#howitworks"
+                  }
+                  else {
+                    scrollTo("howitworks");
+                  }
                 }}
+
                 className="text-white opacity-55 hover:underline cursor-pointer hover:opacity-45"
               >
                 How it works
@@ -95,7 +113,13 @@ export default function Footer({
             <div className="flex flex-col gap-y-[20px] w-full">
               <p
                 onClick={() => {
-                  scrollTo("langlearner");
+                  if (pathname !== '/') {
+                    console.log("Language Learner");
+                    window.location.href = "/#languagelearner"
+                  }
+                  else {
+                    scrollTo("langlearner");
+                  }
                 }}
                 className="text-white opacity-55 hover:underline cursor-pointer hover:opacity-45"
               >
@@ -103,15 +127,27 @@ export default function Footer({
               </p>
               <p
                 onClick={() => {
-                  scrollTo("langtranslator");
+                  if (pathname !== '/') {
+                    console.log("Language Translator");
+                    window.location.href = "/#languagetranslator";
+                  }
+                  else {
+                    scrollTo("langtranslator");
+                  }
                 }}
                 className="text-white opacity-55 hover:underline cursor-pointer hover:opacity-45"
               >
                 Language Translator
               </p>
               <p
+
                 onClick={() => {
-                  scrollTo("planyourtrip");
+                  if (pathname !== '/') {
+                    window.location.href = "/#plantrip"
+                  }
+                  else {
+                    scrollTo("planyourtrip");
+                  }
                 }}
                 className="text-white opacity-55 hover:underline cursor-pointer hover:opacity-45"
               >

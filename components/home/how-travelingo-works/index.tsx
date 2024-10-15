@@ -157,7 +157,7 @@ export default function HowItWorks() {
       </div>
   
 
-        <div className="how_to_travel_heading">
+        <div id="howitworks" className="how_to_travel_heading">
           <motion.h2
             animate={animation1}
             initial={{ y: 30, opacity: 0 }}

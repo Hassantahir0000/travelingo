@@ -154,7 +154,7 @@ export default function LanguageLearner() {
           alt="blob_2"
           className="absolute w-[80%] bottom-0 left-0 z-0"
         />
-        <div className="container mx-auto z-10 max_width_container relative">
+        <div id="languagelearner" className="container mx-auto z-10 max_width_container relative">
           <motion.h2
             animate={animation1}
             initial={{ y: 30, opacity: 0 }}
